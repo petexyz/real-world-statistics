@@ -1,5 +1,5 @@
 # Real-World Applications of Statistics
-### Six Stories That Show What This Course Is Really For
+### Real-World Applications of Statistics
 
 **by Pete Halbeisen**
 
@@ -36,7 +36,7 @@ Every example today comes from the real world -- history, economics, investing, 
 
 ### The Story of Clever Hans
 
-In the early 1900s, a horse named Hans became famous across Europe. His trainer, Wilhelm von Osten, was a sincere and well-respected mathematics teacher who genuinely believed he had taught the horse to do arithmetic.
+In the early 1900s, a horse named Hans became famous across Europe. His trainer, Wilhelm von Osten, was a sincere and well-respected retired schoolteacher who genuinely believed he had taught the horse to do arithmetic.
 
 ![Wilhelm von Osten with Clever Hans, 1907](./images/src_clever_hans.png)
 *Wilhelm von Osten with Clever Hans, Berlin, 1907. The chalkboard shows arithmetic problems Hans was said to solve by tapping his hoof.*
@@ -163,7 +163,7 @@ You have heard about GDP and unemployment your entire life on the news. What you
 
 Arthur Okun observed in 1962 that when the economy grows, companies hire people and unemployment falls. When the economy shrinks, companies cut workers and unemployment rises. He put a rough number on it:
 
-**For every 1% increase in economic growth, unemployment tends to fall by about half a percentage point -- and vice versa.**
+**For every 1% increase in economic growth, unemployment tends to fall by roughly a third to half a percentage point -- and vice versa.**
 
 The correlation runs between roughly -0.5 and -0.9 depending on the time period. That is a moderate to strong negative relationship.
 
