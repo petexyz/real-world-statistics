@@ -1,8 +1,6 @@
 [README.md](https://github.com/user-attachments/files/27379065/README.md)
-# real-world-statistics# Real-World Applications of Statistics
+# Real-World Applications of Statistics
 ### Six Stories That Show What This Course Is Really For
-
-**by Pete Halbeisen**
 
 ---
 
