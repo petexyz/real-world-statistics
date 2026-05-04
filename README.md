@@ -1,6 +1,8 @@
 # Real-World Applications of Statistics
 ### Six Stories That Show What This Course Is Really For
 
+**by Pete Halbeisen**
+
 ---
 
 > *You have spent a semester learning tools. Today we connect those tools to the world you already live in.*
@@ -91,8 +93,8 @@ The countermeasures are the same in principle: diverse data, independent auditin
 > **Think about it:** When an AI confidently gives you a wrong answer, what does the Clever Hans story suggest about where that confidence came from?
 
 **Sources:**
-- Pfungst, O. (1911). *Clever Hans.* Holt.
-- Rosenthal, R., & Jacobson, L. (1968). Pygmalion in the classroom. *Urban Review, 3*(1), 16-20.
+- Pfungst, O. (1911). *Clever Hans.* Full text freely available at [Project Gutenberg](https://www.gutenberg.org/ebooks/33936).
+- Rosenthal, R., & Jacobson, L. (1968). Pygmalion in the classroom. *Urban Review.* Abstract and paper at [Springer](https://link.springer.com/article/10.1007/BF02322211). Wikipedia overview: [Pygmalion in the Classroom](https://en.wikipedia.org/wiki/Pygmalion_in_the_Classroom).
 
 ---
 
@@ -146,8 +148,8 @@ Some examples:
 > **Think about it:** A news story reports that people who drink red wine live longer. Before you accept this, what confounding variable should you ask about?
 
 **Sources:**
-- Matthews, R. (2000). Storks deliver babies (p = 0.008). *Teaching Statistics, 22*(2), 36-38.
-- Vigen, T. *Spurious Correlations.* https://www.spuriouscorrelations.com
+- Matthews, R. (2000). Storks deliver babies (p = 0.008). *Teaching Statistics, 22*(2), 36-38. Full PDF at [gwern.net](https://gwern.net/doc/statistics/causality/2000-matthews.pdf). Accessible summary at [Priceonomics](https://priceonomics.com/do-storks-deliver-babies/).
+- Vigen, T. *Spurious Correlations.* [spuriouscorrelations.com](https://www.spuriouscorrelations.com)
 
 ---
 
@@ -188,8 +190,9 @@ When a recession hits, companies do not immediately lay off everyone. They first
 The result: unemployment tends to keep rising even after the economy has turned the corner. This is why people often feel like things are still getting worse even when economists say a recession is technically over. Economically they may be right. The job market, which is what most people actually feel, takes longer to catch up.
 
 **Sources:**
-- Okun, A. M. (1962). Potential GNP: Its measurement and significance. *Cowles Foundation Paper 190.*
-- Federal Reserve Bank of San Francisco. (2014). Okun's Law: Recession and the Jobs Gap. https://www.frbsf.org/research-and-insights/publications/economic-letter/2014/04/okun-law-deviation-unemployment-recession/
+- Okun, A. M. (1962). Potential GNP: Its measurement and significance. Cowles Foundation paper page at [Yale](https://cowles.yale.edu/node/142137).
+- Federal Reserve Bank of San Francisco. (2014). [Okun's Law: Recession and the Jobs Gap](https://www.frbsf.org/research-and-insights/publications/economic-letter/2014/04/okun-law-deviation-unemployment-recession/).
+- Federal Reserve Economic Data (FRED). [fred.stlouisfed.org](https://fred.stlouisfed.org/)
 
 ---
 
@@ -241,8 +244,8 @@ A right-skewed distribution always follows this order from left to right:
 If the mean is higher than the median, the distribution is right-skewed. You now have a diagnostic you can apply every time you see income, wealth, home price, or salary data.
 
 **Sources:**
-- U.S. Census Bureau. (2025). *Income in the United States: 2024.* Report P60-286. https://www.census.gov/library/publications/2025/demo/p60-286.html
-- Federal Reserve Economic Data (FRED). https://fred.stlouisfed.org/
+- U.S. Census Bureau. (2025). [Income in the United States: 2024](https://www.census.gov/library/publications/2025/demo/p60-286.html). Report P60-286.
+- Federal Reserve Economic Data (FRED). [fred.stlouisfed.org](https://fred.stlouisfed.org/)
 
 ---
 
@@ -292,8 +295,8 @@ Studies have found this survivorship bias inflates reported mutual fund performa
 > **Think about it:** A business school publishes the average starting salary of its graduates. What group of people might be missing from that number?
 
 **Sources:**
-- Wald, A. (1943). *A Method of Estimating Plane Vulnerability Based on Damage of Survivors.* Columbia University Statistical Research Group.
-- Elton, E. J., Gruber, M. J., & Blake, C. R. (1996). Survivorship bias and mutual fund performance. *Review of Financial Studies, 9*(4), 1097-1120.
+- Wald, A. (1943). A Method of Estimating Plane Vulnerability Based on Damage of Survivors. Story and context at the [American Mathematical Society](https://www.ams.org/publicoutreach/feature-column/fc-2016-06). Wikipedia: [Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias).
+- Elton, E. J., Gruber, M. J., & Blake, C. R. (1996). Survivor bias and mutual fund performance. *Review of Financial Studies, 9*(4), 1097-1120. Available at [Oxford Academic](https://academic.oup.com/rfs/article/9/4/1097/1580100) and [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6701).
 
 ---
 
@@ -359,13 +362,11 @@ The probability grows so fast because the number of pairs grows much faster than
 **The live demo:** If your class has more than 23 students, go around the room right now and have everyone say their birthday out loud. There is better than a 50-50 chance someone will call out a match before you finish. In a class of 30, the probability is about 70%.
 
 **Sources:**
-- Diaconis, P., & Mosteller, F. (1989). Methods for studying coincidences. *Journal of the American Statistical Association, 84*(408), 853-861.
+- Diaconis, P., & Mosteller, F. (1989). Methods for studying coincidences. *Journal of the American Statistical Association, 84*(408), 853-861. Full PDF at [UC Berkeley](https://www.stat.berkeley.edu/~aldous/157/Papers/diaconis_mosteller.pdf).
 
 ---
 
 ## Closing: What You Now Know How to Do
-
-![Summary concept map](./images/15_summary_map.png)
 
 These six stories are connected by one thread: statistics is the discipline of asking the right questions about data before you trust it.
 
