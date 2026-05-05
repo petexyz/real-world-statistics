@@ -365,6 +365,5 @@ Income inequality measures how unequally annual earnings are distributed. Wealth
 
 *Instructor notes by Pete Halbeisen*
 *Corresponds to index.html -- RevealJS slideshow, ~33 slides*
-*Last updated: Rev 2.0*
+*Last updated: Rev 2.1*
 
-**Rev 2.0 chart improvements:** All generated charts updated with larger text (12-16pt), bolder axis labels, higher contrast annotations. Specific fixes: confounding diagram (no more overlapping text), wealth vs. income (no more overlapping text), AI pipeline (bias labels larger and clearer), Okun time series (axis/legend text larger, recession labels bolder), survivorship funds (legend and axis text larger), income over time (annotation text larger), Lorenz curve (data point labels larger with background boxes).
