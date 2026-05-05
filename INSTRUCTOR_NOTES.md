@@ -1,7 +1,7 @@
 # Instructor Notes: Real-World Applications of Statistics
-### Last Lecture -- Elementary Statistics
+### Last Lecture -- Statistics - MAT 177
 
-**Estimated total time:** 115-125 minutes
+**Estimated total time:** ~119 minutes
 **Format:** RevealJS slideshow, presented fullscreen in a browser
 **Controls:** Arrow keys to advance, S for speaker view, F for fullscreen
 
@@ -251,7 +251,6 @@ Drag slowly right. Point out at each stage:
 At $1,000,000,000 the class mean exceeds $33,000,000 -- while 29 out of 30 people still earn $50,000.
 
 Ask: "Which of these three numbers best describes what a typical person in this group earns?"
-
 
 ---
 
