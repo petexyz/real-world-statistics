@@ -392,49 +392,123 @@
   <aside class="notes">When a politician says "the average American household earns $X" they may be using the mean — substantially higher than what most households experience. Not necessarily dishonest — but a choice.</aside>
 </section>
 
+
 <section>
-  <h2>Bonus: Do Height and Income Correlate?</h2>
-  <div class="cols-60-40">
-    <div>
-      <img src="./images/height_income_scatter.png" alt="Height income scatter" style="max-height:270px;">
-      <div class="img-caption">Simulated data consistent with published research. Judge &amp; Cable (2004): someone 6 feet tall earns ~$166,000 more over a 30-year career than someone 5'5".</div>
-    </div>
-    <div>
-      <div class="stat-row" style="flex-direction:column; gap:8px;">
-        <div class="stat-box"><span class="num">0.13–0.20</span><span class="lbl">Typical r across studies<br>(weak positive)</span></div>
-        <div class="stat-box"><span class="num">~2%</span><span class="lbl">Of income variation<br>explained by height (r²)</span></div>
-      </div>
-      <p style="margin-top:10px; font-size:0.8em;">Statistically significant — but practically modest. And the confounding variable? Childhood nutrition and family income correlate with both height and adult earnings.</p>
-    </div>
+  <h2>Income by Bracket: What the Numbers Actually Look Like</h2>
+  <img src="./images/income_brackets.png" alt="Income brackets" style="max-height:310px;">
+  <div class="img-caption">U.S. household income by bracket, 2023. The green dashed line marks the median (~$83k) — half of all households fall to the left of it. Source: U.S. Census Bureau.</div>
+  <div class="callout">
+    <strong>What the numbers are telling you:</strong> Most households — about 65% — earn under $100,000 per year. The median sits at roughly $83,000.
+    <div class="not"><strong>What they aren't telling you:</strong> The 7.4% of households earning over $300,000 pull the mean income well above $100,000. That top group earns enough to move the average for everyone.</div>
   </div>
-  <aside class="notes">Key bridge to Section 2: the correlation is real and replicated. But r-squared of 0.02 is the teaching moment — statistically significant does not mean practically important.</aside>
+  <aside class="notes">Walk through the brackets left to right. Point out that the median line sits between the $75k-$100k and $100k-$150k bars — meaning half of all U.S. households earn less than $83,000. Then note how the bars to the right are smaller in count but enormous in dollar terms.</aside>
 </section>
 
 <section>
-  <h2>TI-84: Running a Correlation Analysis</h2>
-  <div class="cols">
+  <h2>The Growing Gap: 40 Years of Income in America</h2>
+  <img src="./images/income_over_time.png" alt="Income over time" style="max-height:310px;">
+  <div class="img-caption">Median, mean, and top-10% income threshold, 1980–2023, inflation-adjusted to 2023 dollars. Source: U.S. Census Bureau / CBO.</div>
+  <div class="callout">
+    <strong>What the numbers are telling you:</strong> All three lines have risen since 1980. Median income is higher in real terms than it was 40 years ago.
+    <div class="not"><strong>What they aren't telling you:</strong> The mean has grown much faster than the median — meaning the gains have concentrated at the top. The widening gap between the two lines is a measure of increasing skew. If the distribution were symmetric, the lines would track each other closely.</div>
+  </div>
+  <aside class="notes">The key question to ask students: "If everyone got richer, why does it feel like most people are falling behind?" The answer is in the gap. Real median income grew modestly. Real mean income grew much more — because the top earners grew dramatically. This is the mean vs. median lesson playing out over four decades.</aside>
+</section>
+
+<section>
+  <h2>The Lorenz Curve: Making Inequality Visible</h2>
+  <div class="cols-60-40">
     <div>
-      <h3>Steps</h3>
-      <ol>
-        <li><strong>Turn on diagnostics</strong> (once only)<br><code>2nd + 0</code> → DiagnosticOn → Enter</li>
-        <li><strong>Enter your data</strong><br><code>STAT → 1 (Edit)</code><br>Heights in L1, incomes in L2</li>
-        <li><strong>Run the regression</strong><br><code>STAT → CALC → 4: LinReg(ax+b)</code><br>Select L1, L2 → Enter</li>
-        <li><strong>Read the output</strong><br>r = correlation &nbsp;|&nbsp; r² = variance explained</li>
-      </ol>
+      <img src="./images/lorenz_curve.png" alt="Lorenz curve" style="max-height:320px;">
+      <div class="img-caption">The further the Lorenz curve bows away from the diagonal, the more unequal the distribution.</div>
     </div>
     <div>
-      <h3>What to expect</h3>
-      <table>
-        <tr><th>Output</th><th>Meaning</th></tr>
-        <tr><td><code>a</code></td><td>Dollars gained per inch of height</td></tr>
-        <tr><td><code>b</code></td><td>Y-intercept</td></tr>
-        <tr><td><code>r</code></td><td>~+0.13 to +0.20</td></tr>
-        <tr><td><code>r²</code></td><td>~0.02 (2% explained)</td></tr>
-      </table>
-      <p style="margin-top:10px; font-size:0.78em; font-style:italic; color:var(--gray);">A statistically significant result is not the same as a practically important one.</p>
+      <p>The <strong>Lorenz curve</strong> plots cumulative population share against cumulative income share.</p>
+      <p>If income were perfectly equal, the curve would follow the diagonal — the bottom 20% would earn 20%, the bottom 50% would earn 50%.</p>
+      <p>In the U.S.:</p>
+      <ul>
+        <li class="fragment">The bottom 50% earn about <strong>10% of total income</strong></li>
+        <li class="fragment">The bottom 80% earn about <strong>33% of total income</strong></li>
+        <li class="fragment">The top 1% earn about <strong>23% of total income</strong></li>
+      </ul>
+      <p class="fragment">The <strong>Gini coefficient</strong> is the area between the Lorenz curve and the diagonal, divided by the total area under the diagonal. It summarizes the entire shape of the distribution in one number between 0 and 1.</p>
     </div>
   </div>
-  <aside class="notes">Walk through the TI-84 steps live if time permits. The punchline: r = 0.15 passes a significance test with a large sample, but r-squared = 0.02 means the variable barely moves the needle.</aside>
+  <aside class="notes">The Lorenz curve is the most intuitive visualization of inequality. The diagonal is the reference — what perfect equality looks like. The more the actual curve bows downward and to the right, the more concentrated income is at the top. The Gini coefficient converts that visual bow into a single comparable number.</aside>
+</section>
+
+<section>
+  <h2>How the U.S. Compares: International Gini Coefficients</h2>
+  <img src="./images/gini_comparison.png" alt="Gini comparison" style="max-height:310px;">
+  <div class="img-caption">Gini coefficients by country. Green = more equal, yellow = moderate, red = more unequal. Source: World Bank / OECD.</div>
+  <div class="callout">
+    <strong>What the numbers are telling you:</strong> The U.S. Gini coefficient (~0.49) is substantially higher than most other wealthy nations, which cluster between 0.26 and 0.36.
+    <div class="not"><strong>What they aren't telling you:</strong> A Gini coefficient is a summary — it collapses the entire shape of the distribution into one number. Two countries with the same Gini could have very different distributions. And Gini measures income, not wealth — the wealth picture is even more concentrated.</div>
+  </div>
+  <aside class="notes">Students are often surprised the U.S. sits closer to Mexico and Brazil than to Canada or Germany. Worth noting that Gini is pre- or post-tax depending on the source — the U.S. post-tax Gini is somewhat lower due to redistribution, but still high by international standards.</aside>
+</section>
+
+<section>
+  <h2>Income vs. Wealth: Two Different Levels of Skew</h2>
+  <img src="./images/wealth_vs_income.png" alt="Wealth vs income" style="max-height:290px;">
+  <div class="img-caption">Income and wealth shares by population group. The top 1% own 33% of all wealth — far more concentrated than income. Source: Federal Reserve Survey of Consumer Finances (2022).</div>
+  <div class="callout">
+    <strong>What the numbers are telling you:</strong> Income is right-skewed. Wealth — assets minus debts — is dramatically more concentrated. The bottom 50% of Americans own about 2.5% of total wealth.
+    <div class="not"><strong>What they aren't telling you:</strong> Income tells you what flows in each year. Wealth tells you what has accumulated over time. They are related but very different measures. High income does not automatically mean high wealth — and low income does not always mean low wealth. The distributions look similar in shape but the wealth distribution is far more extreme.</div>
+  </div>
+  <aside class="notes">This is often the most surprising chart for students. The income picture already looks unequal. The wealth picture is on another level entirely. The bottom 50% of Americans — roughly 130 million people — collectively own about 2.5% of total U.S. wealth. This is worth a moment of silence before moving on.</aside>
+</section>
+
+<section>
+  <h2>The Billionaire Slider: How One Outlier Moves the Mean</h2>
+  <p style="font-size:0.88em; color:var(--gray); margin-bottom:8px;">A classroom of 30 students all earn $50,000 per year after graduation. Then one classmate founds a startup and becomes a billionaire.</p>
+  <div class="calc-wrap">
+    <label>Your classmate's income: $<span id="bill-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">50,000</span></label>
+    <input type="range" min="50000" max="1000000000" value="50000" id="bill-slider" oninput="calcBill(this.value)">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;">
+      <div class="stat-box">
+        <span class="num" id="bill-mean">$50,000</span>
+        <span class="lbl">Class mean income</span>
+      </div>
+      <div class="stat-box">
+        <span class="num" style="color:var(--green);">$50,000</span>
+        <span class="lbl">Class median income (unchanged)</span>
+      </div>
+    </div>
+    <div class="prob-bar-wrap" style="margin-top:10px;">
+      <div class="prob-bar" id="bill-bar" style="width:0.005%; background:var(--navy);"></div>
+    </div>
+    <p style="font-size:0.72em; color:var(--gray); margin-top:6px; font-family:sans-serif;" id="bill-note">Drag the slider to the right. Watch what happens to the mean while the median stays fixed.</p>
+  </div>
+  <aside class="notes">This is the most interactive moment in Section 4. Let students drag the slider themselves if possible. The median never moves — it is always $50,000 because 29 out of 30 people still earn that. But drag to $1 billion and the class mean becomes over $33 million. Ask: "Which number better describes what a typical member of this class earns?"</aside>
+</section>
+
+<section>
+  <h2>Where Do You Stand? A Percentile Calculator</h2>
+  <div class="calc-wrap">
+    <label>Enter a household income: $<span id="pct-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">60,000</span></label>
+    <input type="range" min="10000" max="500000" step="1000" value="60000" id="pct-slider" oninput="calcPct(this.value)">
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:12px;">
+      <div class="stat-box">
+        <span class="num" id="pct-result">~42nd</span>
+        <span class="lbl">Percentile</span>
+      </div>
+      <div class="stat-box">
+        <span class="num" id="pct-above">~58%</span>
+        <span class="lbl">of households earn more</span>
+      </div>
+      <div class="stat-box">
+        <span class="num" id="pct-below">~42%</span>
+        <span class="lbl">of households earn less</span>
+      </div>
+    </div>
+    <div class="prob-bar-wrap" style="margin-top:10px;">
+      <div class="prob-bar" id="pct-bar" style="width:42%; background:var(--steel);"></div>
+    </div>
+    <p style="font-size:0.72em; color:var(--gray); margin-top:6px; font-family:sans-serif;" id="pct-note">Based on approximate U.S. household income distribution (Census Bureau, 2023).</p>
+  </div>
+  <p style="font-size:0.8em; margin-top:10px;">Notice: moving from $50k to $100k takes you from roughly the 38th to the 72nd percentile. Moving from $200k to $500k — a $300k jump — only moves you from the 93rd to the 98th. <strong>The percentile scale compresses sharply at the top.</strong></p>
+  <aside class="notes">Let students find their own family income or a target salary on the slider. The compression at the top is the key insight — in the bottom half of the distribution, each additional $10k moves you several percentile points. In the top 5%, a $100k raise barely moves the needle on percentile rank because the values are so spread out.</aside>
 </section>
 
 <!-- ══ SECTION 5 ══ -->
@@ -510,7 +584,7 @@
       <span class="calc-pct" id="bday-pct">70.6%</span>
       <span class="calc-sub">probability of at least one shared birthday</span>
     </div>
-    <div class="prob-bar-wrap"><div class="prob-bar" id="bday-bar" style="width:70.6%"></div></div>
+    <div class="prob-bar-wrap"><div class="prob-bar" id="bday-bar" style="width:70.6%; background:#27AE60"></div></div>
   </div>
   <p class="source" style="margin-top:8px; text-align:center;">Drag the slider. At what number does it cross 50%?</p>
   <aside class="notes">Let students interact before revealing the answer. Ask: at what number does it cross 50%? (23). At 99%? (57). The visual surprise is the teaching moment.</aside>
@@ -553,7 +627,7 @@
       <span class="calc-pct" id="demo-pct">70.6%</span>
       <span class="calc-sub">chance of a match in this class</span>
     </div>
-    <div class="prob-bar-wrap"><div class="prob-bar" id="demo-bar" style="width:70.6%"></div></div>
+    <div class="prob-bar-wrap"><div class="prob-bar" id="demo-bar" style="width:70.6%; background:#27AE60"></div></div>
   </div>
   <p class="source" style="margin-top:8px;">If no match occurs — that happens about 30% of the time in a class of 30. Run this in 10 classes and you'll see a match in roughly 7 of them.</p>
   <aside class="notes">Best closer in the lecture. If a match occurs early — great. If no match: "We beat the odds today — which is itself a lesson about probability."</aside>
@@ -576,9 +650,7 @@
 
 <section>
   <div class="end-slide">
-    <div class="end-quote">"A statistical thinker is not someone who distrusts numbers. It is someone who knows exactly what to ask before trusting them."</div>
-    <div class="end-rule"></div>
-    <div style="font-family:sans-serif; font-size:0.78em; color:var(--gray);">Pete Halbeisen &nbsp;·&nbsp; Real-World Applications of Statistics</div>
+    <div class="end-quote">A statistical thinker is not someone who distrusts numbers. It is someone who knows exactly what to ask before trusting them.</div>
   </div>
   <aside class="notes">End here. Good luck on the exam.</aside>
 </section>
@@ -623,6 +695,58 @@ function answer(btn, qid, isCorrect) {
   fb.className    = 'quiz-fb show ' + (isCorrect ? 'correct' : 'wrong');
 }
 
+/* Billionaire slider */
+function calcBill(val) {
+  const v = parseInt(val);
+  const classSize = 30;
+  const mean = (50000 * (classSize - 1) + v) / classSize;
+  document.getElementById('bill-display').textContent = '$' + v.toLocaleString();
+  document.getElementById('bill-mean').textContent = '$' + Math.round(mean).toLocaleString();
+  const barPct = Math.min((Math.log10(Math.max(v,50001)) - Math.log10(50000)) / (9 - Math.log10(50000)) * 100, 100);
+  const bar = document.getElementById('bill-bar');
+  bar.style.width = Math.max(barPct, 0.5) + '%';
+  bar.style.background = barPct > 66 ? '#C0392B' : barPct > 33 ? '#C9A84C' : '#1B2A4A';
+  const note = document.getElementById('bill-note');
+  if (mean > 1000000) {
+    note.textContent = 'Class mean: $' + Math.round(mean).toLocaleString() + ' — but 29 out of 30 classmates still earn $50,000. The mean describes nobody in the room.';
+    note.style.color = '#C0392B';
+  } else {
+    note.textContent = 'Drag right. Watch what happens to the mean while the median stays fixed at $50,000.';
+    note.style.color = '#888';
+  }
+}
+
+/* Percentile calculator */
+const INCOME_CDF = [
+  [0,0],[15000,6],[25000,16.4],[35000,25.5],[50000,36.5],
+  [75000,53.0],[100000,65.2],[150000,78.7],[200000,85.8],
+  [300000,92.6],[500000,97.2],[1000000,99.3],[2000000,100]
+];
+function incomePercentile(income) {
+  for (let i = 1; i < INCOME_CDF.length; i++) {
+    if (income <= INCOME_CDF[i][0]) {
+      const [x0,y0] = INCOME_CDF[i-1], [x1,y1] = INCOME_CDF[i];
+      return y0 + (income-x0)/(x1-x0)*(y1-y0);
+    }
+  }
+  return 100;
+}
+function ordinal(n) {
+  const s = Math.round(n).toString(), last = parseInt(s.slice(-1)), last2 = parseInt(s.slice(-2));
+  if (last2>=11&&last2<=13) return s+'th';
+  return s+['th','st','nd','rd','th','th','th','th','th','th'][last];
+}
+function calcPct(val) {
+  const v = parseInt(val), pct = incomePercentile(v);
+  document.getElementById('pct-display').textContent = '$' + v.toLocaleString();
+  document.getElementById('pct-result').textContent  = '~' + ordinal(pct);
+  document.getElementById('pct-above').textContent   = '~' + (100-Math.round(pct)) + '%';
+  document.getElementById('pct-below').textContent   = '~' + Math.round(pct) + '%';
+  const bar = document.getElementById('pct-bar');
+  bar.style.width = pct + '%';
+  bar.style.background = pct > 80 ? '#C0392B' : pct > 50 ? '#C9A84C' : '#27AE60';
+}
+
 /* Birthday calculator */
 function bProb(n) {
   let p = 1;
@@ -632,7 +756,7 @@ function bProb(n) {
 function setBar(barId, pct) {
   const bar = document.getElementById(barId);
   bar.style.width = pct + '%';
-  bar.style.background = pct > 90 ? '#C0392B' : pct > 50 ? '#C9A84C' : '#1B2A4A';
+  bar.style.background = pct >= 66 ? '#27AE60' : pct >= 33 ? '#C9A84C' : '#C0392B';
 }
 function calcBday(n) {
   const pct = bProb(parseInt(n));

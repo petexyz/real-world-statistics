@@ -230,45 +230,6 @@ The income distribution has a long right tail. A small number of households earn
 
 ---
 
-### A Closer Look: Do Height and Income Correlate?
-
-Height follows a normal distribution. Income is right-skewed. They look nothing alike -- but is there a relationship between them?
-
-It turns out there is, and it has been replicated across multiple large studies. Researchers Judge and Cable analyzed data from four longitudinal studies following about 8,500 people from adolescence to adulthood. They found that someone who is 6 feet tall earns on average nearly $166,000 more over a 30-year career than someone who is 5'5", even when controlling for gender, age, and weight. A study using the National Health and Nutrition Examination Survey put the correlation at **r = 0.13**, statistically significant with p = 0.001.
-
-![Height vs. Income scatter plot](./images/height_income_scatter.png)
-*Height vs. annual income. The upward trend is real but modest -- a lot of scatter around the regression line, which is exactly what a weak correlation looks like. Source: Simulated data consistent with published research (Judge & Cable, 2004; NHANES).*
-
-The correlation is weak but genuine. Which immediately raises the question from Section 2: **what is the confounding variable?** Researchers point to childhood nutrition and socioeconomic background -- wealthier families produce taller children on average, and those same children have better access to education and career opportunities. Height may partly be a proxy for those advantages rather than a direct cause of higher income.
-
----
-
-#### How to Run This on a TI-84
-
-**Step 1 -- Turn on diagnostics** (only needed once)
-- Press `2nd` + `0` (CATALOG), scroll to **DiagnosticOn**, press `ENTER` twice
-
-**Step 2 -- Enter your data**
-- Press `STAT` then `1` (Edit)
-- Type height values into **L1**, income values into **L2**
-
-**Step 3 -- Run the regression**
-- Press `STAT`, arrow right to **CALC**, select **4: LinReg(ax+b)**
-- Enter L1, L2 and press `ENTER`
-
-**Step 4 -- Read the output**
-
-| Output | What it means |
-|--------|--------------|
-| `a` | Slope -- dollars gained per additional inch of height |
-| `b` | Y-intercept |
-| `r` | Correlation coefficient -- expect around +0.13 to +0.20 |
-| `r²` | Proportion of income variation explained by height -- expect 0.02 to 0.04 |
-
-**The key teaching point:** r = 0.15 is statistically significant with a large enough sample -- but r² = 0.02 means height explains only about **2% of the variation in income**. The other 98% is driven by education, field of work, experience, location, and dozens of other factors. A statistically significant result is not the same as a practically important one.
-
----
-
 ### Why This Matters
 
 Here is a concrete example. Imagine a company with 9 workers earning $40,000 a year and one CEO earning $1,000,000.
@@ -478,3 +439,4 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 | 1.2 | 4,352 | Subtitle changed to "What Numbers Are Telling You -- and What They Aren't" |
 | 1.3 | 4,914 | Switched to Minimal theme; added boxed "What the numbers are telling you / aren't telling you" callout to all six sections |
 | 1.4 | 4,959 | Section 1 expanded to 3 slides: Clever Hans, Poker (fully elaborated), AI pipeline; instructor notes fully rewritten to match 6-section slideshow |
+| 1.5 | 4,563 | Removed height-income section; expanded income section with 7 new slides: income brackets, 40-year trend, Lorenz curve, Gini international comparison, wealth vs. income, billionaire mean slider, percentile calculator |

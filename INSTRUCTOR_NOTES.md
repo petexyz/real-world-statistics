@@ -33,8 +33,13 @@
 | Okun time series + lag | Section 3 | 6 min | 1 |
 | Two distributions | Section 4 | 4 min | 1 |
 | Mean vs. median | Section 4 | 5 min | 1 |
-| Height-income correlation | Section 4 | 4 min | 1 |
-| TI-84 steps | Section 4 | 4 min | 1 |
+| Income by bracket | Section 4 | 4 min | 1 |
+| 40-year income trend | Section 4 | 5 min | 1 |
+| Lorenz curve | Section 4 | 5 min | 1 |
+| International Gini | Section 4 | 4 min | 1 |
+| Wealth vs. income | Section 4 | 4 min | 1 |
+| Billionaire slider | Section 4 | 4 min | 1 |
+| Percentile calculator | Section 4 | 3 min | 1 |
 | Wald / planes | Section 5 | 6 min | 1 |
 | Funds chart | Section 5 | 4 min | 1 |
 | Quiz 3 | Section 5 | 2 min | 1 |
@@ -43,7 +48,7 @@
 | Live demo | Section 6 | 5 min | 1 |
 | Six questions | Closing | 3 min | 1 |
 | Final slide | Closing | 1 min | 1 |
-| **Total** | | **~95 min** | **24** |
+| **Total** | | **~115 min** | **31** |
 
 ---
 
@@ -175,7 +180,9 @@ The practical implication: this is why people often feel like a recession is sti
 
 ---
 
-### Section 4: The Shape of Income (17 minutes across 4 slides)
+### Section 4: The Shape of Income (38 minutes across 9 slides)
+
+This is the most expanded section in the presentation. Take your time -- the interactive slides in particular benefit from letting students engage before you explain.
 
 **Slide: Two distributions -- 4 minutes**
 
@@ -197,23 +204,73 @@ Nobody at the company earns $136,000. The mean is mathematically correct and com
 
 The order of statistics in a right-skewed distribution -- mode < median < mean -- is worth writing down or photographing. It is a diagnostic students can apply to any income, wealth, or price data they encounter in the news.
 
-**Slide: Height-income correlation -- 4 minutes**
+**Slide: Income by bracket -- 4 minutes**
 
-This is a fun bridge between the two distribution types. One is normally distributed, one is right-skewed -- and they are weakly correlated.
+Walk through the bars left to right. Point out where the median line sits -- between the $75k-$100k and $100k-$150k bars. Half of all U.S. households earn less than $83,000.
 
-Key numbers to land:
-- r = 0.13 to 0.20 across studies -- weak positive, but statistically significant
-- r-squared = approximately 0.02 -- height explains about 2% of the variation in income
+Then point to the right side: the bars get smaller in count but the dollar amounts get much larger. The 7.4% of households earning over $300,000 generate enough total income to pull the national mean well above the median.
 
-The r-squared number is the teaching moment: statistically significant does not mean practically important. With a large enough sample, even a tiny correlation will pass a significance test. Height is a real but very minor factor in a very complicated picture.
+Ask: "If a politician wanted to make the economy sound like it was doing well, which number would they use -- mean or median?" Then ask the same question in reverse.
 
-Then ask: "Wait -- could this be a confounding variable problem?" Yes. Childhood nutrition and family socioeconomic status correlate with both height and adult income. Height may partly be a proxy for those advantages.
+**Slide: 40-year trend -- 5 minutes**
 
-**Slide: TI-84 steps -- 4 minutes**
+Before explaining the chart, ask students to look at all three lines and describe what they see. They should notice:
+- All three lines rise over 40 years
+- The gap between median and mean widens over time
+- The top-10% line pulls away most dramatically
 
-Walk through the four steps live if calculators are available. If not, walk through the expected output and focus on interpreting r and r-squared.
+The key question: "If everyone got richer, why does it feel like most people are falling behind?" Answer: because the gains have concentrated at the top. The mean grew fast because high earners grew fastest. The median grew slowly because it reflects the typical household. These are both true simultaneously, and they tell very different stories about the same economy.
 
-The key question to ask students after they see the output: "If r = 0.15 and the p-value is 0.001, does that mean height is an important predictor of income?" No -- important and significant are different things. r-squared = 0.02 means 98% of income variation is explained by something else.
+**Slide: Lorenz curve -- 5 minutes**
+
+Walk through what the axes mean before reading the curve:
+- X-axis: cumulative share of population, ranked from poorest to richest
+- Y-axis: cumulative share of total income
+- The diagonal: perfect equality -- the bottom 20% earn 20%, the bottom 50% earn 50%, etc.
+
+Then trace the actual U.S. curve. It bows well below the diagonal. The further the bow, the more concentrated income is at the top.
+
+Land the two specific callouts: the bottom 50% earn about 10% of total income; the bottom 80% earn about 33%.
+
+The Gini coefficient converts the visual bow into a single number: the area between the curve and the diagonal, divided by the total area under the diagonal. The U.S. Gini is approximately 0.49 -- meaning the actual distribution is about halfway between perfect equality and one person owning everything.
+
+**Slide: International Gini comparison -- 4 minutes**
+
+Students are often surprised the U.S. sits much closer to Mexico and Brazil than to Canada, Germany, or the Scandinavian countries.
+
+Worth noting: Gini can be measured pre-tax or post-tax. The U.S. post-tax Gini is somewhat lower due to redistribution programs, but still high by international standards. The chart shows pre-tax figures for consistency.
+
+Also worth noting: Gini is a summary statistic. Two countries with the same Gini can have very different distributions. As with mean vs. median, a single number always loses information about the shape.
+
+**Slide: Wealth vs. income -- 4 minutes**
+
+This is often the most surprising chart in the entire presentation. Give students a moment to take it in.
+
+The income picture already looks unequal. The wealth picture is on another level. The bottom 50% of Americans -- roughly 130 million people -- collectively own about 2.5% of total U.S. wealth.
+
+Clarify the distinction: income is what flows in each year. Wealth is what has accumulated over a lifetime -- savings, home equity, investments, inheritance. High income does not automatically mean high wealth, and the two distributions, while related, are measuring very different things.
+
+The top 1% own about 33% of all wealth. Let that land before moving on.
+
+**Slide: Billionaire slider -- 4 minutes**
+
+This is the most interactive moment in Section 4. If possible, let a student come up and drag the slider.
+
+Start with the slider at the far left -- everyone earns $50,000. The mean and median are identical.
+
+Slowly drag right. At $500,000 the mean moves to about $65,000. At $5,000,000 it approaches $200,000. At $1,000,000,000 the class mean exceeds $33,000,000 -- while 29 out of 30 classmates still earn $50,000.
+
+Ask at that point: "Which number better describes what a typical person in this class earns?" The median never moves. It is always $50,000.
+
+This is the most visceral demonstration of why the median is the honest measure of typical in a skewed distribution.
+
+**Slide: Percentile calculator -- 3 minutes**
+
+Let students find their own target salary or their family's approximate income on the slider.
+
+The key observation to point out: the percentile scale compresses sharply at the top. Moving from $30,000 to $60,000 moves you roughly 20 percentile points. Moving from $200,000 to $500,000 -- a much larger dollar jump -- moves you only about 5 percentile points. At the top of the distribution, the values are so spread out that large dollar differences translate to small percentile differences.
+
+This is a consequence of the right skew: most of the population is clustered toward the left of the distribution, so each dollar increment there covers many people. At the far right, the population thins out and dollar increments cover very few people.
 
 ---
 
