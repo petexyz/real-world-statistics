@@ -1,5 +1,5 @@
 # Real-World Applications of Statistics
-### Real-World Applications of Statistics
+### What Numbers Are Telling You -- and What They Aren't
 
 **by Pete Halbeisen**
 
@@ -92,6 +92,10 @@ The countermeasures are the same in principle: diverse data, independent auditin
 
 > **Think about it:** When an AI confidently gives you a wrong answer, what does the Clever Hans story suggest about where that confidence came from?
 
+<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
+<strong>What the numbers are telling you:</strong> When an experiment is properly blinded, the result reflects what is actually happening -- not what the observer expects to find.<br><br>
+<strong>What they aren't telling you:</strong> An unblinded result tells you nothing reliable. It may be measuring the observer's expectations just as much as the phenomenon being studied. This applies to drug trials, AI training data, and any situation where the measurer knows the desired outcome.
+</div>
 **Sources:**
 - Pfungst, O. (1911). *Clever Hans.* Full text freely available at [Project Gutenberg](https://www.gutenberg.org/ebooks/33936).
 - Rosenthal, R., & Jacobson, L. (1968). Pygmalion in the classroom. *Urban Review.* Abstract and paper at [Springer](https://link.springer.com/article/10.1007/BF02322211). Wikipedia overview: [Pygmalion in the Classroom](https://en.wikipedia.org/wiki/Pygmalion_in_the_Classroom).
@@ -147,6 +151,10 @@ Some examples:
 
 > **Think about it:** A news story reports that people who drink red wine live longer. Before you accept this, what confounding variable should you ask about?
 
+<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
+<strong>What the numbers are telling you:</strong> There is a real, statistically significant positive correlation between stork populations and human birth rates across European countries.<br><br>
+<strong>What they aren't telling you:</strong> They aren't telling you that storks cause births, or that births attract storks. Both variables are responding to a third factor -- country size. The correlation number alone never tells you whether a relationship is causal. That requires knowing the context.
+</div>
 **Sources:**
 - Matthews, R. (2000). Storks deliver babies (p = 0.008). *Teaching Statistics, 22*(2), 36-38. Full PDF at [gwern.net](https://gwern.net/doc/statistics/causality/2000-matthews.pdf). Accessible summary at [Priceonomics](https://priceonomics.com/do-storks-deliver-babies/).
 - Vigen, T. *Spurious Correlations.* [spuriouscorrelations.com](https://www.spuriouscorrelations.com)
@@ -189,6 +197,10 @@ When a recession hits, companies do not immediately lay off everyone. They first
 
 The result: unemployment tends to keep rising even after the economy has turned the corner. This is why people often feel like things are still getting worse even when economists say a recession is technically over. Economically they may be right. The job market, which is what most people actually feel, takes longer to catch up.
 
+<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
+<strong>What the numbers are telling you:</strong> When an economy grows, unemployment tends to fall. When it shrinks, unemployment tends to rise. This relationship is consistent, well-documented, and useful for understanding economic news.<br><br>
+<strong>What they aren't telling you:</strong> They aren't telling you this happens immediately or predictably. The lag between GDP changes and labor market changes means the economy and the job market are often telling different stories at the same time -- and both can be right.
+</div>
 **Sources:**
 - Okun, A. M. (1962). Potential GNP: Its measurement and significance. Cowles Foundation paper page at [Yale](https://cowles.yale.edu/node/142137).
 - Federal Reserve Bank of San Francisco. (2014). [Okun's Law: Recession and the Jobs Gap](https://www.frbsf.org/research-and-insights/publications/economic-letter/2014/04/okun-law-deviation-unemployment-recession/).
@@ -201,8 +213,6 @@ The result: unemployment tends to keep rising even after the economy has turned 
 > **The big idea:** The shape of a distribution determines which summary statistics are honest. In a right-skewed distribution like income, the mean and the median tell very different stories -- and people in power know which one to reach for.
 
 ### Two Shapes, Two Different Worlds
-
-You learned two distribution shapes this semester. They look completely different, and that difference matters.
 
 **Height** follows a bell curve -- symmetric, with most people near the middle and equal tails on both sides.
 
@@ -217,6 +227,45 @@ With a symmetric distribution, the mean is a fair summary. It sits right in the 
 *U.S. household income. The bulk of households earn between $25k and $100k, but the tail extends far to the right. The median (red dashed line) sits at about $83,730 -- well below where the mean lands.*
 
 The income distribution has a long right tail. A small number of households earning millions per year pull the mean far above what most households actually bring home.
+
+---
+
+### A Closer Look: Do Height and Income Correlate?
+
+Height follows a normal distribution. Income is right-skewed. They look nothing alike -- but is there a relationship between them?
+
+It turns out there is, and it has been replicated across multiple large studies. Researchers Judge and Cable analyzed data from four longitudinal studies following about 8,500 people from adolescence to adulthood. They found that someone who is 6 feet tall earns on average nearly $166,000 more over a 30-year career than someone who is 5'5", even when controlling for gender, age, and weight. A study using the National Health and Nutrition Examination Survey put the correlation at **r = 0.13**, statistically significant with p = 0.001.
+
+![Height vs. Income scatter plot](./images/height_income_scatter.png)
+*Height vs. annual income. The upward trend is real but modest -- a lot of scatter around the regression line, which is exactly what a weak correlation looks like. Source: Simulated data consistent with published research (Judge & Cable, 2004; NHANES).*
+
+The correlation is weak but genuine. Which immediately raises the question from Section 2: **what is the confounding variable?** Researchers point to childhood nutrition and socioeconomic background -- wealthier families produce taller children on average, and those same children have better access to education and career opportunities. Height may partly be a proxy for those advantages rather than a direct cause of higher income.
+
+---
+
+#### How to Run This on a TI-84
+
+**Step 1 -- Turn on diagnostics** (only needed once)
+- Press `2nd` + `0` (CATALOG), scroll to **DiagnosticOn**, press `ENTER` twice
+
+**Step 2 -- Enter your data**
+- Press `STAT` then `1` (Edit)
+- Type height values into **L1**, income values into **L2**
+
+**Step 3 -- Run the regression**
+- Press `STAT`, arrow right to **CALC**, select **4: LinReg(ax+b)**
+- Enter L1, L2 and press `ENTER`
+
+**Step 4 -- Read the output**
+
+| Output | What it means |
+|--------|--------------|
+| `a` | Slope -- dollars gained per additional inch of height |
+| `b` | Y-intercept |
+| `r` | Correlation coefficient -- expect around +0.13 to +0.20 |
+| `r²` | Proportion of income variation explained by height -- expect 0.02 to 0.04 |
+
+**The key teaching point:** r = 0.15 is statistically significant with a large enough sample -- but r² = 0.02 means height explains only about **2% of the variation in income**. The other 98% is driven by education, field of work, experience, location, and dozens of other factors. A statistically significant result is not the same as a practically important one.
 
 ---
 
@@ -243,9 +292,15 @@ A right-skewed distribution always follows this order from left to right:
 
 If the mean is higher than the median, the distribution is right-skewed. You now have a diagnostic you can apply every time you see income, wealth, home price, or salary data.
 
+<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
+<strong>What the numbers are telling you:</strong> Income is right-skewed. The median household income is around $83,730. There is a weak but real positive correlation between height and income (r ≈ 0.13 to 0.20), confirmed across multiple large studies.<br><br>
+<strong>What they aren't telling you:</strong> A single average income figure isn't telling you what most people earn -- it's telling you what the distribution looks like when a small number of very high earners are included. And height explaining 2% of income variation means 98% of what determines your income is something else entirely.
+</div>
 **Sources:**
 - U.S. Census Bureau. (2025). [Income in the United States: 2024](https://www.census.gov/library/publications/2025/demo/p60-286.html). Report P60-286.
 - Federal Reserve Economic Data (FRED). [fred.stlouisfed.org](https://fred.stlouisfed.org/)
+- Judge, T. A., & Cable, D. M. (2004). The effect of physical height on workplace success and income. *Journal of Applied Psychology, 89*(3), 428-441. [APA summary](https://www.apa.org/monitor/julaug04/standing).
+- Cavelaars, A. E. et al. (2000). Persistent variations in average height between countries and between socio-economic groups. [PubMed](https://pubmed.ncbi.nlm.nih.gov/28520240/).
 
 ---
 
@@ -294,6 +349,10 @@ Studies have found this survivorship bias inflates reported mutual fund performa
 
 > **Think about it:** A business school publishes the average starting salary of its graduates. What group of people might be missing from that number?
 
+<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
+<strong>What the numbers are telling you:</strong> The data from returned bombers showed where planes could be hit and survive. The mutual fund data shows which funds performed well enough to still exist.<br><br>
+<strong>What they aren't telling you:</strong> Neither dataset is telling you anything about the cases that didn't make it back. The bullet hole map is a map of survivable damage, not vulnerable areas. The fund performance figures are the record of survivors, not the full picture of what investors experienced.
+</div>
 **Sources:**
 - Wald, A. (1943). A Method of Estimating Plane Vulnerability Based on Damage of Survivors. Story and context at the [American Mathematical Society](https://www.ams.org/publicoutreach/feature-column/fc-2016-06). Wikipedia: [Survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias).
 - Elton, E. J., Gruber, M. J., & Blake, C. R. (1996). Survivor bias and mutual fund performance. *Review of Financial Studies, 9*(4), 1097-1120. Available at [Oxford Academic](https://academic.oup.com/rfs/article/9/4/1097/1580100) and [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6701).
@@ -361,6 +420,10 @@ The probability grows so fast because the number of pairs grows much faster than
 
 **The live demo:** If your class has more than 23 students, go around the room right now and have everyone say their birthday out loud. There is better than a 50-50 chance someone will call out a match before you finish. In a class of 30, the probability is about 70%.
 
+<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
+<strong>What the numbers are telling you:</strong> In a group of 23 people, there is a better than 50% chance that two of them share a birthday. In a group of 30, the probability is about 70%.<br><br>
+<strong>What they aren't telling you:</strong> This isn't telling you anything spooky or miraculous about coincidences. It's telling you that the number of possible pairs grows much faster than the number of people -- and that our intuition systematically underestimates how many opportunities there are for any two things to match.
+</div>
 **Sources:**
 - Diaconis, P., & Mosteller, F. (1989). Methods for studying coincidences. *Journal of the American Statistical Association, 84*(408), 853-861. Full PDF at [UC Berkeley](https://www.stat.berkeley.edu/~aldous/157/Papers/diaconis_mosteller.pdf).
 
@@ -403,3 +466,14 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 *Presentation by Pete Halbeisen*
 *Charts generated with Python / matplotlib / scipy*
 *Data sources cited within each section*
+
+---
+
+## Revision History
+
+| Rev | Word Count | Changes |
+|-----|-----------|---------|
+| 1.0 | 3,829 | Initial 6-section draft |
+| 1.1 | 4,283 | Added height-income correlation, scatter plot, and TI-84 steps; struck "you learned two distributions"; fact check fixes (von Osten title, Okun coefficient); title restored; all sources converted to web links; overlapping text fixed in 4 charts |
+| 1.2 | 4,352 | Subtitle changed to "What Numbers Are Telling You -- and What They Aren't" |
+| 1.3 | 4,914 | Switched to Minimal theme; added boxed "What the numbers are telling you / aren't telling you" callout to all six sections |
