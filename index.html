@@ -17,17 +17,17 @@
     --red:   #C0392B;
     --green: #27AE60;
   }
-  .reveal { font-family: Georgia, serif; font-size: 20px; color: var(--text); }
+  .reveal { font-family: Georgia, serif; font-size: 18px; color: var(--text); }
   .reveal h1, .reveal h2, .reveal h3 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--navy); text-transform: none; letter-spacing: -0.02em;
     font-weight: 700; text-shadow: none;
   }
   .reveal h1 { font-size: 2.0em; line-height: 1.15; }
-  .reveal h2 { font-size: 1.4em; border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 16px; }
+  .reveal h2 { font-size: 1.35em; border-bottom: 2px solid var(--gold); padding-bottom: 4px; margin-bottom: 10px; }
   .reveal h3 { font-size: 1.0em; color: var(--steel); font-weight: 600; margin-bottom: 8px; }
-  .reveal .slides section { text-align: left; padding: 8px 36px; box-sizing: border-box; }
-  .reveal p  { line-height: 1.6; margin-bottom: 8px; font-size: 0.86em; }
+  .reveal .slides section { text-align: left; padding: 6px 32px; box-sizing: border-box; }
+  .reveal p  { line-height: 1.55; margin-bottom: 6px; font-size: 0.84em; }
   .reveal ul { margin-left: 18px; }
   .reveal ul li { margin-bottom: 5px; font-size: 0.83em; line-height: 1.5; }
   .reveal ul li::marker { color: var(--gold); }
@@ -64,9 +64,9 @@
   .img-caption { font-size: 0.62em; color: var(--gray); text-align: center; margin-top: 4px; font-style: italic; line-height: 1.35; font-family: sans-serif; }
 
   /* Callout box */
-  .callout { border: 1.5px solid var(--navy); border-radius: 4px; padding: 12px 16px; margin: 12px 0; font-size: 0.79em; line-height: 1.6; background: #fff; }
-  .callout strong { color: var(--navy); display: block; margin-bottom: 2px; font-family: sans-serif; font-size: 0.95em; }
-  .callout .not { margin-top: 8px; }
+  .callout { border: 1.5px solid var(--navy); border-radius: 4px; padding: 8px 12px; margin: 8px 0; font-size: 0.72em; line-height: 1.5; background: #fff; }
+  .callout strong { color: var(--navy); display: block; margin-bottom: 1px; font-family: sans-serif; font-size: 0.92em; }
+  .callout .not { margin-top: 6px; }
 
   /* Stat blocks */
   .stat-row { display: flex; gap: 14px; margin: 10px 0; }
@@ -183,7 +183,7 @@
 
 <section>
   <h2>The Fix: Blinded Experiments</h2>
-  <img src="./images/01_clever_hans_blinding.png" alt="Blinding diagram" style="max-height:270px;">
+  <img src="./images/01_clever_hans_blinding.png" alt="Blinding diagram" style="max-height:220px;">
   <div class="img-caption">Left: without blinding, Hans reads unconscious cues. Right: blinded — performance collapses to chance.</div>
   <div class="callout">
     <strong>What the numbers are telling you:</strong> When an experiment is properly blinded, the result reflects what is actually happening — not what the observer expects.
@@ -218,7 +218,7 @@
   <h2>Artificial Intelligence: The Most Impressionable Subject of All</h2>
   <div class="cols-60-40">
     <div>
-      <img src="./images/02_ai_observer_bias.png" alt="AI pipeline" style="max-height:270px;">
+      <img src="./images/02_ai_observer_bias.png" alt="AI pipeline" style="max-height:215px;">
       <div class="img-caption">The AI training pipeline. Bias enters at the data labeling stage and compounds through feedback loops across multiple training cycles.</div>
     </div>
     <div>
@@ -231,12 +231,12 @@
       </ul>
     </div>
   </div>
-  <div class="callout" style="margin-top:10px;">
-    <strong>What the numbers are telling you:</strong> When an experiment is properly blinded — or an AI is trained on diverse, audited data — the result reflects what is actually happening.
-    <div class="not"><strong>What they aren't telling you:</strong> An unblinded result, or a model trained on biased data, may be measuring expectations rather than reality. Hans learned to read one questioner. A biased AI reflects those expectations back to millions of people simultaneously.</div>
+  <div class="callout" style="margin-top:8px;">
+    <strong>What the numbers are telling you:</strong> A model trained on diverse, audited data reflects reality. A biased model reflects expectations.
+    <div class="not"><strong>What they aren't telling you:</strong> Hans learned to read one questioner. A biased AI reflects those expectations back to millions of people simultaneously — at scale, continuously.</div>
   </div>
-  <p class="source">Discussion: When an AI confidently gives you a wrong answer — what does the Clever Hans story suggest about where that confidence came from?</p>
-  <aside class="notes">The discussion question is worth 2-3 minutes. The Clever Hans answer: the model learned from human-generated text, and humans write confidently even when wrong. The model learned the pattern of confident language, not the truth behind it. ChatGPT "hallucinations" are a direct expression of this.</aside>
+  <p class="source">Discussion: When an AI confidently gives you a wrong answer — what does Clever Hans suggest about where that confidence came from?</p>
+  <aside class="notes">The Clever Hans answer: the model learned from human-generated text, and humans write confidently even when wrong. The model learned the pattern of confident language, not the truth. ChatGPT hallucinations are a direct expression of this. Worth 2-3 minutes of student response.</aside>
 </section>
 
 <section>
@@ -284,7 +284,7 @@
 
 <section>
   <h2>The Confounding Variable</h2>
-  <img src="./images/06_confounding_diagram.png" alt="Confounding diagram" style="max-height:270px;">
+  <img src="./images/06_confounding_diagram.png" alt="Confounding diagram" style="max-height:210px;">
   <div class="callout">
     <strong>What the numbers are telling you:</strong> There is a real, statistically significant positive correlation (r = 0.62) between stork populations and human birth rates across European countries.
     <div class="not"><strong>What they aren't telling you:</strong> Neither causes the other. Both are driven by country size. A correlation number alone never tells you whether a relationship is causal — that requires knowing the context and ruling out confounders.</div>
@@ -335,10 +335,10 @@
 
 <section>
   <h2>The Lag: Why It's Messier Than It Looks</h2>
-  <img src="./images/04_okuns_time_series.png" alt="Okun time series" style="max-height:260px;">
+  <img src="./images/04_okuns_time_series.png" alt="Okun time series" style="max-height:210px;">
   <div class="img-caption">GDP growth (navy) and unemployment rate (gold dashed) 1990-2023. Unemployment peaks after GDP has already started recovering.</div>
   <div class="callout">
-    <strong>What the numbers are telling you:</strong> GDP and unemployment move together in a consistent, measurable pattern that holds across decades.
+    <strong>What the numbers are telling you:</strong> GDP and unemployment move together in a consistent pattern that holds across decades.
     <div class="not"><strong>What they aren't telling you:</strong> The relationship is not instant. The lag means the job market can feel broken long after the economy has turned around — and both the economist and the unemployed worker can be right at the same time.</div>
   </div>
   <aside class="notes">Companies hire cautiously after downturns. Finding, interviewing, and training workers takes months. This is why people feel a recession is still happening even after economists say it ended.</aside>
@@ -470,7 +470,7 @@
 
 <section>
   <h2>Survivorship Bias in Investing</h2>
-  <img src="./images/11_survivorship_funds.png" alt="Survivorship funds" style="max-height:255px;">
+  <img src="./images/11_survivorship_funds.png" alt="Survivorship funds" style="max-height:210px;">
   <div class="img-caption">Left: of 355 equity funds in 2000, fewer than half survived to 2023. Right: surviving funds show much higher returns — poor performers erased from the advertised history.</div>
   <div class="callout">
     <strong>What the numbers are telling you:</strong> The reported fund performance figures show the record of funds that still exist.
@@ -520,7 +520,7 @@
   <h2>Why Our Intuition Fails</h2>
   <div class="cols-60-40">
     <div>
-      <img src="./images/14_birthday_problem.png" alt="Birthday curve" style="max-height:270px;">
+      <img src="./images/14_birthday_problem.png" alt="Birthday curve" style="max-height:215px;">
       <div class="img-caption">The curve crosses 50% at just 23 people — far sooner than almost anyone guesses.</div>
     </div>
     <div>
