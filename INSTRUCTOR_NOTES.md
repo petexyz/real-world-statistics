@@ -252,3 +252,119 @@ At $1,000,000,000 the class mean exceeds $33,000,000 -- while 29 out of 30 peopl
 
 Ask: "Which of these three numbers best describes what a typical person in this group earns?"
 
+
+---
+
+### Section 5: Survivorship Bias (12 minutes across 3 slides)
+
+**Slide: Abraham Wald and the WWII Bombers -- 6 minutes**
+
+The slide uses the canonical Wikipedia survivorship bias diagram -- a top-view B-17 with red dots showing where returning planes were hit (wings, fuselage, tail). Note that the engines show very few hits -- not because they were never struck, but because planes hit in critical engine components (oil cooler, fuel lines, supercharger) were far less likely to survive and return. Wald's data showed a plane survived a single engine hit about 60% of the time, versus ~95% survival for fuselage hits. The underrepresentation of engine damage was the signal.
+
+Build the story before revealing the insight.
+
+Setup: "Engineers mapped bullet holes on returned planes. Most damage: wings, fuselage, and tail. Where do you put the armor?"
+
+Wait for student answers. Most will say reinforce where the holes are. Then deliver the Wald insight.
+
+The philosophical core: "The planes they were studying were the ones that survived. Bullet holes in the wings and fuselage were common on returned planes for exactly one reason -- those hits did not bring the plane down. The underrepresentation of engine damage was not because engines were never hit. It was because certain engine hits -- to the oil cooler, fuel lines, supercharger -- were far more likely to bring the plane down entirely."
+
+Then: "The underrepresentation of engine damage was the signal."
+
+**Slide: Mutual funds -- 4 minutes**
+
+Ask: "If you saw a fund company advertise 8% average annual returns over 20 years, and you knew about survivorship bias, what is the first question you would ask?"
+
+Answer: "Of how many original funds is that 8% the average? And what happened to the ones that no longer exist?"
+
+**Slide: Quiz 5 -- 2 minutes**
+
+Correct answer: B (graduates who are unemployed or underemployed and did not respond to the survey).
+
+Graduates who found high-paying jobs are proud to report them. Those who are underemployed or still searching are far less likely to respond. The published figure is a biased sample -- the survivors.
+
+---
+
+### Section 6: The Birthday Problem (15 minutes across 4 slides)
+
+**Slide: Birthday calculator -- 4 minutes**
+
+Slider now starts at the leftmost position (2 people, 0.3% probability). Before touching it: "In a room of 30 people, what is the probability that at least two share a birthday? Write down your guess."
+
+Take a few answers aloud. Most will be in the 5-20% range. Then drag to 30 and reveal: 70.6%. Watch the reactions.
+
+Let students interact: "Drag it until it crosses 50%. What number is that?" (23.) "What number hits 99%?" (57.)
+
+**Slide: Birthday curve and table -- 4 minutes**
+
+Walk through the table. The jump from 10 people (12%) to 23 people (50%) is the most surprising.
+
+Explain the intuition failure: "We think about this as 'what is the chance someone shares MY birthday?' That probability is small -- about 8% in a room of 30. But the actual question is: what is the chance any two people share any birthday? With 30 people there are 435 different pairs. Each pair is a separate chance for a match."
+
+**Slide: Quiz 6 -- 2 minutes**
+
+Correct answer: B (they are thinking about one specific match rather than the 435 possible pairs at the party).
+
+The person at the party framed the coincidence as a specific prediction. The birthday problem asks a fundamentally different question about any match across all possible pairs.
+
+**Slide: Live demo -- 5 minutes**
+
+This is the best closer in the course. Do it in every class.
+
+Set the slider to the actual class size. Go around the room. Each student says their birthday out loud. The class calls "match!" the moment one is repeated.
+
+In a class of 25-30, a match typically occurs in the first 20-25 students.
+
+If no match occurs: "We beat the odds today. That happens about 30% of the time in a class of 30. Run this in ten classes and you will see a match in about seven of them."
+
+---
+
+### Closing (4 minutes across 2 slides)
+
+**Slide: Six questions**
+
+Read each question slowly. Pause between them. Suggest students write them down or photograph the slide.
+
+These are the transferable product of the course. The formulas will fade. These questions stay useful for the rest of their lives.
+
+**Final slide**
+
+End here. The closing line lands better in silence than with additional commentary. Do not explain it or summarize it. Just let it sit.
+
+---
+
+## Anticipated Student Questions
+
+**"Is Okun's Law still valid after COVID?"**
+The 2020 recession and 2021 recovery were exceptional -- unemployment spiked far more sharply than Okun would predict and recovered faster than expected. Most economists believe Okun's Law holds over normal business cycles but that COVID was outside its domain of applicability.
+
+**"Does the stork correlation actually disappear when you control for country size?"**
+Yes. When you analyze within groups of countries of similar size and urbanization, the stork-birth relationship is no longer statistically significant. This is the standard test for whether a confounding variable explains a correlation.
+
+**"Why is the U.S. Gini so much higher than other wealthy countries?"**
+Multiple factors: weaker redistribution through taxes and transfers, a more polarized labor market, higher returns to education and capital, and historical factors including racial wealth gaps. The U.S. pre-tax Gini is high; the post-tax Gini is somewhat lower but still elevated compared to peer nations.
+
+**"How do we know the mutual fund survivorship bias numbers are right?"**
+Studies track all funds from a starting date forward and compare reported performance against the full original cohort. Elton, Gruber, and Blake (1996) is the landmark paper. The methodology is transparent and has been replicated.
+
+**"Why does the birthday probability matter outside of a demonstration?"**
+The birthday problem is the mathematical foundation for understanding coincidences generally, hash collisions in cryptography, and DNA database false matches. Any situation where you are asking whether any two items in a large set share a property follows the same logic.
+
+**"What is the difference between income and wealth inequality?"**
+Income inequality measures how unequally annual earnings are distributed. Wealth inequality measures how unequally accumulated assets -- savings, property, investments -- are distributed. Wealth is typically far more concentrated because it builds over time and can be passed down across generations.
+
+---
+
+## If You Have Extra Time
+
+- **The Monty Hall Problem** -- similar intuition-defying probability; works well as a follow-on to the birthday problem
+- **Publication bias** -- the scientific literature as a survivorship bias problem; connects directly to the replication crisis in psychology and medicine
+- **Regression to the mean** -- why exceptional performance tends to be followed by more average performance; relevant to sports, investing, and medicine
+
+---
+
+*Instructor notes by Pete Halbeisen*
+*Corresponds to index.html -- RevealJS slideshow, ~33 slides*
+*Last updated: Rev 2.0*
+
+**Rev 2.0 chart improvements:** All generated charts updated with larger text (12-16pt), bolder axis labels, higher contrast annotations. Specific fixes: confounding diagram (no more overlapping text), wealth vs. income (no more overlapping text), AI pipeline (bias labels larger and clearer), Okun time series (axis/legend text larger, recession labels bolder), survivorship funds (legend and axis text larger), income over time (annotation text larger), Lorenz curve (data point labels larger with background boxes).
