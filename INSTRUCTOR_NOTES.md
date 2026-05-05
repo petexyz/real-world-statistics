@@ -1,7 +1,7 @@
 # Instructor Notes: Real-World Applications of Statistics
 ### Last Lecture -- Elementary Statistics
 
-**Estimated total time:** 90-110 minutes
+**Estimated total time:** 115-125 minutes
 **Format:** RevealJS slideshow, presented fullscreen in a browser
 **Controls:** Arrow keys to advance, S for speaker view, F for fullscreen
 
@@ -10,45 +10,50 @@
 ## Pre-Class Setup
 
 - Open `index.html` in Chrome or Firefox and press F for fullscreen before students arrive
-- Press S to open speaker view in a second window -- your notes will appear there while students see the clean slides
-- Have the birthday demo slider (Section 6) ready -- students enjoy interacting with it
-- If the room has a second screen or monitor, use RevealJS speaker view: students see the slide, you see your notes and the next slide
+- Press S to open speaker view in a second window -- your notes appear there while students see the clean slide
+- If the room has a second screen or monitor, RevealJS speaker view shows your notes and the next slide simultaneously
+- Have the birthday demo ready for Section 6 -- students enjoy interacting with the slider
+- Consider letting a student volunteer operate the billionaire slider in Section 4
 
 ---
 
 ## Pacing Guide
 
-| Slide Group | Section | Time | Slides |
-|-------------|---------|------|--------|
-| Cover + Agenda | Opening | 3 min | 2 |
-| Clever Hans story | Section 1 | 5 min | 1 |
-| Blinding diagram | Section 1 | 4 min | 1 |
-| Poker | Section 1 | 5 min | 1 |
-| AI pipeline | Section 1 | 5 min | 1 |
-| Quiz 1 | Section 1 | 2 min | 1 |
-| Storks scatter | Section 2 | 6 min | 1 |
-| Confounding variable | Section 2 | 5 min | 1 |
-| Quiz 2 | Section 2 | 2 min | 1 |
-| Okun scatter | Section 3 | 6 min | 1 |
-| Okun time series + lag | Section 3 | 6 min | 1 |
-| Two distributions | Section 4 | 4 min | 1 |
-| Mean vs. median | Section 4 | 5 min | 1 |
-| Income by bracket | Section 4 | 4 min | 1 |
-| 40-year income trend | Section 4 | 5 min | 1 |
-| Lorenz curve | Section 4 | 5 min | 1 |
-| International Gini | Section 4 | 4 min | 1 |
-| Wealth vs. income | Section 4 | 4 min | 1 |
-| Billionaire slider | Section 4 | 4 min | 1 |
-| Percentile calculator | Section 4 | 3 min | 1 |
-| Wald / planes | Section 5 | 6 min | 1 |
-| Funds chart | Section 5 | 4 min | 1 |
-| Quiz 3 | Section 5 | 2 min | 1 |
-| Birthday calculator | Section 6 | 4 min | 1 |
-| Birthday curve + table | Section 6 | 4 min | 1 |
-| Live demo | Section 6 | 5 min | 1 |
-| Six questions | Closing | 3 min | 1 |
-| Final slide | Closing | 1 min | 1 |
-| **Total** | | **~115 min** | **31** |
+| Slide | Section | Time |
+|-------|---------|------|
+| Cover + Agenda | Opening | 3 min |
+| Clever Hans story | Section 1 | 5 min |
+| Blinding diagram | Section 1 | 4 min |
+| Poker | Section 1 | 5 min |
+| AI pipeline | Section 1 | 5 min |
+| Quiz 1 | Section 1 | 2 min |
+| Storks scatter + r and p explained | Section 2 | 7 min |
+| Confounding variable | Section 2 | 5 min |
+| Quiz 2 | Section 2 | 2 min |
+| Okun scatter | Section 3 | 6 min |
+| Okun time series + lag | Section 3 | 6 min |
+| Quiz 3 | Section 3 | 2 min |
+| Section 4 header | Section 4 | 1 min |
+| The real shape of income | Section 4 | 4 min |
+| Mean vs. median | Section 4 | 5 min |
+| Income by bracket | Section 4 | 4 min |
+| 40-year income trend | Section 4 | 5 min |
+| Lorenz curve | Section 4 | 5 min |
+| International Gini | Section 4 | 4 min |
+| Wealth vs. income | Section 4 | 4 min |
+| Billionaire slider | Section 4 | 4 min |
+| Percentile calculator | Section 4 | 3 min |
+| Quiz 4 | Section 4 | 2 min |
+| Survivorship planes | Section 5 | 6 min |
+| Funds chart | Section 5 | 4 min |
+| Quiz 5 | Section 5 | 2 min |
+| Birthday calculator | Section 6 | 4 min |
+| Birthday curve + table | Section 6 | 4 min |
+| Quiz 6 | Section 6 | 2 min |
+| Live demo | Section 6 | 5 min |
+| Six questions | Closing | 3 min |
+| Final slide | Closing | 1 min |
+| **Total** | | **~125 min** |
 
 ---
 
@@ -58,11 +63,11 @@
 
 ### Opening (3 minutes)
 
-Frame this as synthesis, not new content. Students have seen all the tools -- today they see what the tools are actually for.
+Frame this as synthesis, not new content. Students have seen all the tools -- today they see what those tools are actually for.
 
 Open with something like: *"No new formulas today. Everything we cover, you have technically already seen. What we are doing is connecting it to the world you actually live in."*
 
-Do not start with housekeeping. Go straight into the Clever Hans story -- it is immediately engaging and sets the right tone.
+Do not start with housekeeping. Go straight into the Clever Hans story -- it is immediately engaging and sets the right tone for everything that follows.
 
 ---
 
@@ -72,205 +77,193 @@ Do not start with housekeeping. Go straight into the Clever Hans story -- it is 
 
 Tell the story as a narrative before the slide appears. Ask students to guess the explanation before you reveal it.
 
-Key beats in order:
+Key beats:
 1. Von Osten was completely sincere -- he genuinely believed the horse could reason. He never charged admission. He was not a fraud.
 2. Public demonstrations attracted journalists, scientists, and government officials. The 1904 Hans Commission -- thirteen experts -- concluded no trickery was involved.
 3. Pfungst's decisive test: vary whether the questioner knows the answer.
 4. Result: 89% correct when questioner knows, 6% when they do not.
 
-Pause after revealing the 89%/6% numbers. Let it land. Then ask: "So what was Hans actually doing?" Students usually land on "reading body language" quickly.
+Pause after the 89%/6% numbers. Let it land. Then ask: "So what was Hans actually doing?" Students usually land on "reading body language" quickly.
 
 The micro-cue detail -- a barely perceptible head dip at the moment the questioner's tension released -- is worth describing vividly. It was not conscious. Von Osten had no idea he was doing it.
 
 **Slide: Blinding diagram -- 4 minutes**
 
-The diagram shows the mechanism. Walk through it left to right:
-- Left panel: questioner knows, cue transmitted, Hans performs
+Walk through it left to right:
+- Left panel: questioner knows the answer, cue is transmitted, Hans performs
 - Right panel: questioner does not know, no cue, Hans at chance
 
-Make the connection to research design explicit: this is exactly why drug trials use double-blind protocols. The doctor's behavior -- how encouraging they are, how they interpret borderline results -- shifts when they know which patient got the real drug.
+Connect to research design explicitly: this is why drug trials use double-blind protocols. The doctor's behavior -- how encouraging they are, how they interpret borderline results -- shifts when they know which patient received the real drug.
 
 **Slide: Poker -- 5 minutes**
 
-This is the most expanded new section. The key insight: professional poker players have independently arrived at the same solution as experimental scientists -- eliminate the observable signal that leaks from one party to another.
+The key insight: professional poker players have independently arrived at the same solution as experimental scientists -- eliminate the observable signal that leaks from one party to another.
 
-Walk through each bullet point with a concrete example:
+The slide now includes citations for each claim. Walk through them with context:
 
-- **Sunglasses:** Pupils dilate involuntarily when you see something exciting -- like a strong hand. Mirrored lenses prevent this from being readable.
-- **Consistent timing:** If you bet quickly with strong hands and slowly with weak ones, a sharp opponent will catch it within a few hands. Pros use the same deliberate 10-15 second pause every single decision, regardless of hand strength.
-- **False tells:** Some pros deliberately rub their nose or tap the table before a strong hand -- planting a readable signal that they then use against opponents who think they have spotted a tell.
-- **Neutral attire:** Jaw tension, a clenched neck, or a subtle swallow are nearly impossible to consciously suppress. Covering them eliminates the channel entirely.
+- **Sunglasses / pupil dilation:** Backed by peer-reviewed science. Einhäuser, Koch & Carter (2010) published in *Frontiers in Human Neuroscience* that pupil dilation betrays the timing of decisions. The Caltech press release noted explicitly that this may explain why poker players wear sunglasses. Full URL: https://www.frontiersin.org/articles/10.3389/fnhum.2010.00018/full
+- **Consistent timing:** Timing tells are one of the most studied aspects of professional poker. A fast bet signals confidence; a slow bet signals uncertainty. Pros use the same deliberate pause on every decision to eliminate the timing channel. Reference: https://poker.academy/blog/post/the-hidden-power-of-timing-tells
+- **False tells:** Sourced to Mike Caro's *Book of Poker Tells* (2003), the canonical reference on poker psychology. Caro documents the advanced technique of deliberately planting misleading behavioral signals. Publisher page: https://www.simonandschuster.com/books/Caros-Book-of-Poker-Tells/Mike-Caro/9781580420822
+- **Neutral attire:** Jaw tension and neck movements are nearly impossible to consciously suppress. Covering the face eliminates the channel entirely.
 
-Ask students: "What other competitive situations require this kind of information control?" Good answers include: negotiation, poker, chess (time management as a tell), sports (pitchers hiding grip).
+Ask: "What other competitive situations require this kind of information control?" Good answers: negotiation, chess (time management as a tell), sports (pitchers hiding grip).
 
 **Slide: Artificial Intelligence -- 5 minutes**
 
-This is the section that will resonate most with this generation. Spend time on the feedback loop diagram.
+This will resonate most with this generation. Spend time on the feedback loop diagram.
 
-Walk through the three mechanisms:
+Three mechanisms:
+1. **Labeled training data:** If the people who labeled the data had systematic blind spots, the model absorbed those blind spots -- not the underlying truth.
+2. **Feedback loops:** A model's output influences what users see; user behavior becomes future training data; bias compounds across training cycles.
+3. **Benchmark design:** A model that scores 95% on a benchmark may have learned to pass that benchmark rather than acquired genuine capability.
 
-1. **Labeled training data:** Someone had to decide what counted as the "correct" label for each piece of training data. If those people had systematic blind spots -- about what faces look professional, what writing sounds authoritative, what answers seem correct -- the model absorbed those blind spots.
-
-2. **Feedback loops:** When a model's output influences what users see, and that user behavior becomes future training data, bias can compound. A recommendation algorithm that slightly favors certain content will generate more engagement data for that content, which makes it favor that content more strongly in the next training cycle.
-
-3. **Benchmark design:** A model that scores 95% on a benchmark may have learned to pass that specific benchmark rather than acquired genuine capability. The benchmark itself was designed by people with expectations about what "good performance" looks like.
-
-The discussion question -- "When an AI confidently gives you a wrong answer, what does the Clever Hans story suggest?" -- is worth 2-3 minutes of student response. The answer: the model learned from human-generated text, and humans write confidently even when they are wrong. The model learned the pattern of confident language, not the truth behind it.
+The discussion question -- "When an AI confidently gives you a wrong answer, what does the Clever Hans story suggest?" -- is worth 2-3 minutes. The answer: the model learned from human-generated text, and humans write confidently even when they are wrong. The model learned the pattern of confidence, not the truth behind it.
 
 **Slide: Quiz 1 -- 2 minutes**
 
 Correct answer: B (doctors may unconsciously treat patients differently).
 
-If students pick A or C, use it as an opening to reinforce the observer effect concept. Sample size is a separate issue. And drugs absolutely can be tested in blind conditions -- that is the whole point of placebo design.
+If students pick A or C: sample size is a separate issue, and drugs absolutely can be tested blind -- that is the entire point of placebo design.
 
 ---
 
-### Section 2: Do Storks Deliver Babies? (13 minutes across 3 slides)
+### Section 2: Do Storks Deliver Babies? (14 minutes across 3 slides)
 
-**Slide: A Real Study. A Real Result. -- 6 minutes**
+**Slide: A Real Study. A Real Result. -- 7 minutes**
 
-Do not reveal the confounding variable yet. Show the scatter plot and let students look at it for a moment.
+Do not reveal the confounding variable yet. Show the scatter plot and let students absorb it.
 
-Then show the r value (0.62) and p-value (0.008) without explanation. Ask: "What do we conclude?"
+This slide now includes plain-English explanations of both the correlation coefficient and the p-value. Walk through them deliberately:
 
-Wait for someone to say "more storks cause more babies" or something equivalent. Then ask: "Is there any other possibility?" Students will usually get to "some third factor" quickly.
+- **r = 0.62:** Explain that r runs from -1 to +1. Zero means no relationship. Positive one means a perfect lockstep increase. At 0.62, storks and births move together moderately strongly -- not perfectly, but consistently enough to show a clear upward trend.
+- **p = 0.008:** Explain that this answers the question: if there were truly no relationship, how likely is it that we would see a correlation this strong just by random chance? Less than 1% likely. That makes the result statistically significant -- it is almost certainly a real pattern, not noise.
 
-The combination of an absurd conclusion and a real p-value reliably produces the right kind of laughter -- the kind that comes with genuine recognition that statistics can mislead.
-
-After revealing the answer, make the point explicitly: the p-value tells you the correlation is unlikely to be due to chance. It tells you nothing about whether the relationship is causal.
+Then pause and let the punchline land: the result is real, the pattern is not a fluke -- and yet the interpretation "storks cause births" is completely wrong. This is the core lesson. Statistical significance tells you the pattern is real. It tells you nothing about whether the relationship is causal.
 
 **Slide: Confounding variable -- 5 minutes**
 
-Walk through the diagram. The key move: country size drives both stork populations (more rural land = more habitat) and birth rates (larger, less urbanized countries have higher birth rates). Neither variable is causing the other.
+Walk through the diagram. Larger, more rural countries have more stork habitat and higher birth rates. Both variables are responding to the same underlying factor -- country size. Neither is causing the other.
 
-Ask: "How would you test whether country size is really the explanation?" The answer: hold country size constant. Analyze within groups of similar-sized countries. The correlation disappears.
-
-This is the bridge to randomized experiments. Random assignment breaks the link between the confounder and the treatment, which is why randomized controlled trials are the gold standard in medicine.
+Ask: "How would you test whether country size is really the explanation?" Answer: hold country size constant. Analyze within groups of similar-sized countries. The correlation disappears.
 
 **Slide: Quiz 2 -- 2 minutes**
 
 Correct answer: C (confounding variable like family income).
 
-This bridges directly to the storks example. Family income correlates with both having breakfast reliably available and with better academic performance through a dozen pathways -- stability, parental involvement, better schools, less stress.
+Family income, parental involvement, and home stability all correlate with both having breakfast reliably available and with academic performance. This bridges directly from the storks example.
 
 ---
 
-### Section 3: Okun's Law (12 minutes across 2 slides)
+### Section 3: Okun's Law (14 minutes across 3 slides)
 
 **Slide: GDP Growth vs. Unemployment -- 6 minutes**
 
-Lead with the scatter plot. Before explaining it, ask students to read it:
+Before explaining the chart, ask students to read it:
 - "What does the direction of the slope tell you?"
 - "What does the scatter around the line tell you?"
 - "What do the recession arrows show?"
 
-Students can identify the negative correlation themselves. The scatter is the teaching moment: real economic relationships are never clean. The points off the line represent recessions of different types, different industries, different eras.
+Students can identify the negative correlation themselves. The scatter is an important teaching moment: real economic relationships are never clean. The points off the line represent recessions of different types, different industries, different eras.
 
-Address the common question directly: "Is Okun's Law actually a law?" No. It is an empirical regularity -- a well-supported rule of thumb that has held for six decades but is not a physical law. The coefficient varies across time periods and countries.
+Address the common question directly: "Is Okun's Law actually a law?" No -- it is an empirical regularity, a well-supported rule of thumb that has held for six decades but is not a physical law. The coefficient varies across time periods and countries.
 
-**Slide: The Lag -- 6 minutes**
+**Slide: The lag -- 6 minutes**
 
-Walk through the time series. Students will recognize the 2008 crisis and 2020 COVID recession viscerally.
+Walk through the time series. Students will recognize the 2008 crisis and 2020 COVID recession.
 
-Ask: "Does unemployment peak at the same time GDP hits its lowest point?" No -- it peaks later. That is the lag in action.
-
-The explanation of why: companies do not immediately fire everyone when a recession begins. They reduce hours, freeze hiring, cut contractors, and only then cut permanent staff. When recovery begins, they wait for confirmation before committing to payroll. Finding, interviewing, and training workers takes months.
+Ask: "Does unemployment peak at the same time GDP hits its lowest point?" No -- it peaks later. That is the lag.
 
 The practical implication: this is why people often feel like a recession is still happening even after economists say it ended. GDP has recovered. The job market, which is what most people feel directly, has not caught up yet. Both descriptions can be accurate simultaneously.
 
+**Slide: Quiz 3 -- 2 minutes**
+
+Correct answer: B (unemployment can keep rising after GDP turns around due to the lag).
+
+The student in the question is not wrong -- they are describing the lag effect accurately. GDP recovery and labor market recovery are different things that happen on different timelines.
+
 ---
 
-### Section 4: The Shape of Income (38 minutes across 9 slides)
+### Section 4: The Shape of Income (39 minutes across 10 slides)
 
-This is the most expanded section in the presentation. Take your time -- the interactive slides in particular benefit from letting students engage before you explain.
+This is the longest section. The interactive slides benefit from letting students engage before you explain.
 
-**Slide: Two distributions -- 4 minutes**
+**Slide: The real shape of income -- 4 minutes**
 
-Put the two charts side by side and let students look before talking. Ask: "What is different about the shape of these two distributions?"
+Let students look at the chart before saying anything. Ask: "Where is the mean relative to the median on this chart?" The mean sits further right -- pulled by the tail. This chart is the foundation for everything that follows in the section.
 
-Height: symmetric. Tails are roughly equal on both sides. The mean, median, and mode all land at the same place.
+**Slide: Mean vs. median -- 5 minutes**
 
-Income: right-skewed. A long tail extends far to the right. The bulk of households cluster at lower-to-middle incomes, but a small number of households earn extraordinary amounts.
-
-**Slide: Mean vs. Median -- 5 minutes**
-
-The company example is the clearest illustration. Walk through the arithmetic:
+Walk through the arithmetic of the company example:
 - 9 workers at $40,000 = $360,000 total
 - 1 CEO at $1,000,000
-- Total payroll: $1,360,000
-- Divide by 10: mean = $136,000
+- Total: $1,360,000 divided by 10 = mean of $136,000
+- Nobody earns $136,000. The mean is correct and misleading simultaneously.
 
-Nobody at the company earns $136,000. The mean is mathematically correct and completely misleading as a description of what a typical worker earns.
-
-The order of statistics in a right-skewed distribution -- mode < median < mean -- is worth writing down or photographing. It is a diagnostic students can apply to any income, wealth, or price data they encounter in the news.
+The order mode < median < mean in a right-skewed distribution is worth writing on the board. It is a diagnostic students can apply to any income or price data they encounter in the news.
 
 **Slide: Income by bracket -- 4 minutes**
 
 Walk through the bars left to right. Point out where the median line sits -- between the $75k-$100k and $100k-$150k bars. Half of all U.S. households earn less than $83,000.
 
-Then point to the right side: the bars get smaller in count but the dollar amounts get much larger. The 7.4% of households earning over $300,000 generate enough total income to pull the national mean well above the median.
-
-Ask: "If a politician wanted to make the economy sound like it was doing well, which number would they use -- mean or median?" Then ask the same question in reverse.
+Ask: "If a politician wanted to make the economy sound like it was doing well, which number -- mean or median -- would they use?"
 
 **Slide: 40-year trend -- 5 minutes**
 
-Before explaining the chart, ask students to look at all three lines and describe what they see. They should notice:
-- All three lines rise over 40 years
-- The gap between median and mean widens over time
-- The top-10% line pulls away most dramatically
+Ask students to look at all three lines and describe what they see before you explain. They should notice the widening gap between median and mean.
 
-The key question: "If everyone got richer, why does it feel like most people are falling behind?" Answer: because the gains have concentrated at the top. The mean grew fast because high earners grew fastest. The median grew slowly because it reflects the typical household. These are both true simultaneously, and they tell very different stories about the same economy.
+Key question: "If everyone got richer, why does it feel like most people are falling behind?" Because the gains concentrated at the top. The mean grew fast; the median grew slowly. These are both true and they tell very different stories about the same economy.
 
 **Slide: Lorenz curve -- 5 minutes**
 
-Walk through what the axes mean before reading the curve:
-- X-axis: cumulative share of population, ranked from poorest to richest
+Walk through the axes before reading the curve:
+- X-axis: cumulative share of population ranked poorest to richest
 - Y-axis: cumulative share of total income
-- The diagonal: perfect equality -- the bottom 20% earn 20%, the bottom 50% earn 50%, etc.
+- The diagonal: perfect equality
 
-Then trace the actual U.S. curve. It bows well below the diagonal. The further the bow, the more concentrated income is at the top.
+Trace the actual U.S. curve. The two specific callouts to land: the bottom 50% earn about 10% of total income; the bottom 80% earn about 33%.
 
-Land the two specific callouts: the bottom 50% earn about 10% of total income; the bottom 80% earn about 33%.
+The Gini coefficient converts the visual bow into one number between 0 and 1. The U.S. Gini is approximately 0.49.
 
-The Gini coefficient converts the visual bow into a single number: the area between the curve and the diagonal, divided by the total area under the diagonal. The U.S. Gini is approximately 0.49 -- meaning the actual distribution is about halfway between perfect equality and one person owning everything.
+**Slide: International Gini -- 4 minutes**
 
-**Slide: International Gini comparison -- 4 minutes**
+Students are often surprised the U.S. sits much closer to Mexico and Brazil than to Canada or Germany.
 
-Students are often surprised the U.S. sits much closer to Mexico and Brazil than to Canada, Germany, or the Scandinavian countries.
-
-Worth noting: Gini can be measured pre-tax or post-tax. The U.S. post-tax Gini is somewhat lower due to redistribution programs, but still high by international standards. The chart shows pre-tax figures for consistency.
-
-Also worth noting: Gini is a summary statistic. Two countries with the same Gini can have very different distributions. As with mean vs. median, a single number always loses information about the shape.
+Note: Gini is a summary statistic. Two countries with the same Gini can have very different distributions. As with mean vs. median, a single number always loses information about shape.
 
 **Slide: Wealth vs. income -- 4 minutes**
 
-This is often the most surprising chart in the entire presentation. Give students a moment to take it in.
+Give students a moment to take in both charts. The income picture already looks unequal. The wealth picture is on another level.
 
-The income picture already looks unequal. The wealth picture is on another level. The bottom 50% of Americans -- roughly 130 million people -- collectively own about 2.5% of total U.S. wealth.
+The bottom 50% of Americans -- roughly 130 million people -- collectively own about 2.5% of total U.S. wealth. Let that land before moving on.
 
-Clarify the distinction: income is what flows in each year. Wealth is what has accumulated over a lifetime -- savings, home equity, investments, inheritance. High income does not automatically mean high wealth, and the two distributions, while related, are measuring very different things.
-
-The top 1% own about 33% of all wealth. Let that land before moving on.
+Clarify the distinction: income is what flows in each year. Wealth is what has accumulated over a lifetime -- savings, home equity, investments, inheritance.
 
 **Slide: Billionaire slider -- 4 minutes**
 
-This is the most interactive moment in Section 4. If possible, let a student come up and drag the slider.
+Let a student volunteer drag the slider if possible.
 
-Start with the slider at the far left -- everyone earns $50,000. The mean and median are identical.
+Start at the far left -- everyone at $50,000. Mean, median, and mode are identical.
 
-Slowly drag right. At $500,000 the mean moves to about $65,000. At $5,000,000 it approaches $200,000. At $1,000,000,000 the class mean exceeds $33,000,000 -- while 29 out of 30 classmates still earn $50,000.
+Drag slowly right. Point out at each stage:
+- The mode never moves -- $50,000 is still the most common value
+- The median never moves -- the middle value of the group is still $50,000
+- Only the mean responds to the extreme value
 
-Ask at that point: "Which number better describes what a typical person in this class earns?" The median never moves. It is always $50,000.
+At $1,000,000,000 the class mean exceeds $33,000,000 -- while 29 out of 30 people still earn $50,000.
 
-This is the most visceral demonstration of why the median is the honest measure of typical in a skewed distribution.
+Ask: "Which of these three numbers best describes what a typical person in this group earns?"
 
 **Slide: Percentile calculator -- 3 minutes**
 
-Let students find their own target salary or their family's approximate income on the slider.
+Let students find their own target salary on the slider.
 
-The key observation to point out: the percentile scale compresses sharply at the top. Moving from $30,000 to $60,000 moves you roughly 20 percentile points. Moving from $200,000 to $500,000 -- a much larger dollar jump -- moves you only about 5 percentile points. At the top of the distribution, the values are so spread out that large dollar differences translate to small percentile differences.
+Point out the compression at the top: moving from $50k to $100k moves you roughly 30 percentile points. Moving from $200k to $500k -- a much larger dollar jump -- moves you only about 5 points. At the top of the distribution, the values are so spread out that large dollar differences cover very few people.
 
-This is a consequence of the right skew: most of the population is clustered toward the left of the distribution, so each dollar increment there covers many people. At the far right, the population thins out and dollar increments cover very few people.
+**Slide: Quiz 4 -- 2 minutes**
+
+Correct answer: C (the anchor is using the mean; the researcher is describing median experience).
+
+Both statements are accurate. They describe different aspects of the same distribution. This is the mean vs. median lesson applied directly to a news headline.
 
 ---
 
@@ -278,61 +271,63 @@ This is a consequence of the right skew: most of the population is clustered tow
 
 **Slide: Abraham Wald and the WWII Bombers -- 6 minutes**
 
-Tell this story slowly and with some drama. Build up before revealing Wald's insight.
+The chart has been redesigned as a two-panel side-by-side on a white background -- left panel shows returned planes with gold bullet holes on wings and fuselage, right panel shows the missing planes with red hits on the engines. Much cleaner and readable from the back of a room.
 
-Setup: "You are an engineer in 1943. Bombers are being shot down. Your team examines 100 planes that came back. You map every bullet hole. Most damage is on the wings, fuselage, and tail. Where do you put the armor?"
+Build the story before revealing the insight.
 
-Wait for student answers. Most will say reinforce where the holes are. Then deliver the insight.
+Setup: "You are an engineer in 1943. Bombers are being shot down. You examine planes that came back. Most bullet holes are on the wings, fuselage, and tail. Where do you put the armor?"
 
-The philosophical core is worth a full sentence on its own: "The planes they were looking at were the ones that survived. Bullet holes in the wings and fuselage were common on returned planes for exactly one reason -- those hits did not bring the plane down. The planes that took engine hits never came back. They were not in the dataset."
+Wait for student answers. Most will say reinforce where the holes are. Then deliver the Wald insight.
+
+The philosophical core: "The planes they were studying were the ones that survived. Bullet holes in the wings and fuselage were common on returned planes for exactly one reason -- those hits did not bring the plane down. The planes that took engine hits never came back. They were not in the dataset."
 
 Then: "The absence of data was the data."
 
 **Slide: Mutual funds -- 4 minutes**
 
-The chart makes the point visually. Left panel: of 355 funds that existed in 2000, fewer than half survived to 2023. Right panel: the survivor-only reported returns are dramatically higher than the true all-fund average.
-
 Ask: "If you saw a fund company advertise 8% average annual returns over 20 years, and you knew about survivorship bias, what is the first question you would ask?"
 
-Answer: "Of how many original funds is that 8% the average? And what happened to the ones that are not included?"
+Answer: "Of how many original funds is that 8% the average? And what happened to the ones that no longer exist?"
 
-**Slide: Quiz 3 -- 2 minutes**
+**Slide: Quiz 5 -- 2 minutes**
 
-Correct answer: B (unemployed or underemployed graduates who did not respond).
+Correct answer: B (graduates who are unemployed or underemployed and did not respond to the survey).
 
-This is the schools-as-survivors problem. Graduates who found high-paying jobs are proud to report them. Graduates who are working part-time, still job searching, or took positions well below their degree level are far less likely to respond to a salary survey. The published figure is a biased sample of outcomes.
+Graduates who found high-paying jobs are proud to report them. Those who are underemployed or still searching are far less likely to respond. The published figure is a biased sample -- the survivors.
 
 ---
 
-### Section 6: The Birthday Problem (13 minutes across 3 slides)
+### Section 6: The Birthday Problem (15 minutes across 4 slides)
 
 **Slide: Birthday calculator -- 4 minutes**
 
-Before touching the slider, ask the class: "In a room of 30 people, what is the probability that at least two share a birthday? Write down your guess."
+Before touching the slider: "In a room of 30 people, what is the probability that at least two share a birthday? Write down your guess."
 
-Take a few guesses aloud. Most will be in the 5-20% range.
+Take a few answers aloud. Most will be in the 5-20% range. Then reveal: 70.6%. Watch the reactions.
 
-Then reveal the slider result: 70.6%. Watch the reactions.
-
-Let students interact with the slider. Ask: "Drag it until you find where it crosses 50%. What number is that?" (23.) "What number does it hit 99%?" (57.)
+Let students interact: "Drag it until it crosses 50%. What number is that?" (23.) "What number hits 99%?" (57.)
 
 **Slide: Birthday curve and table -- 4 minutes**
 
-The table is the anchor. Walk through the numbers. The jump from 10 people (12%) to 23 people (50%) is the most surprising.
+Walk through the table. The jump from 10 people (12%) to 23 people (50%) is the most surprising.
 
-Explain why intuition fails: "We think about this as 'what is the chance someone shares MY birthday?' That probability is small for a room of 30 -- about 8%. But the actual question is: what is the chance any two people share any birthday? With 30 people there are 435 different pairs. Each pair is a separate chance for a match."
+Explain the intuition failure: "We think about this as 'what is the chance someone shares MY birthday?' That probability is small -- about 8% in a room of 30. But the actual question is: what is the chance any two people share any birthday? With 30 people there are 435 different pairs. Each pair is a separate chance for a match."
 
-The number of pairs growing faster than the number of people is the key mechanism. Going from 20 to 30 people does not add 10 more chances for a match -- it adds roughly 250 more pairs.
+**Slide: Quiz 6 -- 2 minutes**
+
+Correct answer: B (they are thinking about one specific match rather than the 435 possible pairs at the party).
+
+The person at the party framed the coincidence as a specific prediction -- "what are the odds this person shares MY birthday?" The birthday problem asks a fundamentally different question about any match across all possible pairs.
 
 **Slide: Live demo -- 5 minutes**
 
 This is the best closer in the course. Do it in every class.
 
-Set the slider to the actual class size. Go around the room. Every student says their birthday out loud. Ask the class to call "match!" the moment they hear a repeated birthday.
+Set the slider to the actual class size. Go around the room. Each student says their birthday out loud. The class calls "match!" the moment one is repeated.
 
-In a class of 25-30, a match typically occurs in the first 20-25 students. The moment it happens is always memorable.
+In a class of 25-30, a match typically occurs in the first 20-25 students.
 
-If no match occurs: "We beat the odds today. That happens about 30% of the time in a class of 30. If we ran this experiment in ten different classes of 30, we would see a match in about seven of them."
+If no match occurs: "We beat the odds today. That happens about 30% of the time in a class of 30. Run this in ten classes and you will see a match in about seven of them."
 
 ---
 
@@ -342,41 +337,44 @@ If no match occurs: "We beat the odds today. That happens about 30% of the time 
 
 Read each question slowly. Pause between them. Suggest students write them down or photograph the slide.
 
-These are the transferable product of the course. The formulas will fade. These questions stay useful.
+These are the transferable product of the course. The formulas will fade. These questions stay useful for the rest of their lives.
 
 **Final slide**
 
-End here. Brief. The quote lands better in silence than with additional commentary.
+End here. The closing line lands better in silence than with additional commentary. Do not explain it or summarize it. Just let it sit.
 
 ---
 
 ## Anticipated Student Questions
 
 **"Is Okun's Law still valid after COVID?"**
-The 2020 recession and 2021 recovery were exceptional -- unemployment spiked far more sharply than Okun would predict and recovered faster than Okun would predict. Most economists believe Okun's Law holds over normal business cycles but that COVID was outside its domain of applicability.
+The 2020 recession and 2021 recovery were exceptional -- unemployment spiked far more sharply than Okun would predict and recovered faster than expected. Most economists believe Okun's Law holds over normal business cycles but that COVID was outside its domain of applicability.
 
 **"Does the stork correlation actually disappear when you control for country size?"**
-Yes. When you analyze within groups of countries of similar size and urbanization, the relationship between storks and birth rates is no longer statistically significant. This is the standard test for whether a confounding variable explains a correlation.
+Yes. When you analyze within groups of countries of similar size and urbanization, the stork-birth relationship is no longer statistically significant. This is the standard test for whether a confounding variable explains a correlation.
 
-**"If height explains only 2% of income, why do the studies bother reporting it?"**
-Two reasons. First, it is still statistically significant and consistently replicated -- it tells us something real about the relationship, even if modest. Second, even a 2% explanation can matter at scale. Across a 30-year career, 2% of income variation translates to real dollars. The point is not that height is irrelevant, but that it is a minor factor in a complex picture.
+**"Why is the U.S. Gini so much higher than other wealthy countries?"**
+Multiple factors: weaker redistribution through taxes and transfers, a more polarized labor market, higher returns to education and capital, and historical factors including racial wealth gaps. The U.S. pre-tax Gini is high; the post-tax Gini is somewhat lower but still elevated compared to peer nations.
 
 **"How do we know the mutual fund survivorship bias numbers are right?"**
-The studies track all funds from a starting date forward and compare reported performance (survivors only) against the full original cohort. Elton, Gruber, and Blake (1996) is the landmark paper. The methodology is transparent and has been replicated.
+Studies track all funds from a starting date forward and compare reported performance against the full original cohort. Elton, Gruber, and Blake (1996) is the landmark paper. The methodology is transparent and has been replicated.
 
-**"Why does the birthday probability matter outside a party trick?"**
-The birthday problem is the mathematical foundation for understanding coincidences, hash collisions in cryptography, DNA database false matches, and any situation where you are asking whether any two items in a set share a property. It is not a party trick -- it is a fundamental result in combinatorial probability.
+**"Why does the birthday probability matter outside of a demonstration?"**
+The birthday problem is the mathematical foundation for understanding coincidences generally, hash collisions in cryptography, and DNA database false matches. Any situation where you are asking whether any two items in a large set share a property follows the same logic.
+
+**"What is the difference between income and wealth inequality?"**
+Income inequality measures how unequally annual earnings are distributed. Wealth inequality measures how unequally accumulated assets -- savings, property, investments -- are distributed. Wealth is typically far more concentrated because it builds over time and can be passed down across generations. The Gini coefficient can be applied to either measure but will produce very different numbers.
 
 ---
 
 ## If You Have Extra Time
 
 - **The Monty Hall Problem** -- similar intuition-defying probability; works well as a follow-on to the birthday problem
-- **Publication bias** -- the scientific literature as a survivorship bias problem; connects to replication crisis
-- **Regression to the mean** -- why exceptional performance tends to be followed by more average performance; relevant to sports, medicine, and business
+- **Publication bias** -- the scientific literature as a survivorship bias problem; connects directly to the replication crisis in psychology and medicine
+- **Regression to the mean** -- why exceptional performance tends to be followed by more average performance; relevant to sports, investing, and medicine
 
 ---
 
 *Instructor notes by Pete Halbeisen*
-*Corresponds to index.html -- RevealJS slideshow, 24 slides*
-*Last updated: Rev 1.4*
+*Corresponds to index.html -- RevealJS slideshow, ~33 slides*
+*Last updated: Rev 1.7*

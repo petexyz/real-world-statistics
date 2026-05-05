@@ -97,8 +97,11 @@ The countermeasures are the same in principle: diverse data, independent auditin
 <strong>What they aren't telling you:</strong> An unblinded result tells you nothing reliable. It may be measuring the observer's expectations just as much as the phenomenon being studied. This applies to drug trials, AI training data, and any situation where the measurer knows the desired outcome.
 </div>
 **Sources:**
-- Pfungst, O. (1911). *Clever Hans.* Full text freely available at [Project Gutenberg](https://www.gutenberg.org/ebooks/33936).
-- Rosenthal, R., & Jacobson, L. (1968). Pygmalion in the classroom. *Urban Review.* Abstract and paper at [Springer](https://link.springer.com/article/10.1007/BF02322211). Wikipedia overview: [Pygmalion in the Classroom](https://en.wikipedia.org/wiki/Pygmalion_in_the_Classroom).
+- Pfungst, O. (1911). *Clever Hans.* Full text freely available at Project Gutenberg: https://www.gutenberg.org/ebooks/33936
+- Rosenthal, R., & Jacobson, L. (1968). Pygmalion in the classroom. *Urban Review, 3*(1), 16-20. Abstract at Springer: https://link.springer.com/article/10.1007/BF02322211
+- Einhäuser, W., Koch, C., & Carter, O. L. (2010). Pupil dilation betrays the timing of decisions. *Frontiers in Human Neuroscience, 4*, 18. Full text: https://www.frontiersin.org/articles/10.3389/fnhum.2010.00018/full -- The peer-reviewed source behind the poker sunglasses / pupil dilation claim. Caltech press release: https://www.caltech.edu/about/news/pupil-dilation-marks-decision-making-1386
+- Caro, M. (2003). *Caro's Book of Poker Tells: The Psychology and Body Language of Poker.* Cardoza Publishing. Publisher page: https://www.simonandschuster.com/books/Caros-Book-of-Poker-Tells/Mike-Caro/9781580420822 -- The foundational reference on poker tells, timing, and deliberate false tells. Widely cited in professional poker strategy.
+- On timing tells in poker: https://poker.academy/blog/post/the-hidden-power-of-timing-tells
 
 ---
 
@@ -441,3 +444,4 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 | 1.4 | 4,959 | Section 1 expanded to 3 slides: Clever Hans, Poker (fully elaborated), AI pipeline; instructor notes fully rewritten to match 6-section slideshow |
 | 1.5 | 4,563 | Removed height-income section; expanded income section with 7 new slides: income brackets, 40-year trend, Lorenz curve, Gini international comparison, wealth vs. income, billionaire mean slider, percentile calculator |
 | 1.6 | 4,596 | Sharpened 4 charts (blinding, AI pipeline, confounding, survivorship planes) with larger text and lighter background on planes; restored income distribution chart as standalone slide; fixed double $$ in percentile calculator; title corrected to "What the Numbers Are Telling You"; billionaire slider now shows mean, median, and mode; height chart removed from Section 4; 6 quiz questions (one per section) |
+| 1.7 | 4,745 | Survivorship planes chart redesigned (white bg, two-panel); Lorenz curve text overlap fixed; percentile calculator initial $ added; title card updated to MAT 177; poker section cited (Einhäuser et al. 2010, Caro 2003); all Section 1 sources now show full URLs; instructor notes updated |

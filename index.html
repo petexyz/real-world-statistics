@@ -132,7 +132,7 @@
     <h1>Real-World Applications<br>of Statistics</h1>
     <div class="rule"></div>
     <div class="subtitle">What the Numbers Are Telling You — and What They Aren't</div>
-    <div class="author">Pete Halbeisen &nbsp;·&nbsp; Elementary Statistics</div>
+    <div class="author">Pete Halbeisen &nbsp;·&nbsp; Statistics — MAT 177</div>
   </div>
   <aside class="notes">Welcome. Last lecture — no new tools today. We are connecting everything you have learned to the world you already live in. Some of these will surprise you.</aside>
 </section>
@@ -197,21 +197,21 @@
   <div class="cols-40-60">
     <div>
       <img src="./images/src_poker.png" alt="Poker player" style="max-height:300px;">
-      <div class="img-caption">A championship player at the World Series of Poker. Every piece of attire is a countermeasure against the observer effect.</div>
+      <div class="img-caption">A championship player at the World Series of Poker. Every piece of attire is a deliberate countermeasure against information leakage.</div>
     </div>
     <div>
       <p>Championship poker is not just about the cards. It is about controlling what information leaks from you to the people watching you.</p>
       <p>Professionals have independently reinvented experimental blinding as competitive strategy:</p>
       <ul>
-        <li class="fragment"><strong>Mirrored sunglasses</strong> — hide pupil dilation and eye movement, which involuntarily signal excitement or concern about a hand</li>
-        <li class="fragment"><strong>Consistent bet timing</strong> — a fast bet when holding a strong hand and a slow bet when bluffing is a tell. Pros use the same deliberate pause every single time regardless of hand strength</li>
-        <li class="fragment"><strong>Deliberate false tells</strong> — consciously planting an observable behavior that signals the opposite of the truth. Reverse-engineering the Clever Hans effect</li>
-        <li class="fragment"><strong>Neutral attire</strong> — hoods, hat brims, and scarves mask micro-expressions around the jaw and neck that are difficult to consciously control</li>
+        <li class="fragment"><strong>Mirrored sunglasses</strong> — pupil dilation is an involuntary response to excitement that opponents can read. Research by Einhäuser, Koch &amp; Carter (2010) confirmed that pupil changes betray the timing of decisions, even in competitive settings.</li>
+        <li class="fragment"><strong>Consistent bet timing</strong> — fast bets signal confidence; slow bets signal uncertainty. Professionals use the same deliberate pause on every decision regardless of hand strength, eliminating the timing channel entirely.</li>
+        <li class="fragment"><strong>Deliberate false tells</strong> — Mike Caro's foundational work <em>Caro's Book of Poker Tells</em> (2003) documents the advanced strategy of consciously planting misleading signals — acting weak with a strong hand, or strong with a weak one — to reverse-engineer the Clever Hans effect against opponents.</li>
+        <li class="fragment"><strong>Neutral attire</strong> — hoods, hat brims, and scarves mask jaw tension and neck movements that are nearly impossible to consciously suppress.</li>
       </ul>
-      <p class="fragment" style="font-size:0.8em; font-style:italic; color:var(--gray);">The goal is identical to Pfungst's blinded condition: make your observable behavior carry zero information about your private state.</p>
+      <p class="fragment" style="font-size:0.78em; font-style:italic; color:var(--gray);">The goal is identical to Pfungst's blinded condition: make your observable behavior carry zero information about your private state.</p>
     </div>
   </div>
-  <aside class="notes">This lands well with students who play poker or watch it. The key insight: professionals have arrived at the same solution as experimental scientists — eliminate the signal that leaks from the observer to the subject. Ask: "What other competitive situations require this kind of information control?"</aside>
+  <aside class="notes">This lands well with students who play poker or watch it. The Einhäuser citation is peer-reviewed science from Caltech/Harvard — gives the sunglasses point real credibility. Caro's Book of Poker Tells is the canonical reference on the topic and widely cited. Ask: "What other competitive situations require this kind of information control?" Good answers: negotiation, chess (time management as a tell), sports (pitchers hiding grip).</aside>
 </section>
 
 <section>
@@ -512,7 +512,7 @@
 <section>
   <h2>Where Do You Stand? A Percentile Calculator</h2>
   <div class="calc-wrap">
-    <label>Enter a household income: <span id="pct-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">60,000</span></label>
+    <label>Enter a household income: <span id="pct-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">$60,000</span></label>
     <input type="range" min="10000" max="500000" step="1000" value="60000" id="pct-slider" oninput="calcPct(this.value)">
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:12px;">
       <div class="stat-box">
