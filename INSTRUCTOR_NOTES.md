@@ -2,34 +2,48 @@
 ### Last Lecture -- Elementary Statistics
 
 **Estimated total time:** 90-110 minutes
-**Format:** Lecture with embedded discussion questions and optional live demos
+**Format:** RevealJS slideshow, presented fullscreen in a browser
+**Controls:** Arrow keys to advance, S for speaker view, F for fullscreen
 
 ---
 
 ## Pre-Class Setup
 
-- Print one copy of the Quick-Reference formula sheet (last page of main doc) for yourself
-- If doing the birthday demo (Section 9), have students ready to participate -- works best with 20+ students
-- Recommended: have the GitHub-hosted version open on the projector in a browser so charts render at full size
-- Optional: a whiteboard or tablet for sketching the confounding variable diagram live
+- Open `index.html` in Chrome or Firefox and press F for fullscreen before students arrive
+- Press S to open speaker view in a second window -- your notes will appear there while students see the clean slides
+- Have the birthday demo slider (Section 6) ready -- students enjoy interacting with it
+- If the room has a second screen or monitor, use RevealJS speaker view: students see the slide, you see your notes and the next slide
 
 ---
 
-## Overall Pacing Guide
+## Pacing Guide
 
-| Section | Recommended Time | Notes |
-|---------|-----------------|-------|
-| Opening framing | 5 min | Set tone -- this is synthesis, not new material |
-| 1. Clever Hans | 15 min | Spend time on the AI angle -- very current |
-| 2. Okun's Law | 12 min | Can trim if running long |
-| 3. Storks / Spurious Correlation | 12 min | Discussion question usually generates good debate |
-| 4. Normal Distribution | 7 min | Fast pass -- they know this; use birthday demo hook |
-| 5. Household Income | 10 min | Political discussion tends to ignite -- be ready to facilitate |
-| 6. Survivorship Bias | 12 min | WWII story lands well; the investing chart is the gut punch |
-| 7. Simpson's Paradox | 12 min | This one usually produces genuine "wait, what?" reactions |
-| 8. Bayes / Base Rate | 12 min | Slow down here -- students need time to absorb the arithmetic |
-| 9. Birthday Problem | 10 min | End with the live demo -- great closer |
-| Closing synthesis | 5 min | Fast -- the 7 questions slide |
+| Slide Group | Section | Time | Slides |
+|-------------|---------|------|--------|
+| Cover + Agenda | Opening | 3 min | 2 |
+| Clever Hans story | Section 1 | 5 min | 1 |
+| Blinding diagram | Section 1 | 4 min | 1 |
+| Poker | Section 1 | 5 min | 1 |
+| AI pipeline | Section 1 | 5 min | 1 |
+| Quiz 1 | Section 1 | 2 min | 1 |
+| Storks scatter | Section 2 | 6 min | 1 |
+| Confounding variable | Section 2 | 5 min | 1 |
+| Quiz 2 | Section 2 | 2 min | 1 |
+| Okun scatter | Section 3 | 6 min | 1 |
+| Okun time series + lag | Section 3 | 6 min | 1 |
+| Two distributions | Section 4 | 4 min | 1 |
+| Mean vs. median | Section 4 | 5 min | 1 |
+| Height-income correlation | Section 4 | 4 min | 1 |
+| TI-84 steps | Section 4 | 4 min | 1 |
+| Wald / planes | Section 5 | 6 min | 1 |
+| Funds chart | Section 5 | 4 min | 1 |
+| Quiz 3 | Section 5 | 2 min | 1 |
+| Birthday calculator | Section 6 | 4 min | 1 |
+| Birthday curve + table | Section 6 | 4 min | 1 |
+| Live demo | Section 6 | 5 min | 1 |
+| Six questions | Closing | 3 min | 1 |
+| Final slide | Closing | 1 min | 1 |
+| **Total** | | **~95 min** | **24** |
 
 ---
 
@@ -37,223 +51,275 @@
 
 ---
 
-### Opening (5 minutes)
+### Opening (3 minutes)
 
-**Goal:** Frame the entire lecture as synthesis and celebration, not new content.
+Frame this as synthesis, not new content. Students have seen all the tools -- today they see what the tools are actually for.
 
-Say something like: *"Everything today you have technically seen before -- correlation, distributions, probability. What we are doing today is connecting the dots between those tools and the world you already live in. By the end of this class you will realize you have been thinking statistically for months without knowing it."*
+Open with something like: *"No new formulas today. Everything we cover, you have technically already seen. What we are doing is connecting it to the world you actually live in."*
 
-**Do not** start with housekeeping. Start with the Clever Hans story directly -- it is immediately engaging.
-
----
-
-### Section 1: Clever Hans (15 minutes)
-
-**The story (4 min):**
-Tell this as a narrative before showing any slides. The image works better as a reveal after students have formed a mental picture.
-
-Key beats:
-1. Von Osten was completely sincere -- he genuinely believed the horse could reason
-2. Public demonstrations, scientific committees, all impressed
-3. Pfungst's decisive experiment: vary whether the questioner knows the answer
-4. The result: Hans could not answer questions the questioner did not know
-
-Pause and let the implication land before moving on.
-
-**Discussion prompt (optional, 2 min):**
-"Before I tell you the explanation -- what is your hypothesis for how Hans was doing it?"
-
-Students usually guess training/conditioning correctly. Then you can explain the micro-cue mechanism.
-
-**Poker application (2 min):**
-Brief -- just enough to illustrate that professional players have independently reinvented blinding as a strategic tool. The sunglasses/poker face example connects to something students know.
-
-**AI application (5 min):**
-This is the section that will matter most to this generation. Spend time on the feedback loop diagram. The key point: AI models are the most impressionable "subjects" ever created because they have no intrinsic priors -- they learn exactly what they are shown.
-
-The discussion question ("why does ChatGPT confidently give wrong answers?") is worth 2 minutes of student response. The Clever Hans answer: the model learned from human-generated content, and humans have confident-sounding ways of saying wrong things. The model learned the pattern of confidence, not the truth.
-
-**Formulas to mention:** The bias model $Y = \mu + \epsilon_{true} + \epsilon_{bias}$ does not need derivation -- just the concept that blinding tries to drive $\epsilon_{bias}$ to zero.
+Do not start with housekeeping. Go straight into the Clever Hans story -- it is immediately engaging and sets the right tone.
 
 ---
 
-### Section 2: Okun's Law (12 minutes)
+### Section 1: The Observer Effect (21 minutes across 5 slides)
 
-**Tone:** This is your cleanest "statistics describes the real world" section. Students have probably heard about GDP and unemployment in the news; most have no idea there is a formula connecting them.
+**Slide: Clever Hans (1907) -- 5 minutes**
 
-**Lead with the scatter plot.** Let students read it before you explain it. Ask: "What does this shape tell you? What does the slope direction mean?" Let them identify the negative correlation themselves.
+Tell the story as a narrative before the slide appears. Ask students to guess the explanation before you reveal it.
 
-**Key teaching points:**
-- The correlation is real but imperfect ($-0.9 < r < -0.5$) -- note the scatter. Real economic relationships are never clean.
-- The scatter is not error or noise -- it is real variation from recessions of different types, different industries, different eras.
-- The lag is the most pedagogically interesting part. This is where you can introduce the concept of time-series modeling without formally teaching it.
+Key beats in order:
+1. Von Osten was completely sincere -- he genuinely believed the horse could reason. He never charged admission. He was not a fraud.
+2. Public demonstrations attracted journalists, scientists, and government officials. The 1904 Hans Commission -- thirteen experts -- concluded no trickery was involved.
+3. Pfungst's decisive test: vary whether the questioner knows the answer.
+4. Result: 89% correct when questioner knows, 6% when they do not.
 
-**The time-series chart:** Walk through the three recessions. Students recognize 2008 and 2020 viscerally. Ask: "Notice anything about the timing? Does unemployment peak at the same time as GDP hits its low?" (No -- it peaks later.) That is the lag in action.
+Pause after revealing the 89%/6% numbers. Let it land. Then ask: "So what was Hans actually doing?" Students usually land on "reading body language" quickly.
 
-**Common student question:** "Is Okun's Law a law?" Answer: No, it is an empirical regularity -- a well-supported rule of thumb, not a physical law. The coefficient changes over time and across countries.
+The micro-cue detail -- a barely perceptible head dip at the moment the questioner's tension released -- is worth describing vividly. It was not conscious. Von Osten had no idea he was doing it.
 
----
+**Slide: Blinding diagram -- 4 minutes**
 
-### Section 3: Storks (12 minutes)
+The diagram shows the mechanism. Walk through it left to right:
+- Left panel: questioner knows, cue transmitted, Hans performs
+- Right panel: questioner does not know, no cue, Hans at chance
 
-**This is the highlight of the lecture for most students.** The combination of an absurd correlation and a real $p$-value ($p < 0.01$!) reliably produces laughter and genuine engagement.
+Make the connection to research design explicit: this is exactly why drug trials use double-blind protocols. The doctor's behavior -- how encouraging they are, how they interpret borderline results -- shifts when they know which patient got the real drug.
 
-**Do not reveal the confounding variable immediately.** Show the scatter plot and the correlation coefficient. Ask: "What do we conclude?" Wait for someone to say "more storks cause more babies" or something equivalent. Then ask: "Is there any other possibility?"
+**Slide: Poker -- 5 minutes**
 
-**The teaching sequence:**
-1. Show the correlation. Let it land.
-2. Ask for alternative explanations. Students will usually get to "some third factor" quickly.
-3. Reveal the confounding variable diagram.
-4. Show why controlling for country size makes the correlation disappear.
+This is the most expanded new section. The key insight: professional poker players have independently arrived at the same solution as experimental scientists -- eliminate the observable signal that leaks from one party to another.
 
-**The breakfast grades example** (discussion question) is worth a few minutes. Common confounders students identify: family income, parental involvement, whether the child is hungry/distracted. These are all correct. This bridges to randomized experiments as the gold standard.
+Walk through each bullet point with a concrete example:
 
-**Formula note:** You do not need to show the partial correlation formula. The concept -- "holding Z constant, does the X-Y relationship persist?" -- is sufficient for this level.
+- **Sunglasses:** Pupils dilate involuntarily when you see something exciting -- like a strong hand. Mirrored lenses prevent this from being readable.
+- **Consistent timing:** If you bet quickly with strong hands and slowly with weak ones, a sharp opponent will catch it within a few hands. Pros use the same deliberate 10-15 second pause every single decision, regardless of hand strength.
+- **False tells:** Some pros deliberately rub their nose or tap the table before a strong hand -- planting a readable signal that they then use against opponents who think they have spotted a tell.
+- **Neutral attire:** Jaw tension, a clenched neck, or a subtle swallow are nearly impossible to consciously suppress. Covering them eliminates the channel entirely.
 
----
+Ask students: "What other competitive situations require this kind of information control?" Good answers include: negotiation, poker, chess (time management as a tell), sports (pitchers hiding grip).
 
-### Section 4: Normal Distribution (7 minutes -- fast pass)
+**Slide: Artificial Intelligence -- 5 minutes**
 
-**Goal:** Rapid but vivid recap, not a full re-teaching.
+This is the section that will resonate most with this generation. Spend time on the feedback loop diagram.
 
-**Lead with a show of hands:** "How many of you are between 5'4" and 6'4"? [pause] That is the 95% interval -- $\pm 2\sigma$ from the mean. You just experienced a probability distribution."
+Walk through the three mechanisms:
 
-The Central Limit Theorem explanation is worth 90 seconds: "Why does height follow a bell curve? Because it is the sum of hundreds of genetic and environmental factors. The CLT says that sums of many independent random factors tend toward normal. This is why the normal distribution appears everywhere in nature."
+1. **Labeled training data:** Someone had to decide what counted as the "correct" label for each piece of training data. If those people had systematic blind spots -- about what faces look professional, what writing sounds authoritative, what answers seem correct -- the model absorbed those blind spots.
 
-**The key connection:** The CLT is why our $z$-tests and $t$-tests work. Without it, hypothesis testing would require knowing the exact distribution of the population.
+2. **Feedback loops:** When a model's output influences what users see, and that user behavior becomes future training data, bias can compound. A recommendation algorithm that slightly favors certain content will generate more engagement data for that content, which makes it favor that content more strongly in the next training cycle.
 
-**Optional fast fact:** The tallest recorded person was 8'11" (Robert Wadlow). Using our height model, that is about $+9.7\sigma$ -- a probability of roughly $10^{-22}$. Some things are not normally distributed in the tails.
+3. **Benchmark design:** A model that scores 95% on a benchmark may have learned to pass that specific benchmark rather than acquired genuine capability. The benchmark itself was designed by people with expectations about what "good performance" looks like.
 
----
+The discussion question -- "When an AI confidently gives you a wrong answer, what does the Clever Hans story suggest?" -- is worth 2-3 minutes of student response. The answer: the model learned from human-generated text, and humans write confidently even when they are wrong. The model learned the pattern of confident language, not the truth behind it.
 
-### Section 5: Household Income (10 minutes)
+**Slide: Quiz 1 -- 2 minutes**
 
-**Warning:** This section has political content. Frame it explicitly as statistical literacy, not advocacy.
+Correct answer: B (doctors may unconsciously treat patients differently).
 
-Opening: "I am going to show you a fact about income statistics that politicians on both sides of the aisle use selectively. My goal is not to tell you what to conclude -- it is to give you the tools to notice when you are being given a number that serves an argument."
-
-**The inequality $\text{Mode} < \text{Median} < \text{Mean}$** is the key formula. Write it on the board. Ask students to name a distribution where this holds (right-skewed). Ask them to name one where it reverses (left-skewed). Confirm their understanding.
-
-**The Gini coefficient** is bonus material if you have time. The key insight: a single number summarizing the entire shape of the distribution -- analogous to $\sigma$ summarizing spread.
-
-**Common student reaction:** "Why do they report the mean at all if it is misleading?" Answer: It is not wrong -- it is the correct mean. The issue is using it as a proxy for "typical," which it is not. The mean of income is very meaningful for calculating total tax revenue, for example.
+If students pick A or C, use it as an opening to reinforce the observer effect concept. Sample size is a separate issue. And drugs absolutely can be tested in blind conditions -- that is the whole point of placebo design.
 
 ---
 
-### Section 6: Survivorship Bias (12 minutes)
+### Section 2: Do Storks Deliver Babies? (13 minutes across 3 slides)
 
-**The WWII story is the best narrative in the lecture.** Tell it slowly and with drama.
+**Slide: A Real Study. A Real Result. -- 6 minutes**
 
-Build-up: "You are an engineer in 1943. Bombers are being shot down. You examine 100 planes that came back. Here is the bullet hole map. Where do you reinforce?"
+Do not reveal the confounding variable yet. Show the scatter plot and let students look at it for a moment.
 
-Wait for student answers. Most will say "reinforce where the holes are." Then deliver the Wald insight.
+Then show the r value (0.62) and p-value (0.008) without explanation. Ask: "What do we conclude?"
 
-**The "absence of data is data" principle** is the philosophical core of this section. Spend a sentence on it: "Wald's contribution was realizing that the sample he was looking at was not a random sample of planes flown -- it was a sample conditioned on survival. He had to reason about what the missing data would look like."
+Wait for someone to say "more storks cause more babies" or something equivalent. Then ask: "Is there any other possibility?" Students will usually get to "some third factor" quickly.
 
-**The investing chart:** The contrast between "survivor-only returns" and "all-fund returns" is visually stark. Ask: "If you saw a fund company advertise 8.2% average annual returns, and you knew about survivorship bias, what would you ask them?"
+The combination of an absurd conclusion and a real p-value reliably produces the right kind of laughter -- the kind that comes with genuine recognition that statistics can mislead.
 
-**The publishing/science angle** is important for students who will do research: "The replication crisis you may have heard about is partly a survivorship problem. Studies with significant results get published. Studies that find nothing significant do not. The literature is a biased sample of all experiments run."
+After revealing the answer, make the point explicitly: the p-value tells you the correlation is unlikely to be due to chance. It tells you nothing about whether the relationship is causal.
 
----
+**Slide: Confounding variable -- 5 minutes**
 
-### Section 7: Simpson's Paradox (12 minutes)
+Walk through the diagram. The key move: country size drives both stork populations (more rural land = more habitat) and birth rates (larger, less urbanized countries have higher birth rates). Neither variable is causing the other.
 
-**This reliably produces the strongest "wait, how is that possible?" reaction of the lecture.** Do not rush it.
+Ask: "How would you test whether country size is really the explanation?" The answer: hold country size constant. Analyze within groups of similar-sized countries. The correlation disappears.
 
-**Show the aggregate chart first.** Let students see the 44% vs. 35% gap and accept it as evidence of discrimination. Ask: "What do you conclude?" Then show the department-level charts. Watch the reactions.
+This is the bridge to randomized experiments. Random assignment breaks the link between the confounder and the treatment, which is why randomized controlled trials are the gold standard in medicine.
 
-**The explanation needs time.** The weighted average mechanism is subtle. Consider drawing it on the board:
+**Slide: Quiz 2 -- 2 minutes**
 
-- Women applied heavily to Dept A (30% acceptance rate for everyone)
-- Men applied heavily to Dept B (60% acceptance rate for everyone)
-- Aggregate average for women: weighted toward Dept A (low)
-- Aggregate average for men: weighted toward Dept B (high)
-- Result: women look worse in the aggregate even though they do at least as well everywhere
+Correct answer: C (confounding variable like family income).
 
-**The COVID vaccination example** is current and impactful. If students have heard the "more vaccinated people are hospitalized" talking point, this is the moment to address it directly with statistical reasoning.
-
-**Key takeaway sentence:** "Simpson's Paradox is not a paradox at all once you see it. It is just what happens when you mix two groups with different base rates. The aggregate is a weighted average, and the weights are not equal. The lesson: always ask whether there are subgroup differences before interpreting an aggregate comparison."
+This bridges directly to the storks example. Family income correlates with both having breakfast reliably available and with better academic performance through a dozen pathways -- stability, parental involvement, better schools, less stress.
 
 ---
 
-### Section 8: Bayes' Theorem and Base Rate Neglect (12 minutes)
+### Section 3: Okun's Law (12 minutes across 2 slides)
 
-**This is the hardest section cognitively.** Slow down. The arithmetic matters.
+**Slide: GDP Growth vs. Unemployment -- 6 minutes**
 
-**Start with the intuition pump:** "A test for a disease is 95% accurate. You test positive. What is the probability you have the disease?"
+Lead with the scatter plot. Before explaining it, ask students to read it:
+- "What does the direction of the slope tell you?"
+- "What does the scatter around the line tell you?"
+- "What do the recession arrows show?"
 
-Take a few guesses from the class. They will typically be in the 80-95% range. Write them on the board. Then say: "The correct answer, for a disease that affects 1% of the population, is about 16%. Let me show you why."
+Students can identify the negative correlation themselves. The scatter is the teaching moment: real economic relationships are never clean. The points off the line represent recessions of different types, different industries, different eras.
 
-**Work through the 10,000-person table line by line.** This is more intuitive than the formula for most students.
+Address the common question directly: "Is Okun's Law actually a law?" No. It is an empirical regularity -- a well-supported rule of thumb that has held for six decades but is not a physical law. The coefficient varies across time periods and countries.
 
-| | Has disease | No disease |
-|---|------------|------------|
-| Tests positive | 95 | 495 |
-| Tests negative | 5 | 9,405 |
+**Slide: The Lag -- 6 minutes**
 
-"Of 590 positive tests, only 95 are true positives. 95/590 = 16%."
+Walk through the time series. Students will recognize the 2008 crisis and 2020 COVID recession viscerally.
 
-Then show the Bayes' Theorem formula as the algebraic version of the same calculation.
+Ask: "Does unemployment peak at the same time GDP hits its lowest point?" No -- it peaks later. That is the lag in action.
 
-**The criminal evidence example** often generates strong reactions. The "prosecutor's fallacy" -- confusing $P(\text{match}|\text{innocent})$ with $P(\text{innocent}|\text{match})$ -- has contributed to wrongful convictions.
+The explanation of why: companies do not immediately fire everyone when a recession begins. They reduce hours, freeze hiring, cut contractors, and only then cut permanent staff. When recovery begins, they wait for confirmation before committing to payroll. Finding, interviewing, and training workers takes months.
 
-**Discussion question:** "A news story says an AI cancer detector is 98% accurate. What is the first question you ask?" Answer: "What is the prevalence of the cancer in the population being screened?" A 98% accurate test applied to a condition with 0.1% prevalence will produce mostly false positives.
-
----
-
-### Section 9: The Birthday Problem (10 minutes + live demo)
-
-**Opening:** "Before I show you this chart -- how many people do you think need to be in a room for there to be a 50-50 chance of a shared birthday?" Take guesses. Write them down.
-
-**Then reveal: 23.** Let the shock land.
-
-**Walk through the logic:**
-- The question is NOT "what is the chance someone shares MY birthday"
-- The question is "what is the chance ANY two people share A birthday"
-- With 30 people: $\binom{30}{2} = 435$ pairs. Each pair has a ~0.27% chance of matching. 435 opportunities compound rapidly.
-
-**The live demo:** Ask students to say their birthdays out loud, one at a time, going around the room. Ask the class to shout "match!" when one is repeated. In a class of 25-30, a match typically occurs in the first 20-25 people. The moment it happens is always memorable.
-
-If a match does not occur, note: "That happens about 30% of the time in a class this size. We beat the odds today -- but if we did this same experiment in ten classes of 30, we would see a match in about seven of them."
-
-**The cryptography connection** is a strong closer for technically-minded students: "The security of hash functions in cryptography depends directly on the birthday problem. This is not a party trick -- it is at the heart of how digital signatures work."
+The practical implication: this is why people often feel like a recession is still happening even after economists say it ended. GDP has recovered. The job market, which is what most people feel directly, has not caught up yet. Both descriptions can be accurate simultaneously.
 
 ---
 
-## Closing: The 7 Questions (5 minutes)
+### Section 4: The Shape of Income (17 minutes across 4 slides)
 
-End with the seven questions, read them slowly, and suggest that students write them down or take a photo.
+**Slide: Two distributions -- 4 minutes**
 
-These questions are the transferable product of the course -- the thing that remains useful after the formulas have faded.
+Put the two charts side by side and let students look before talking. Ask: "What is different about the shape of these two distributions?"
 
-Consider ending with: *"A statistical thinker is not someone who distrusts numbers. It is someone who knows exactly what questions to ask before trusting them. You now know those questions. That is not a small thing."*
+Height: symmetric. Tails are roughly equal on both sides. The mean, median, and mode all land at the same place.
+
+Income: right-skewed. A long tail extends far to the right. The bulk of households cluster at lower-to-middle incomes, but a small number of households earn extraordinary amounts.
+
+**Slide: Mean vs. Median -- 5 minutes**
+
+The company example is the clearest illustration. Walk through the arithmetic:
+- 9 workers at $40,000 = $360,000 total
+- 1 CEO at $1,000,000
+- Total payroll: $1,360,000
+- Divide by 10: mean = $136,000
+
+Nobody at the company earns $136,000. The mean is mathematically correct and completely misleading as a description of what a typical worker earns.
+
+The order of statistics in a right-skewed distribution -- mode < median < mean -- is worth writing down or photographing. It is a diagnostic students can apply to any income, wealth, or price data they encounter in the news.
+
+**Slide: Height-income correlation -- 4 minutes**
+
+This is a fun bridge between the two distribution types. One is normally distributed, one is right-skewed -- and they are weakly correlated.
+
+Key numbers to land:
+- r = 0.13 to 0.20 across studies -- weak positive, but statistically significant
+- r-squared = approximately 0.02 -- height explains about 2% of the variation in income
+
+The r-squared number is the teaching moment: statistically significant does not mean practically important. With a large enough sample, even a tiny correlation will pass a significance test. Height is a real but very minor factor in a very complicated picture.
+
+Then ask: "Wait -- could this be a confounding variable problem?" Yes. Childhood nutrition and family socioeconomic status correlate with both height and adult income. Height may partly be a proxy for those advantages.
+
+**Slide: TI-84 steps -- 4 minutes**
+
+Walk through the four steps live if calculators are available. If not, walk through the expected output and focus on interpreting r and r-squared.
+
+The key question to ask students after they see the output: "If r = 0.15 and the p-value is 0.001, does that mean height is an important predictor of income?" No -- important and significant are different things. r-squared = 0.02 means 98% of income variation is explained by something else.
 
 ---
 
-## Potential Student Questions and Answers
+### Section 5: Survivorship Bias (12 minutes across 3 slides)
+
+**Slide: Abraham Wald and the WWII Bombers -- 6 minutes**
+
+Tell this story slowly and with some drama. Build up before revealing Wald's insight.
+
+Setup: "You are an engineer in 1943. Bombers are being shot down. Your team examines 100 planes that came back. You map every bullet hole. Most damage is on the wings, fuselage, and tail. Where do you put the armor?"
+
+Wait for student answers. Most will say reinforce where the holes are. Then deliver the insight.
+
+The philosophical core is worth a full sentence on its own: "The planes they were looking at were the ones that survived. Bullet holes in the wings and fuselage were common on returned planes for exactly one reason -- those hits did not bring the plane down. The planes that took engine hits never came back. They were not in the dataset."
+
+Then: "The absence of data was the data."
+
+**Slide: Mutual funds -- 4 minutes**
+
+The chart makes the point visually. Left panel: of 355 funds that existed in 2000, fewer than half survived to 2023. Right panel: the survivor-only reported returns are dramatically higher than the true all-fund average.
+
+Ask: "If you saw a fund company advertise 8% average annual returns over 20 years, and you knew about survivorship bias, what is the first question you would ask?"
+
+Answer: "Of how many original funds is that 8% the average? And what happened to the ones that are not included?"
+
+**Slide: Quiz 3 -- 2 minutes**
+
+Correct answer: B (unemployed or underemployed graduates who did not respond).
+
+This is the schools-as-survivors problem. Graduates who found high-paying jobs are proud to report them. Graduates who are working part-time, still job searching, or took positions well below their degree level are far less likely to respond to a salary survey. The published figure is a biased sample of outcomes.
+
+---
+
+### Section 6: The Birthday Problem (13 minutes across 3 slides)
+
+**Slide: Birthday calculator -- 4 minutes**
+
+Before touching the slider, ask the class: "In a room of 30 people, what is the probability that at least two share a birthday? Write down your guess."
+
+Take a few guesses aloud. Most will be in the 5-20% range.
+
+Then reveal the slider result: 70.6%. Watch the reactions.
+
+Let students interact with the slider. Ask: "Drag it until you find where it crosses 50%. What number is that?" (23.) "What number does it hit 99%?" (57.)
+
+**Slide: Birthday curve and table -- 4 minutes**
+
+The table is the anchor. Walk through the numbers. The jump from 10 people (12%) to 23 people (50%) is the most surprising.
+
+Explain why intuition fails: "We think about this as 'what is the chance someone shares MY birthday?' That probability is small for a room of 30 -- about 8%. But the actual question is: what is the chance any two people share any birthday? With 30 people there are 435 different pairs. Each pair is a separate chance for a match."
+
+The number of pairs growing faster than the number of people is the key mechanism. Going from 20 to 30 people does not add 10 more chances for a match -- it adds roughly 250 more pairs.
+
+**Slide: Live demo -- 5 minutes**
+
+This is the best closer in the course. Do it in every class.
+
+Set the slider to the actual class size. Go around the room. Every student says their birthday out loud. Ask the class to call "match!" the moment they hear a repeated birthday.
+
+In a class of 25-30, a match typically occurs in the first 20-25 students. The moment it happens is always memorable.
+
+If no match occurs: "We beat the odds today. That happens about 30% of the time in a class of 30. If we ran this experiment in ten different classes of 30, we would see a match in about seven of them."
+
+---
+
+### Closing (4 minutes across 2 slides)
+
+**Slide: Six questions**
+
+Read each question slowly. Pause between them. Suggest students write them down or photograph the slide.
+
+These are the transferable product of the course. The formulas will fade. These questions stay useful.
+
+**Final slide**
+
+End here. Brief. The quote lands better in silence than with additional commentary.
+
+---
+
+## Anticipated Student Questions
 
 **"Is Okun's Law still valid after COVID?"**
-Good question. The 2020 recession and 2021 recovery were exceptional. Unemployment spiked far more sharply than Okun would predict (due to sudden shutdowns) and recovered faster than Okun would predict (due to stimulus and re-opening). Most economists believe Okun's Law still holds over normal business cycles but that COVID was outside the law's domain of applicability.
+The 2020 recession and 2021 recovery were exceptional -- unemployment spiked far more sharply than Okun would predict and recovered faster than Okun would predict. Most economists believe Okun's Law holds over normal business cycles but that COVID was outside its domain of applicability.
 
-**"If Simpson's Paradox is always possible, how can we ever trust aggregate statistics?"**
-You can trust aggregate statistics when you have accounted for known confounders and when the question you are asking is about the aggregate itself (e.g., total revenue, total admissions). Simpson's Paradox is a warning to disaggregate before making causal claims, not a reason to distrust all data.
+**"Does the stork correlation actually disappear when you control for country size?"**
+Yes. When you analyze within groups of countries of similar size and urbanization, the relationship between storks and birth rates is no longer statistically significant. This is the standard test for whether a confounding variable explains a correlation.
 
-**"Can Bayes' Theorem fix the problem with medical tests?"**
-Yes -- this is exactly what it does. The solution is either to raise the base rate of people being tested (screen only high-risk populations) or to follow a positive test with a second independent test, which updates the prior probability dramatically.
+**"If height explains only 2% of income, why do the studies bother reporting it?"**
+Two reasons. First, it is still statistically significant and consistently replicated -- it tells us something real about the relationship, even if modest. Second, even a 2% explanation can matter at scale. Across a 30-year career, 2% of income variation translates to real dollars. The point is not that height is irrelevant, but that it is a minor factor in a complex picture.
 
-**"How do we know survivorship bias is actually causing mutual fund returns to look better? Maybe the surviving funds are just better managed."**
-This is a good critical question. The response: you can test it by tracking the performance of all funds from a starting date forward and comparing to funds-that-survived-only. The studies that have done this (Elton, Gruber, and Blake, 1996) find a substantial bias. Survivorship is the dominant explanation.
+**"How do we know the mutual fund survivorship bias numbers are right?"**
+The studies track all funds from a starting date forward and compare reported performance (survivors only) against the full original cohort. Elton, Gruber, and Blake (1996) is the landmark paper. The methodology is transparent and has been replicated.
+
+**"Why does the birthday probability matter outside a party trick?"**
+The birthday problem is the mathematical foundation for understanding coincidences, hash collisions in cryptography, DNA database false matches, and any situation where you are asking whether any two items in a set share a property. It is not a party trick -- it is a fundamental result in combinatorial probability.
 
 ---
 
-## Optional Extensions (if time permits)
+## If You Have Extra Time
 
-- **The Monty Hall Problem:** Similar intuition-defying probability result; connects well after the birthday problem
-- **P-hacking / multiple comparisons:** The probability of false discovery when you run many tests -- connects Clever Hans, publication bias, and hypothesis testing
-- **The Prosecutor's Fallacy in detail:** More rigorous treatment of the DNA/criminal evidence Bayes application
-- **Regression to the mean:** Why exceptional performance tends to be followed by more average performance -- connects to Okun's Law and has wide sports/business applications
+- **The Monty Hall Problem** -- similar intuition-defying probability; works well as a follow-on to the birthday problem
+- **Publication bias** -- the scientific literature as a survivorship bias problem; connects to replication crisis
+- **Regression to the mean** -- why exceptional performance tends to be followed by more average performance; relevant to sports, medicine, and business
 
 ---
 
 *Instructor notes by Pete Halbeisen*
-*Formatted for GitHub rendering*
+*Corresponds to index.html -- RevealJS slideshow, 24 slides*
+*Last updated: Rev 1.4*

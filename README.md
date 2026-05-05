@@ -477,3 +477,4 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 | 1.1 | 4,283 | Added height-income correlation, scatter plot, and TI-84 steps; struck "you learned two distributions"; fact check fixes (von Osten title, Okun coefficient); title restored; all sources converted to web links; overlapping text fixed in 4 charts |
 | 1.2 | 4,352 | Subtitle changed to "What Numbers Are Telling You -- and What They Aren't" |
 | 1.3 | 4,914 | Switched to Minimal theme; added boxed "What the numbers are telling you / aren't telling you" callout to all six sections |
+| 1.4 | 4,959 | Section 1 expanded to 3 slides: Clever Hans, Poker (fully elaborated), AI pipeline; instructor notes fully rewritten to match 6-section slideshow |

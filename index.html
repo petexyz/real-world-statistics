@@ -193,19 +193,50 @@
 </section>
 
 <section>
-  <h2>The Same Problem — Two Different Arenas</h2>
-  <div class="cols">
+  <h2>Poker: Controlling Information Leakage</h2>
+  <div class="cols-40-60">
     <div>
-      <img src="./images/src_poker.png" alt="Poker player" style="max-height:230px;">
-      <div class="img-caption">Championship players use sunglasses, consistent timing, and deliberate false tells to eliminate readable cues.</div>
+      <img src="./images/src_poker.png" alt="Poker player" style="max-height:300px;">
+      <div class="img-caption">A championship player at the World Series of Poker. Every piece of attire is a countermeasure against the observer effect.</div>
     </div>
     <div>
-      <img src="./images/02_ai_observer_bias.png" alt="AI pipeline" style="max-height:230px;">
-      <div class="img-caption">Bias enters AI at the data labeling stage and can compound through feedback loops over multiple training cycles.</div>
+      <p>Championship poker is not just about the cards. It is about controlling what information leaks from you to the people watching you.</p>
+      <p>Professionals have independently reinvented experimental blinding as competitive strategy:</p>
+      <ul>
+        <li class="fragment"><strong>Mirrored sunglasses</strong> — hide pupil dilation and eye movement, which involuntarily signal excitement or concern about a hand</li>
+        <li class="fragment"><strong>Consistent bet timing</strong> — a fast bet when holding a strong hand and a slow bet when bluffing is a tell. Pros use the same deliberate pause every single time regardless of hand strength</li>
+        <li class="fragment"><strong>Deliberate false tells</strong> — consciously planting an observable behavior that signals the opposite of the truth. Reverse-engineering the Clever Hans effect</li>
+        <li class="fragment"><strong>Neutral attire</strong> — hoods, hat brims, and scarves mask micro-expressions around the jaw and neck that are difficult to consciously control</li>
+      </ul>
+      <p class="fragment" style="font-size:0.8em; font-style:italic; color:var(--gray);">The goal is identical to Pfungst's blinded condition: make your observable behavior carry zero information about your private state.</p>
     </div>
   </div>
-  <p class="source">Discussion: When an AI confidently gives you a wrong answer — what does the Clever Hans story suggest about why?</p>
-  <aside class="notes">Poker players independently reinvented experimental blinding as strategy. AI models learn from human-labeled data — if labelers had expectations, the model learned those expectations.</aside>
+  <aside class="notes">This lands well with students who play poker or watch it. The key insight: professionals have arrived at the same solution as experimental scientists — eliminate the signal that leaks from the observer to the subject. Ask: "What other competitive situations require this kind of information control?"</aside>
+</section>
+
+<section>
+  <h2>Artificial Intelligence: The Most Impressionable Subject of All</h2>
+  <div class="cols-60-40">
+    <div>
+      <img src="./images/02_ai_observer_bias.png" alt="AI pipeline" style="max-height:270px;">
+      <div class="img-caption">The AI training pipeline. Bias enters at the data labeling stage and compounds through feedback loops across multiple training cycles.</div>
+    </div>
+    <div>
+      <p>AI models have no intrinsic understanding — they learn entirely from what they are shown. This makes them the most impressionable subjects ever created.</p>
+      <p><strong>Three mechanisms through which bias enters:</strong></p>
+      <ul>
+        <li class="fragment"><strong>Labeled training data</strong> — if the humans who labeled the data held systematic expectations, the model learns those expectations, not the underlying truth</li>
+        <li class="fragment"><strong>Feedback loops</strong> — model outputs influence what users see; user behavior feeds back into future training data; bias compounds with each cycle</li>
+        <li class="fragment"><strong>Benchmark design</strong> — models evaluated on benchmarks assembled by researchers with specific expectations may learn to pass the benchmark rather than acquire genuine capability</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:10px;">
+    <strong>What the numbers are telling you:</strong> When an experiment is properly blinded — or an AI is trained on diverse, audited data — the result reflects what is actually happening.
+    <div class="not"><strong>What they aren't telling you:</strong> An unblinded result, or a model trained on biased data, may be measuring expectations rather than reality. Hans learned to read one questioner. A biased AI reflects those expectations back to millions of people simultaneously.</div>
+  </div>
+  <p class="source">Discussion: When an AI confidently gives you a wrong answer — what does the Clever Hans story suggest about where that confidence came from?</p>
+  <aside class="notes">The discussion question is worth 2-3 minutes. The Clever Hans answer: the model learned from human-generated text, and humans write confidently even when wrong. The model learned the pattern of confident language, not the truth behind it. ChatGPT "hallucinations" are a direct expression of this.</aside>
 </section>
 
 <section>
