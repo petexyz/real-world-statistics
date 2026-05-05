@@ -500,33 +500,7 @@
   <aside class="notes">The mode is $50,000 because 29 out of 30 people earn exactly that — it is the most common value and cannot be moved by one outlier. The median is $50,000 for the same reason — 29 people still earn it, so the middle value does not shift. Only the mean responds to the extreme value. Ask students: "Which of these three numbers best describes what a typical person in this group earns?"</aside>
 </section>
 
-<section>
-  <h2>Where Do You Stand? A Percentile Calculator</h2>
-  <div class="calc-wrap">
-    <label>Enter a household income: <span id="pct-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">$60,000</span></label>
-    <input type="range" min="10000" max="500000" step="1000" value="60000" id="pct-slider" oninput="calcPct(this.value)">
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:12px;">
-      <div class="stat-box">
-        <span class="num" id="pct-result">~42nd</span>
-        <span class="lbl">Percentile</span>
-      </div>
-      <div class="stat-box">
-        <span class="num" id="pct-above">~58%</span>
-        <span class="lbl">of households earn more</span>
-      </div>
-      <div class="stat-box">
-        <span class="num" id="pct-below">~42%</span>
-        <span class="lbl">of households earn less</span>
-      </div>
-    </div>
-    <div class="prob-bar-wrap" style="margin-top:10px;">
-      <div class="prob-bar" id="pct-bar" style="width:42%; background:var(--steel);"></div>
-    </div>
-    <p style="font-size:0.72em; color:var(--gray); margin-top:6px; font-family:sans-serif;" id="pct-note">Based on approximate U.S. household income distribution (Census Bureau, 2023).</p>
-  </div>
-  <p style="font-size:0.8em; margin-top:10px;">Notice: moving from $50k to $100k takes you from roughly the 38th to the 72nd percentile. Moving from $200k to $500k — a $300k jump — only moves you from the 93rd to the 98th. <strong>The percentile scale compresses sharply at the top.</strong></p>
-  <aside class="notes">Let students find their own family income or a target salary on the slider. The compression at the top is the key insight — in the bottom half of the distribution, each additional $10k moves you several percentile points. In the top 5%, a $100k raise barely moves the needle on percentile rank because the values are so spread out.</aside>
-</section>
+
 
 <section>
   <h2>Section 4 — Quick Check</h2>
@@ -554,8 +528,8 @@
   <h2>Abraham Wald and the WWII Bombers</h2>
   <div class="cols-40-60">
     <div>
-      <img src="./images/survivorship_bias.svg" alt="Survivorship bias bomber diagram" style="max-height:360px;">
-      <div class="img-caption">Hypothetical damage pattern on a returning WWII bomber. Red dots show where returning planes were hit. The engines — where hits were fatal — show no damage because those planes never came back.<br>Source: McGeddon / Wikimedia Commons, CC BY-SA 4.0.</div>
+      <img src="./images/survivorship_bias.png" alt="Survivorship bias bomber diagram" style="max-height:360px;">
+      <div class="img-caption">Hypothetical damage pattern on a returning WWII bomber. Red dots show where returning planes were hit. Engine hits are rare on returned planes — not because engines were never hit, but because planes hit in the engines rarely made it back.<br>Source: McGeddon / Wikimedia Commons, CC BY-SA 4.0.</div>
     </div>
     <div>
       <p>Bombers were being shot down at an unsustainable rate. Engineers mapped bullet holes on <strong>returned</strong> planes — mostly wings, fuselage, and tail. Proposal: reinforce those areas.</p>
@@ -563,9 +537,9 @@
       <ul class="fragment">
         <li>Holes in wings/fuselage = survivable hits</li>
         <li>Engine hits = plane never came back</li>
-        <li>No engine damage on returned planes = that's where armor is needed</li>
+        <li>Far fewer hits on engines than elsewhere — those hits were more likely to be fatal</li>
       </ul>
-      <p class="fragment" style="font-weight:600; color:var(--navy); font-family:sans-serif; font-size:0.88em;">The absence of data was the data.</p>
+      <p class="fragment" style="font-weight:600; color:var(--navy); font-family:sans-serif; font-size:0.88em;">The underrepresentation of engine damage was the signal.</p>
     </div>
   </div>
   <aside class="notes">This now uses the canonical Wikipedia survivorship bias diagram (McGeddon, CC BY-SA 4.0) -- the most recognized version of this illustration, used in classrooms worldwide. Build the story before revealing the insight. Setup: "Engineers mapped bullet holes on returned planes. Most damage on wings, fuselage, tail. Where do you put the armor?" Wait for student answers. Then deliver Wald's insight. The philosophical core: the sample they were studying was conditioned on survival. The absence of engine damage was itself the signal.</aside>

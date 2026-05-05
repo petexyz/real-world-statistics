@@ -285,7 +285,7 @@ Mathematician Abraham Wald pointed out this was exactly backwards.
 
 The armor should go on the engines -- the place with the fewest holes on the returned planes -- because that is where hits were fatal.
 
-**The absence of data was the data.**
+**The underrepresentation of engine damage was the signal.**
 
 ---
 
@@ -445,3 +445,4 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 | 1.5 | 4,563 | Removed height-income section; expanded income section with 7 new slides: income brackets, 40-year trend, Lorenz curve, Gini international comparison, wealth vs. income, billionaire mean slider, percentile calculator |
 | 1.6 | 4,596 | Sharpened 4 charts (blinding, AI pipeline, confounding, survivorship planes) with larger text and lighter background on planes; restored income distribution chart as standalone slide; fixed double $$ in percentile calculator; title corrected to "What the Numbers Are Telling You"; billionaire slider now shows mean, median, and mode; height chart removed from Section 4; 6 quiz questions (one per section) |
 | 1.7 | 4,745 | Survivorship planes chart redesigned (white bg, two-panel); Lorenz curve text overlap fixed; percentile calculator initial $ added; title card updated to MAT 177; poker section cited (Einhäuser et al. 2010, Caro 2003); all Section 1 sources now show full URLs; instructor notes updated |
+| 1.8 | 4,794 | Removed percentile calculator slide; Wald slide now references Wikipedia SVG (survivorship_bias.svg -- download manually from Wikimedia Commons) |

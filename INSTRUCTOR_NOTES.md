@@ -42,7 +42,6 @@
 | International Gini | Section 4 | 4 min |
 | Wealth vs. income | Section 4 | 4 min |
 | Billionaire slider | Section 4 | 4 min |
-| Percentile calculator | Section 4 | 3 min |
 | Quiz 4 | Section 4 | 2 min |
 | Survivorship planes | Section 5 | 6 min |
 | Funds chart | Section 5 | 4 min |
@@ -53,7 +52,7 @@
 | Live demo | Section 6 | 5 min |
 | Six questions | Closing | 3 min |
 | Final slide | Closing | 1 min |
-| **Total** | | **~125 min** |
+| **Total** | | **~119 min** |
 
 ---
 
@@ -183,7 +182,7 @@ The student in the question is not wrong -- they are describing the lag effect a
 
 ---
 
-### Section 4: The Shape of Income (39 minutes across 10 slides)
+### Section 4: The Shape of Income (36 minutes across 9 slides)
 
 This is the longest section. The interactive slides benefit from letting students engage before you explain.
 
@@ -253,128 +252,3 @@ At $1,000,000,000 the class mean exceeds $33,000,000 -- while 29 out of 30 peopl
 
 Ask: "Which of these three numbers best describes what a typical person in this group earns?"
 
-**Slide: Percentile calculator -- 3 minutes**
-
-Let students find their own target salary on the slider.
-
-Point out the compression at the top: moving from $50k to $100k moves you roughly 30 percentile points. Moving from $200k to $500k -- a much larger dollar jump -- moves you only about 5 points. At the top of the distribution, the values are so spread out that large dollar differences cover very few people.
-
-**Slide: Quiz 4 -- 2 minutes**
-
-Correct answer: C (the anchor is using the mean; the researcher is describing median experience).
-
-Both statements are accurate. They describe different aspects of the same distribution. This is the mean vs. median lesson applied directly to a news headline.
-
----
-
-### Section 5: Survivorship Bias (12 minutes across 3 slides)
-
-**Slide: Abraham Wald and the WWII Bombers -- 6 minutes**
-
-The slide now uses the canonical Wikipedia survivorship bias diagram (McGeddon, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Survivorship-bias.svg) -- the most widely recognized version of this illustration, used in classrooms and articles worldwide. Download it from Wikimedia Commons and place it in the images/ folder as survivorship_bias.svg.
-
-Build the story before revealing the insight.
-
-Setup: "Engineers mapped bullet holes on returned planes. Most damage: wings, fuselage, and tail. Where do you put the armor?"
-
-Wait for student answers. Most will say reinforce where the holes are. Then deliver the Wald insight.
-
-The philosophical core: "The planes they were studying were the ones that survived. Bullet holes in the wings and fuselage were common on returned planes for exactly one reason -- those hits did not bring the plane down. The planes that took engine hits never came back. They were not in the dataset."
-
-Then: "The absence of data was the data."
-
-**Slide: Mutual funds -- 4 minutes**
-
-Ask: "If you saw a fund company advertise 8% average annual returns over 20 years, and you knew about survivorship bias, what is the first question you would ask?"
-
-Answer: "Of how many original funds is that 8% the average? And what happened to the ones that no longer exist?"
-
-**Slide: Quiz 5 -- 2 minutes**
-
-Correct answer: B (graduates who are unemployed or underemployed and did not respond to the survey).
-
-Graduates who found high-paying jobs are proud to report them. Those who are underemployed or still searching are far less likely to respond. The published figure is a biased sample -- the survivors.
-
----
-
-### Section 6: The Birthday Problem (15 minutes across 4 slides)
-
-**Slide: Birthday calculator -- 4 minutes**
-
-Before touching the slider: "In a room of 30 people, what is the probability that at least two share a birthday? Write down your guess."
-
-Take a few answers aloud. Most will be in the 5-20% range. Then reveal: 70.6%. Watch the reactions.
-
-Let students interact: "Drag it until it crosses 50%. What number is that?" (23.) "What number hits 99%?" (57.)
-
-**Slide: Birthday curve and table -- 4 minutes**
-
-Walk through the table. The jump from 10 people (12%) to 23 people (50%) is the most surprising.
-
-Explain the intuition failure: "We think about this as 'what is the chance someone shares MY birthday?' That probability is small -- about 8% in a room of 30. But the actual question is: what is the chance any two people share any birthday? With 30 people there are 435 different pairs. Each pair is a separate chance for a match."
-
-**Slide: Quiz 6 -- 2 minutes**
-
-Correct answer: B (they are thinking about one specific match rather than the 435 possible pairs at the party).
-
-The person at the party framed the coincidence as a specific prediction -- "what are the odds this person shares MY birthday?" The birthday problem asks a fundamentally different question about any match across all possible pairs.
-
-**Slide: Live demo -- 5 minutes**
-
-This is the best closer in the course. Do it in every class.
-
-Set the slider to the actual class size. Go around the room. Each student says their birthday out loud. The class calls "match!" the moment one is repeated.
-
-In a class of 25-30, a match typically occurs in the first 20-25 students.
-
-If no match occurs: "We beat the odds today. That happens about 30% of the time in a class of 30. Run this in ten classes and you will see a match in about seven of them."
-
----
-
-### Closing (4 minutes across 2 slides)
-
-**Slide: Six questions**
-
-Read each question slowly. Pause between them. Suggest students write them down or photograph the slide.
-
-These are the transferable product of the course. The formulas will fade. These questions stay useful for the rest of their lives.
-
-**Final slide**
-
-End here. The closing line lands better in silence than with additional commentary. Do not explain it or summarize it. Just let it sit.
-
----
-
-## Anticipated Student Questions
-
-**"Is Okun's Law still valid after COVID?"**
-The 2020 recession and 2021 recovery were exceptional -- unemployment spiked far more sharply than Okun would predict and recovered faster than expected. Most economists believe Okun's Law holds over normal business cycles but that COVID was outside its domain of applicability.
-
-**"Does the stork correlation actually disappear when you control for country size?"**
-Yes. When you analyze within groups of countries of similar size and urbanization, the stork-birth relationship is no longer statistically significant. This is the standard test for whether a confounding variable explains a correlation.
-
-**"Why is the U.S. Gini so much higher than other wealthy countries?"**
-Multiple factors: weaker redistribution through taxes and transfers, a more polarized labor market, higher returns to education and capital, and historical factors including racial wealth gaps. The U.S. pre-tax Gini is high; the post-tax Gini is somewhat lower but still elevated compared to peer nations.
-
-**"How do we know the mutual fund survivorship bias numbers are right?"**
-Studies track all funds from a starting date forward and compare reported performance against the full original cohort. Elton, Gruber, and Blake (1996) is the landmark paper. The methodology is transparent and has been replicated.
-
-**"Why does the birthday probability matter outside of a demonstration?"**
-The birthday problem is the mathematical foundation for understanding coincidences generally, hash collisions in cryptography, and DNA database false matches. Any situation where you are asking whether any two items in a large set share a property follows the same logic.
-
-**"What is the difference between income and wealth inequality?"**
-Income inequality measures how unequally annual earnings are distributed. Wealth inequality measures how unequally accumulated assets -- savings, property, investments -- are distributed. Wealth is typically far more concentrated because it builds over time and can be passed down across generations. The Gini coefficient can be applied to either measure but will produce very different numbers.
-
----
-
-## If You Have Extra Time
-
-- **The Monty Hall Problem** -- similar intuition-defying probability; works well as a follow-on to the birthday problem
-- **Publication bias** -- the scientific literature as a survivorship bias problem; connects directly to the replication crisis in psychology and medicine
-- **Regression to the mean** -- why exceptional performance tends to be followed by more average performance; relevant to sports, investing, and medicine
-
----
-
-*Instructor notes by Pete Halbeisen*
-*Corresponds to index.html -- RevealJS slideshow, ~33 slides*
-*Last updated: Rev 1.7*
