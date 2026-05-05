@@ -35,7 +35,7 @@
   .reveal ol li { margin-bottom: 6px; font-size: 0.82em; line-height: 1.55; }
 
   /* Cover */
-  .cover { text-align: center !important; display: flex !important; flex-direction: column; justify-content: center; align-items: center; min-height: 78vh; }
+  .cover { text-align: center !important; display: flex !important; flex-direction: column; justify-content: center; align-items: center; min-height: 78vh; position: relative; width: 100%; }
   .cover h1 { font-size: 2.1em; color: var(--navy); margin-bottom: 8px; line-height: 1.2; }
   .cover .subtitle { font-size: 1.05em; color: var(--steel); font-style: italic; margin: 4px 0; font-family: Georgia, serif; }
   .cover .author { font-size: 0.8em; color: var(--gray); margin-top: 18px; font-family: sans-serif; }
@@ -127,18 +127,18 @@
 <div class="slides">
 
 <!-- COVER -->
-<section style="position:relative;">
+<section>
   <div class="cover">
     <h1>Real-World Applications<br>of Statistics</h1>
     <div class="rule"></div>
-    <div class="subtitle">What the Numbers Are Telling You  -  and What They Aren't</div>
+    <div class="subtitle">What the Numbers Are Telling You - and What They Aren't</div>
+    <div style="position:absolute; bottom:20px; right:28px; text-align:right; font-family:sans-serif; line-height:1.8;">
+      <div style="font-size:0.78em; color:var(--navy); font-weight:600;">Pete Halbeisen &nbsp;·&nbsp; Statistics - MAT 177</div>
+      <div style="font-size:0.68em; color:var(--gray);">Rev 2.1 &nbsp;·&nbsp; Built May 5, 2026 at 6:37 PM EDT</div>
+      <div style="font-size:0.72em; color:var(--steel); font-weight:600;" id="live-clock"></div>
+    </div>
   </div>
-  <div style="position:absolute; bottom:18px; right:24px; text-align:right; font-family:sans-serif; line-height:1.7;">
-    <div style="font-size:0.78em; color:var(--navy); font-weight:600;">Pete Halbeisen &nbsp;·&nbsp; Statistics - MAT 177</div>
-    <div style="font-size:0.68em; color:var(--gray);">Rev 2.1 &nbsp;·&nbsp; Built May 5, 2026 at 6:37 PM EDT</div>
-    <div style="font-size:0.72em; color:var(--steel); font-weight:600;" id="live-clock"></div>
-  </div>
-  <aside class="notes">Welcome. Last lecture  -  no new tools today. We are connecting everything you have learned to the world you already live in. Some of these will surprise you.</aside>
+  <aside class="notes">Welcome. Last lecture - no new tools today. We are connecting everything you have learned to the world you already live in. Some of these will surprise you.</aside>
 </section>
 
 <!-- AGENDA -->
