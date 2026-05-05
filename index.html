@@ -131,7 +131,7 @@
   <div class="cover">
     <h1>Real-World Applications<br>of Statistics</h1>
     <div class="rule"></div>
-    <div class="subtitle">What Numbers Are Telling You — and What They Aren't</div>
+    <div class="subtitle">What the Numbers Are Telling You — and What They Aren't</div>
     <div class="author">Pete Halbeisen &nbsp;·&nbsp; Elementary Statistics</div>
   </div>
   <aside class="notes">Welcome. Last lecture — no new tools today. We are connecting everything you have learned to the world you already live in. Some of these will surprise you.</aside>
@@ -369,6 +369,28 @@
 </section>
 
 <section>
+  <h2>The Real Shape of Income</h2>
+  <img src="./images/src_income.png" alt="Income distribution" style="max-height:340px;">
+  <div class="img-caption">U.S. household income distribution. The red dashed line marks the median (~$83,730). The distribution has a long right tail — a small number of very high earners pull the mean well above what most households actually bring home. Source: U.S. Census Bureau, 2023.</div>
+  <div class="callout">
+    <strong>What the numbers are telling you:</strong> Most households earn between $25,000 and $100,000. The distribution is right-skewed — it has a long tail extending far to the right.
+    <div class="not"><strong>What they aren't telling you:</strong> A single "average" income figure conceals the entire shape of this distribution. The mean and median sit in very different places — and which one you use changes the story completely.</div>
+  </div>
+  <aside class="notes">Let students look at the shape before saying anything. Ask: "Is this symmetric? Where is the peak? Where does the tail go?" The visual answer to all three questions sets up everything that follows in this section.</aside>
+</section>
+
+<section>
+  <h2>The Real Shape of Income</h2>
+  <img src="./images/src_income.png" alt="U.S. Household Income Distribution" style="max-height:360px;">
+  <div class="img-caption">U.S. Household Income Distribution. The bulk of households earn between $25k and $100k, but a long right tail extends far toward very high earners. The median (red dashed line) sits at ~$83,730 — well below where the mean lands. Source: U.S. Census Bureau, 2024.</div>
+  <div class="callout">
+    <strong>What the numbers are telling you:</strong> The distribution is right-skewed — most households cluster at lower-to-middle incomes, but a small number of very high earners create a long tail to the right.
+    <div class="not"><strong>What they aren't telling you:</strong> A single "average" income figure hides this shape entirely. Without seeing the distribution, you cannot tell whether the average reflects what most people earn — or whether it is being pulled upward by a small number of extreme values.</div>
+  </div>
+  <aside class="notes">Let students look at the shape before saying anything. Ask: "Where is the mean relative to the median?" The mean is further right — pulled by the tail. This is the foundational chart for everything that follows in this section.</aside>
+</section>
+
+<section>
   <h2>Mean vs. Median — Why It Matters</h2>
   <div class="cols-60-40">
     <div>
@@ -490,7 +512,7 @@
 <section>
   <h2>Where Do You Stand? A Percentile Calculator</h2>
   <div class="calc-wrap">
-    <label>Enter a household income: $<span id="pct-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">60,000</span></label>
+    <label>Enter a household income: <span id="pct-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">60,000</span></label>
     <input type="range" min="10000" max="500000" step="1000" value="60000" id="pct-slider" oninput="calcPct(this.value)">
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:12px;">
       <div class="stat-box">
