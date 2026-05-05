@@ -379,16 +379,7 @@
   <aside class="notes">Let students look at the shape before saying anything. Ask: "Is this symmetric? Where is the peak? Where does the tail go?" The visual answer to all three questions sets up everything that follows in this section.</aside>
 </section>
 
-<section>
-  <h2>The Real Shape of Income</h2>
-  <img src="./images/src_income.png" alt="U.S. Household Income Distribution" style="max-height:360px;">
-  <div class="img-caption">U.S. Household Income Distribution. The bulk of households earn between $25k and $100k, but a long right tail extends far toward very high earners. The median (red dashed line) sits at ~$83,730 — well below where the mean lands. Source: U.S. Census Bureau, 2024.</div>
-  <div class="callout">
-    <strong>What the numbers are telling you:</strong> The distribution is right-skewed — most households cluster at lower-to-middle incomes, but a small number of very high earners create a long tail to the right.
-    <div class="not"><strong>What they aren't telling you:</strong> A single "average" income figure hides this shape entirely. Without seeing the distribution, you cannot tell whether the average reflects what most people earn — or whether it is being pulled upward by a small number of extreme values.</div>
-  </div>
-  <aside class="notes">Let students look at the shape before saying anything. Ask: "Where is the mean relative to the median?" The mean is further right — pulled by the tail. This is the foundational chart for everything that follows in this section.</aside>
-</section>
+
 
 <section>
   <h2>Mean vs. Median — Why It Matters</h2>
@@ -563,8 +554,8 @@
   <h2>Abraham Wald and the WWII Bombers</h2>
   <div class="cols-40-60">
     <div>
-      <img src="./images/10_survivorship_planes.png" alt="Survivorship planes" style="max-height:290px;">
-      <div class="img-caption">Returned planes showed heavy damage to wings and fuselage. Wald's insight: those were the survivable hits.</div>
+      <img src="./images/survivorship_bias.svg" alt="Survivorship bias bomber diagram" style="max-height:360px;">
+      <div class="img-caption">Hypothetical damage pattern on a returning WWII bomber. Red dots show where returning planes were hit. The engines — where hits were fatal — show no damage because those planes never came back.<br>Source: McGeddon / Wikimedia Commons, CC BY-SA 4.0.</div>
     </div>
     <div>
       <p>Bombers were being shot down at an unsustainable rate. Engineers mapped bullet holes on <strong>returned</strong> planes — mostly wings, fuselage, and tail. Proposal: reinforce those areas.</p>
@@ -572,12 +563,12 @@
       <ul class="fragment">
         <li>Holes in wings/fuselage = survivable hits</li>
         <li>Engine hits = plane never came back</li>
-        <li>No engine damage on returned planes = that's where the armor needs to go</li>
+        <li>No engine damage on returned planes = that's where armor is needed</li>
       </ul>
       <p class="fragment" style="font-weight:600; color:var(--navy); font-family:sans-serif; font-size:0.88em;">The absence of data was the data.</p>
     </div>
   </div>
-  <aside class="notes">The factual core — Wald's analysis recommended reinforcing areas with least damage — is confirmed by his actual 1943 report from Columbia University's Statistical Research Group.</aside>
+  <aside class="notes">This now uses the canonical Wikipedia survivorship bias diagram (McGeddon, CC BY-SA 4.0) -- the most recognized version of this illustration, used in classrooms worldwide. Build the story before revealing the insight. Setup: "Engineers mapped bullet holes on returned planes. Most damage on wings, fuselage, tail. Where do you put the armor?" Wait for student answers. Then deliver Wald's insight. The philosophical core: the sample they were studying was conditioned on survival. The absence of engine damage was itself the signal.</aside>
 </section>
 
 <section>
@@ -616,13 +607,13 @@
   <h2>What's Your Guess?</h2>
   <p style="font-size:1.0em; font-family:sans-serif; font-weight:600; color:var(--navy); text-align:center; margin:16px 0 8px;">In a room of 30 people, what is the probability that at least two share a birthday?</p>
   <div class="calc-wrap">
-    <label>Number of people: <span id="n-display" style="color:var(--navy); font-size:1.15em; font-weight:700;">30</span></label>
-    <input type="range" min="2" max="80" value="30" id="bday-slider" oninput="calcBday(this.value)">
+    <label>Number of people: <span id="n-display" style="color:var(--navy); font-size:1.15em; font-weight:700;">2</span></label>
+    <input type="range" min="2" max="80" value="2" id="bday-slider" oninput="calcBday(this.value)">
     <div class="calc-result">
-      <span class="calc-pct" id="bday-pct">70.6%</span>
+      <span class="calc-pct" id="bday-pct">0.3%</span>
       <span class="calc-sub">probability of at least one shared birthday</span>
     </div>
-    <div class="prob-bar-wrap"><div class="prob-bar" id="bday-bar" style="width:70.6%; background:#27AE60"></div></div>
+    <div class="prob-bar-wrap"><div class="prob-bar" id="bday-bar" style="width:0.3%; background:#C0392B"></div></div>
   </div>
   <p class="source" style="margin-top:8px; text-align:center;">Drag the slider. At what number does it cross 50%?</p>
   <aside class="notes">Let students interact before revealing the answer. Ask: at what number does it cross 50%? (23). At 99%? (57). The visual surprise is the teaching moment.</aside>

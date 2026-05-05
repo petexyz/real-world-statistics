@@ -271,11 +271,11 @@ Both statements are accurate. They describe different aspects of the same distri
 
 **Slide: Abraham Wald and the WWII Bombers -- 6 minutes**
 
-The chart has been redesigned as a two-panel side-by-side on a white background -- left panel shows returned planes with gold bullet holes on wings and fuselage, right panel shows the missing planes with red hits on the engines. Much cleaner and readable from the back of a room.
+The slide now uses the canonical Wikipedia survivorship bias diagram (McGeddon, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Survivorship-bias.svg) -- the most widely recognized version of this illustration, used in classrooms and articles worldwide. Download it from Wikimedia Commons and place it in the images/ folder as survivorship_bias.svg.
 
 Build the story before revealing the insight.
 
-Setup: "You are an engineer in 1943. Bombers are being shot down. You examine planes that came back. Most bullet holes are on the wings, fuselage, and tail. Where do you put the armor?"
+Setup: "Engineers mapped bullet holes on returned planes. Most damage: wings, fuselage, and tail. Where do you put the armor?"
 
 Wait for student answers. Most will say reinforce where the holes are. Then deliver the Wald insight.
 
