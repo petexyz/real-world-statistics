@@ -347,6 +347,18 @@
   <aside class="notes">Companies hire cautiously after downturns. Finding, interviewing, and training workers takes months. This is why people feel a recession is still happening even after economists say it ended.</aside>
 </section>
 
+<section>
+  <h2>Section 3 — Quick Check</h2>
+  <div class="quiz-q">The economy officially came out of a recession six months ago. GDP is growing again. But unemployment is still rising. A student says: "The recession can't be over — people are still losing jobs." Is the student wrong?</div>
+  <div class="quiz-opts">
+    <button class="quiz-btn" onclick="answer(this,'q4',false)">Yes — if GDP is growing, unemployment must be falling too.</button>
+    <button class="quiz-btn" onclick="answer(this,'q4',true)">No — because of the lag effect, unemployment can keep rising even after GDP has turned around.</button>
+    <button class="quiz-btn" onclick="answer(this,'q4',false)">Yes — GDP and unemployment always move at exactly the same time.</button>
+  </div>
+  <div id="q4-fb" class="quiz-fb"></div>
+  <aside class="notes">Correct is B. This is the lag in action. Companies are cautious about hiring even after demand picks up. The student is describing a real phenomenon accurately — the job market genuinely has not recovered yet even though the economy has technically turned. Both descriptions can be true simultaneously.</aside>
+</section>
+
 <!-- ══ SECTION 4 ══ -->
 <section>
   <div class="section-header">
@@ -514,6 +526,18 @@
   <aside class="notes">Let students find their own family income or a target salary on the slider. The compression at the top is the key insight — in the bottom half of the distribution, each additional $10k moves you several percentile points. In the top 5%, a $100k raise barely moves the needle on percentile rank because the values are so spread out.</aside>
 </section>
 
+<section>
+  <h2>Section 4 — Quick Check</h2>
+  <div class="quiz-q">A news anchor reports: "The average American household income rose to $115,000 last year." A researcher says: "But most households are still struggling." How can both statements be true?</div>
+  <div class="quiz-opts">
+    <button class="quiz-btn" onclick="answer(this,'q5',false)">They can't — if the average rose, most households must be better off.</button>
+    <button class="quiz-btn" onclick="answer(this,'q5',false)">The researcher must be using outdated data.</button>
+    <button class="quiz-btn" onclick="answer(this,'q5',true)">The anchor is reporting the mean, which is pulled up by very high earners. The median — what most households actually earn — is much lower.</button>
+  </div>
+  <div id="q5-fb" class="quiz-fb"></div>
+  <aside class="notes">Correct is C. This is the mean vs. median distinction applied directly to a news headline. The mean U.S. household income is around $115,000. The median is around $83,000. Both numbers are accurate. They describe different aspects of the same distribution. The mean is not wrong — it is just not a good measure of what is typical when the distribution is skewed.</aside>
+</section>
+
 <!-- ══ SECTION 5 ══ -->
 <section>
   <div class="section-header">
@@ -620,6 +644,19 @@
   <aside class="notes">The intuition error: we ask "what's the chance someone shares MY birthday?" (small). The real question involves 435 different pairs in a room of 30.</aside>
 </section>
 
+
+<section>
+  <h2>Section 6 — Quick Check</h2>
+  <div class="quiz-q">Two people meet at a party and discover they share a birthday. One says: "What are the odds — there are 365 days in a year!" Why is this reaction statistically misleading?</div>
+  <div class="quiz-opts">
+    <button class="quiz-btn" onclick="answer(this,'q6',false)">It isn't misleading — sharing a birthday really is very unlikely.</button>
+    <button class="quiz-btn" onclick="answer(this,'q6',true)">They are thinking about one specific match — their own birthday — rather than the much larger number of possible pairs at the party.</button>
+    <button class="quiz-btn" onclick="answer(this,'q6',false)">The reaction is correct because there are only two people being compared.</button>
+  </div>
+  <div id="q6-fb" class="quiz-fb"></div>
+  <aside class="notes">Correct is B. This is the birthday problem intuition failure in a real-world setting. The person is asking "what is the chance this specific person shares MY birthday?" — which is indeed about 1/365. But at a party of 30 people there are 435 possible pairs, and the question is whether any two of those pairs match on any day. The probability is about 70%. Coincidences feel remarkable because we frame them as specific predictions after the fact rather than as one outcome from many possibilities.</aside>
+</section>
+
 <section>
   <h2>Live Demo — Try It Right Now</h2>
   <p style="font-size:1.0em; font-family:sans-serif; font-weight:600; color:var(--navy); text-align:center; margin:12px 0;">Go around the room. Say your birthday out loud. Call "match!" when you hear one repeated.</p>
@@ -686,6 +723,18 @@ const FB = {
   q3: {
     t: "Correct. Graduates who are unemployed or underemployed are far less likely to respond to salary surveys. The published figure reflects survivors — those who found employment worth reporting.",
     f: "Not quite. The missing group is graduates who did not respond to the salary survey — typically those who are unemployed, underemployed, or earned less than expected."
+  },
+  q4: {
+    t: "Correct. This is the lag effect. Companies hire cautiously after a downturn — the job market can genuinely still be deteriorating even after GDP has turned around. Both the economist and the student are right about different things.",
+    f: "Not quite. GDP and unemployment do not move in lockstep. Because of the lag, unemployment can keep rising for months after GDP has already started recovering. The student is describing something real."
+  },
+  q5: {
+    t: "Correct. The mean income is pulled upward by a small number of very high earners. The median — the income that splits the population exactly in half — is much lower and better represents what most households actually earn.",
+    f: "Not quite. Both statements can be true simultaneously. The anchor is using the mean, which is mathematically correct but misleading as a measure of typical income in a right-skewed distribution. The researcher is describing the experience of most households, which is better captured by the median."
+  },
+  q6: {
+    t: "Correct. The intuition error is framing the question as a specific prediction — 'what are the odds this person shares MY birthday?' — rather than recognizing that at a party of 30 people there are 435 possible pairs, each a separate chance for a match.",
+    f: "Not quite. The reaction is statistically misleading because it frames a coincidence as a specific prediction. With enough people in a room, a shared birthday becomes highly likely — not because of luck, but because of the large number of possible pairs."
   }
 };
 
