@@ -133,7 +133,8 @@
     <div class="rule"></div>
     <div class="subtitle">What the Numbers Are Telling You  -  and What They Aren't</div>
     <div class="author">Pete Halbeisen &nbsp;·&nbsp; Statistics  -  MAT 177</div>
-    <div style="font-size:0.7em; color:var(--gray); margin-top:8px; font-family:sans-serif;">Rev 2.1 &nbsp;·&nbsp; May 5, 2026</div>
+    <div style="font-size:0.7em; color:var(--gray); margin-top:8px; font-family:sans-serif;">Rev 2.1 &nbsp;·&nbsp; Built May 5, 2026 at 10:14 PM</div>
+    <div style="font-size:0.75em; color:var(--steel); margin-top:6px; font-family:sans-serif; font-weight:600;" id="live-clock"></div>
   </div>
   <aside class="notes">Welcome. Last lecture  -  no new tools today. We are connecting everything you have learned to the world you already live in. Some of these will surprise you.</aside>
 </section>
@@ -723,6 +724,15 @@ function answer(btn, qid, isCorrect) {
   fb.textContent  = isCorrect ? FB[qid].t : FB[qid].f;
   fb.className    = 'quiz-fb show ' + (isCorrect ? 'correct' : 'wrong');
 }
+
+/* Live clock */
+function updateClock() {
+  const el = document.getElementById('live-clock');
+  if (!el) return;
+  el.textContent = new Date().toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit', second:'2-digit', hour12:true});
+}
+updateClock();
+setInterval(updateClock, 1000);
 
 /* Billionaire slider -- logarithmic scale 0-100 maps to $50k-$1B */
 function calcBill(pos) {
