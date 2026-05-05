@@ -362,25 +362,10 @@
 <!-- ══ SECTION 4 ══ -->
 <section>
   <div class="section-header">
-    <div class="sec-num">Section 4 — Distributions</div>
+    <div class="sec-num">Section 4 — Economics</div>
     <h2>The Shape of Income</h2>
-    <div class="big-idea">The shape of a distribution determines which summary statistics are honest. In a right-skewed distribution, the mean and median tell very different stories — and people in power know which one to reach for.</div>
+    <div class="big-idea">The shape of a distribution determines which summary statistics are honest. In a right-skewed distribution like income, the mean, median, and mode tell very different stories — and people in power know which one to reach for.</div>
   </div>
-</section>
-
-<section>
-  <h2>Two Shapes, Two Very Different Stories</h2>
-  <div class="cols">
-    <div>
-      <img src="./images/src_height_normal.png" alt="Height distribution" style="max-height:250px;">
-      <div class="img-caption">Adult male height: symmetric bell curve. Mean, median, and mode all at ~70 inches. The 68-95-99.7 rule applies cleanly.</div>
-    </div>
-    <div>
-      <img src="./images/src_income.png" alt="Income distribution" style="max-height:250px;">
-      <div class="img-caption">U.S. household income: right-skewed. Median ~$83,730 (red line). Mean is substantially higher — pulled by the long right tail.</div>
-    </div>
-  </div>
-  <aside class="notes">With height, the mean is honest — it sits in the middle. With income, the mean is pulled far above what most households actually earn.</aside>
 </section>
 
 <section>
@@ -480,22 +465,26 @@
   <div class="calc-wrap">
     <label>One person's income: <span id="bill-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">$50,000</span></label>
     <input type="range" min="0" max="100" value="0" id="bill-slider" oninput="calcBill(this.value)">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:12px;">
       <div class="stat-box">
-        <span class="num" id="bill-mean">$50,000</span>
-        <span class="lbl">Class mean income</span>
+        <span class="num" id="bill-mean" style="color:var(--red);">$50,000</span>
+        <span class="lbl">Mean — pulled by outlier</span>
       </div>
       <div class="stat-box">
         <span class="num" style="color:var(--green);">$50,000</span>
-        <span class="lbl">Class median income (unchanged)</span>
+        <span class="lbl">Median — unchanged</span>
+      </div>
+      <div class="stat-box">
+        <span class="num" style="color:var(--steel);">$50,000</span>
+        <span class="lbl">Mode — unchanged</span>
       </div>
     </div>
     <div class="prob-bar-wrap" style="margin-top:10px;">
       <div class="prob-bar" id="bill-bar" style="width:0.005%; background:var(--navy);"></div>
     </div>
-    <p style="font-size:0.72em; color:var(--gray); margin-top:6px; font-family:sans-serif;" id="bill-note">Drag the slider to the right. Watch what happens to the mean while the median stays fixed.</p>
+    <p style="font-size:0.72em; color:var(--gray); margin-top:6px; font-family:sans-serif;" id="bill-note">Drag right. The median and mode never move — only the mean does.</p>
   </div>
-  <aside class="notes">This is the most interactive moment in Section 4. Let students drag the slider themselves if possible. The median never moves — it is always $50,000 because 29 out of 30 people still earn that. But drag to $1 billion and the class mean becomes over $33 million. Ask: "Which number better describes what a typical member of this class earns?"</aside>
+  <aside class="notes">The mode is $50,000 because 29 out of 30 people earn exactly that — it is the most common value and cannot be moved by one outlier. The median is $50,000 for the same reason — 29 people still earn it, so the middle value does not shift. Only the mean responds to the extreme value. Ask students: "Which of these three numbers best describes what a typical person in this group earns?"</aside>
 </section>
 
 <section>
