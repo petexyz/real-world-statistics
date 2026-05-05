@@ -274,12 +274,15 @@
         <div class="stat-box"><span class="num">0.62</span><span class="lbl">Correlation (r)</span></div>
         <div class="stat-box"><span class="num">0.008</span><span class="lbl">p-value</span></div>
       </div>
-      <p>Statistically significant. Moderately strong. Positive.</p>
+      <p><strong>What is the correlation coefficient (r)?</strong><br>
+      r measures how closely two variables move together, on a scale from -1 to +1. A value of 0 means no relationship. A value of +1 means a perfect positive relationship -- when one goes up, the other goes up by exactly the same proportion every time. At r = 0.62, storks and births move together moderately strongly -- not perfectly, but consistently enough to show a clear upward trend in the chart.</p>
+      <p><strong>What is the p-value?</strong><br>
+      The p-value answers: if there were truly no relationship between these two variables, how likely is it that we would see a correlation this strong just by random chance? A p-value of 0.008 means there is less than a 1% chance the result is a fluke. By conventional standards, that makes this result <em>statistically significant</em> -- it is almost certainly a real pattern in the data, not noise.</p>
       <p class="fragment" style="font-style:italic; color:var(--gray);">So... do storks deliver babies?</p>
-      <p class="fragment">Obviously not. So what is actually going on?</p>
+      <p class="fragment">The result is real. The <em>interpretation</em> is wrong. A genuine correlation with a tiny p-value can still be completely meaningless causally. This is the most important thing statistics can teach you.</p>
     </div>
   </div>
-  <aside class="notes">Let the p-value and r land before moving on. Students may assume significance equals causation. This is the moment to address that directly.</aside>
+  <aside class="notes">This is the moment to be explicit about what p-value means and what it does not mean. Many students leave intro stats thinking a small p-value means the result is important or causal. It means neither. It only means the pattern is unlikely to be due to chance. The storks example is perfect because the p-value is genuinely small -- this makes the point that significance and causation are completely separate questions.</aside>
 </section>
 
 <section>
@@ -461,10 +464,10 @@
 
 <section>
   <h2>The Billionaire Slider: How One Outlier Moves the Mean</h2>
-  <p style="font-size:0.88em; color:var(--gray); margin-bottom:8px;">A classroom of 30 students all earn $50,000 per year after graduation. Then one classmate founds a startup and becomes a billionaire.</p>
+  <p style="font-size:0.88em; color:var(--gray); margin-bottom:8px;">30 people from a statistics class all earn $50,000 per year after graduation. Then one person founds a startup and becomes a billionaire.</p>
   <div class="calc-wrap">
-    <label>Your classmate's income: $<span id="bill-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">50,000</span></label>
-    <input type="range" min="50000" max="1000000000" value="50000" id="bill-slider" oninput="calcBill(this.value)">
+    <label>One person's income: <span id="bill-display" style="color:var(--navy); font-size:1.1em; font-weight:700;">$50,000</span></label>
+    <input type="range" min="0" max="100" value="0" id="bill-slider" oninput="calcBill(this.value)">
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px;">
       <div class="stat-box">
         <span class="num" id="bill-mean">$50,000</span>
@@ -695,20 +698,21 @@ function answer(btn, qid, isCorrect) {
   fb.className    = 'quiz-fb show ' + (isCorrect ? 'correct' : 'wrong');
 }
 
-/* Billionaire slider */
-function calcBill(val) {
-  const v = parseInt(val);
+/* Billionaire slider -- logarithmic scale 0-100 maps to $50k-$1B */
+function calcBill(pos) {
+  const minLog = Math.log10(50000);
+  const maxLog = Math.log10(1000000000);
+  const v = Math.round(Math.pow(10, minLog + (pos / 100) * (maxLog - minLog)));
   const classSize = 30;
   const mean = (50000 * (classSize - 1) + v) / classSize;
   document.getElementById('bill-display').textContent = '$' + v.toLocaleString();
   document.getElementById('bill-mean').textContent = '$' + Math.round(mean).toLocaleString();
-  const barPct = Math.min((Math.log10(Math.max(v,50001)) - Math.log10(50000)) / (9 - Math.log10(50000)) * 100, 100);
   const bar = document.getElementById('bill-bar');
-  bar.style.width = Math.max(barPct, 0.5) + '%';
-  bar.style.background = barPct > 66 ? '#C0392B' : barPct > 33 ? '#C9A84C' : '#1B2A4A';
+  bar.style.width = pos + '%';
+  bar.style.background = pos > 66 ? '#C0392B' : pos > 33 ? '#C9A84C' : '#1B2A4A';
   const note = document.getElementById('bill-note');
   if (mean > 1000000) {
-    note.textContent = 'Class mean: $' + Math.round(mean).toLocaleString() + ' — but 29 out of 30 classmates still earn $50,000. The mean describes nobody in the room.';
+    note.textContent = 'Class mean: $' + Math.round(mean).toLocaleString() + ' — but 29 out of 30 people still earn $50,000. The mean describes nobody in the room.';
     note.style.color = '#C0392B';
   } else {
     note.textContent = 'Drag right. Watch what happens to the mean while the median stays fixed at $50,000.';
