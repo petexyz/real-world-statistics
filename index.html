@@ -127,14 +127,16 @@
 <div class="slides">
 
 <!-- COVER -->
-<section>
+<section style="position:relative;">
   <div class="cover">
     <h1>Real-World Applications<br>of Statistics</h1>
     <div class="rule"></div>
     <div class="subtitle">What the Numbers Are Telling You  -  and What They Aren't</div>
-    <div class="author">Pete Halbeisen &nbsp;·&nbsp; Statistics  -  MAT 177</div>
-    <div style="font-size:0.7em; color:var(--gray); margin-top:8px; font-family:sans-serif;">Rev 2.1 &nbsp;·&nbsp; Built May 5, 2026 at 6:37 PM ET</div>
-    <div style="font-size:0.75em; color:var(--steel); margin-top:6px; font-family:sans-serif; font-weight:600;" id="live-clock"></div>
+  </div>
+  <div style="position:absolute; bottom:18px; right:24px; text-align:right; font-family:sans-serif; line-height:1.7;">
+    <div style="font-size:0.78em; color:var(--navy); font-weight:600;">Pete Halbeisen &nbsp;·&nbsp; Statistics - MAT 177</div>
+    <div style="font-size:0.68em; color:var(--gray);">Rev 2.1 &nbsp;·&nbsp; Built May 5, 2026 at 6:37 PM EDT</div>
+    <div style="font-size:0.72em; color:var(--steel); font-weight:600;" id="live-clock"></div>
   </div>
   <aside class="notes">Welcome. Last lecture  -  no new tools today. We are connecting everything you have learned to the world you already live in. Some of these will surprise you.</aside>
 </section>
@@ -729,7 +731,9 @@ function answer(btn, qid, isCorrect) {
 function updateClock() {
   const el = document.getElementById('live-clock');
   if (!el) return;
-  el.textContent = new Date().toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit', second:'2-digit', hour12:true});
+  const now = new Date();
+  const time = now.toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit', second:'2-digit', hour12:true, timeZoneName:'short'});
+  el.textContent = 'Current time: ' + time;
 }
 updateClock();
 setInterval(updateClock, 1000);
