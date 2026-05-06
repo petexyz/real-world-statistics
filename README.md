@@ -215,23 +215,6 @@ The result: unemployment tends to keep rising even after the economy has turned 
 
 > **The big idea:** The shape of a distribution determines which summary statistics are honest. In a right-skewed distribution like income, the mean and the median tell very different stories -- and people in power know which one to reach for.
 
-### Two Shapes, Two Different Worlds
-
-**Height** follows a bell curve -- symmetric, with most people near the middle and equal tails on both sides.
-
-![Heights and the Empirical Rule](./images/src_height_normal.png)
-*Adult male height in the U.S. The bell shape is nearly symmetric. The mean, median, and mode all land at essentially the same value -- about 70 inches. The 68-95-99.7 rule applies cleanly.*
-
-With a symmetric distribution, the mean is a fair summary. It sits right in the middle and represents what a typical person looks like.
-
-**Income** is completely different.
-
-![U.S. Household Income Distribution](./images/src_income.png)
-*U.S. household income. The bulk of households earn between $25k and $100k, but the tail extends far to the right. The median (red dashed line) sits at about $83,730 -- well below where the mean lands.*
-
-The income distribution has a long right tail. A small number of households earning millions per year pull the mean far above what most households actually bring home.
-
----
 
 ### Why This Matters
 
@@ -257,14 +240,10 @@ A right-skewed distribution always follows this order from left to right:
 If the mean is higher than the median, the distribution is right-skewed. You now have a diagnostic you can apply every time you see income, wealth, home price, or salary data.
 
 <div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
-<strong>What the numbers are telling you:</strong> Income is right-skewed. The median household income is around $83,730. There is a weak but real positive correlation between height and income (r ≈ 0.13 to 0.20), confirmed across multiple large studies.<br><br>
-<strong>What they aren't telling you:</strong> A single average income figure isn't telling you what most people earn -- it's telling you what the distribution looks like when a small number of very high earners are included. And height explaining 2% of income variation means 98% of what determines your income is something else entirely.
 </div>
 **Sources:**
 - U.S. Census Bureau. (2025). [Income in the United States: 2024](https://www.census.gov/library/publications/2025/demo/p60-286.html). Report P60-286.
 - Federal Reserve Economic Data (FRED). [fred.stlouisfed.org](https://fred.stlouisfed.org/)
-- Judge, T. A., & Cable, D. M. (2004). The effect of physical height on workplace success and income. *Journal of Applied Psychology, 89*(3), 428-441. [APA summary](https://www.apa.org/monitor/julaug04/standing).
-- Cavelaars, A. E. et al. (2000). Persistent variations in average height between countries and between socio-economic groups. [PubMed](https://pubmed.ncbi.nlm.nih.gov/28520240/).
 
 ---
 
@@ -448,3 +427,4 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 | 1.8 | 4,794 | Removed percentile calculator slide; Wald slide now references Wikipedia SVG (survivorship_bias.svg -- download manually from Wikimedia Commons) |
 | 2.0 | 4,818 | All 7 generated charts rebuilt: larger text, bolder labels, higher contrast. Fixed overlapping text in confounding diagram and wealth vs. income. Instructor notes restored (sections 5/6/closing were truncated) and updated to Rev 2.0 |
 | 2.1 | 4,857 | Confounding variable diagram rebuilt larger (16x10) with no overlapping text; Clever Hans blinding diagram fixed; agenda slide renamed to "Topics" with larger text; em/en dashes replaced with hyphens throughout |
+| 2.2 | 4,595 | Removed stale height/TI-84 content from README; removed 12 orphaned images from images folder; instructor notes verified clean |
