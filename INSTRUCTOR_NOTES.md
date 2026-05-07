@@ -1,7 +1,7 @@
 # Instructor Notes: Real-World Applications of Statistics
 ### Last Lecture -- Statistics - MAT 177
 
-**Estimated total time:** ~119 minutes
+**Estimated total time:** ~114 minutes
 **Format:** RevealJS slideshow, presented fullscreen in a browser
 **Controls:** Arrow keys to advance, S for speaker view, F for fullscreen
 
@@ -49,10 +49,9 @@
 | Birthday calculator | Section 6 | 4 min |
 | Birthday curve + table | Section 6 | 4 min |
 | Quiz 6 | Section 6 | 2 min |
-| Live demo | Section 6 | 5 min |
 | Six questions | Closing | 3 min |
 | Final slide | Closing | 1 min |
-| **Total** | | **~119 min** |
+| **Total** | | **~114 min** |
 
 ---
 
@@ -306,15 +305,6 @@ Correct answer: B (they are thinking about one specific match rather than the 43
 
 The person at the party framed the coincidence as a specific prediction. The birthday problem asks a fundamentally different question about any match across all possible pairs.
 
-**Slide: Live demo -- 5 minutes**
-
-This is the best closer in the course. Do it in every class.
-
-Set the slider to the actual class size. Go around the room. Each student says their birthday out loud. The class calls "match!" the moment one is repeated.
-
-In a class of 25-30, a match typically occurs in the first 20-25 students.
-
-If no match occurs: "We beat the odds today. That happens about 30% of the time in a class of 30. Run this in ten classes and you will see a match in about seven of them."
 
 ---
 
