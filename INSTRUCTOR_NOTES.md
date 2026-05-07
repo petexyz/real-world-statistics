@@ -1,7 +1,7 @@
 # Instructor Notes: Real-World Applications of Statistics
 ### Last Lecture -- Statistics - MAT 177
 
-**Estimated total time:** ~114 minutes
+**Estimated total time:** ~109 minutes
 **Format:** RevealJS slideshow, presented fullscreen in a browser
 **Controls:** Arrow keys to advance, S for speaker view, F for fullscreen
 
@@ -30,7 +30,7 @@
 | Storks scatter + r and p explained | Section 2 | 7 min |
 | Confounding variable | Section 2 | 5 min |
 | Quiz 2 | Section 2 | 2 min |
-| Okun scatter | Section 3 | 6 min |
+| GDP Growth vs. Unemployment | Section 3 | 6 min |
 | Okun time series + lag | Section 3 | 6 min |
 | Quiz 3 | Section 3 | 2 min |
 | Section 4 header | Section 4 | 1 min |
@@ -51,7 +51,7 @@
 | Quiz 6 | Section 6 | 2 min |
 | Six questions | Closing | 3 min |
 | Final slide | Closing | 1 min |
-| **Total** | | **~114 min** |
+| **Total** | | **~109 min** |
 
 ---
 
@@ -69,7 +69,7 @@ Do not start with housekeeping. Go straight into the Clever Hans story -- it is 
 
 ---
 
-### Section 1: The Observer Effect (21 minutes across 5 slides)
+### Section 1: The Observer Effect (21 minutes -- 6 slides)
 
 **Slide: Clever Hans (1907) -- 5 minutes**
 
@@ -125,7 +125,7 @@ If students pick A or C: sample size is a separate issue, and drugs absolutely c
 
 ---
 
-### Section 2: Do Storks Deliver Babies? (14 minutes across 3 slides)
+### Section 2: Do Storks Deliver Babies? (14 minutes -- 3 slides)
 
 **Slide: A Real Study. A Real Result. -- 7 minutes**
 
@@ -138,7 +138,7 @@ This slide now includes plain-English explanations of both the correlation coeff
 
 Then pause and let the punchline land: the result is real, the pattern is not a fluke -- and yet the interpretation "storks cause births" is completely wrong. This is the core lesson. Statistical significance tells you the pattern is real. It tells you nothing about whether the relationship is causal.
 
-**Slide: Confounding variable -- 5 minutes**
+**Slide: The Confounding Variable -- 5 minutes**
 
 Walk through the diagram. Larger, more rural countries have more stork habitat and higher birth rates. Both variables are responding to the same underlying factor -- country size. Neither is causing the other.
 
@@ -152,7 +152,7 @@ Family income, parental involvement, and home stability all correlate with both 
 
 ---
 
-### Section 3: Okun's Law (14 minutes across 3 slides)
+### Section 3: Okun's Law (14 minutes -- 3 slides)
 
 **Slide: GDP Growth vs. Unemployment -- 6 minutes**
 
@@ -165,7 +165,7 @@ Students can identify the negative correlation themselves. The scatter is an imp
 
 Address the common question directly: "Is Okun's Law actually a law?" No -- it is an empirical regularity, a well-supported rule of thumb that has held for six decades but is not a physical law. The coefficient varies across time periods and countries.
 
-**Slide: The lag -- 6 minutes**
+**Slide: The Lag: Why It's Messier Than It Looks -- 6 minutes**
 
 Walk through the time series. Students will recognize the 2008 crisis and 2020 COVID recession.
 
@@ -181,15 +181,15 @@ The student in the question is not wrong -- they are describing the lag effect a
 
 ---
 
-### Section 4: The Shape of Income (36 minutes across 9 slides)
+### Section 4: The Shape of Income (37 minutes -- 8 slides)
 
 This is the longest section. The interactive slides benefit from letting students engage before you explain.
 
-**Slide: The real shape of income -- 4 minutes**
+**Slide: The Real Shape of Income -- 4 minutes**
 
 Let students look at the chart before saying anything. Ask: "Where is the mean relative to the median on this chart?" The mean sits further right -- pulled by the tail. This chart is the foundation for everything that follows in the section.
 
-**Slide: Mean vs. median -- 5 minutes**
+**Slide: Mean vs. Median - Why It Matters -- 5 minutes**
 
 Walk through the arithmetic of the company example:
 - 9 workers at $40,000 = $360,000 total
@@ -199,19 +199,19 @@ Walk through the arithmetic of the company example:
 
 The order mode < median < mean in a right-skewed distribution is worth writing on the board. It is a diagnostic students can apply to any income or price data they encounter in the news.
 
-**Slide: Income by bracket -- 4 minutes**
+**Slide: Income by Bracket: What the Numbers Actually Look Like -- 4 minutes**
 
 Walk through the bars left to right. Point out where the median line sits -- between the $75k-$100k and $100k-$150k bars. Half of all U.S. households earn less than $83,000.
 
 Ask: "If a politician wanted to make the economy sound like it was doing well, which number -- mean or median -- would they use?"
 
-**Slide: 40-year trend -- 5 minutes**
+**Slide: The Growing Gap: 40 Years of Income in America -- 5 minutes**
 
 Ask students to look at all three lines and describe what they see before you explain. They should notice the widening gap between median and mean.
 
 Key question: "If everyone got richer, why does it feel like most people are falling behind?" Because the gains concentrated at the top. The mean grew fast; the median grew slowly. These are both true and they tell very different stories about the same economy.
 
-**Slide: Lorenz curve -- 5 minutes**
+**Slide: The Lorenz Curve: Making Inequality Visible -- 5 minutes**
 
 Walk through the axes before reading the curve:
 - X-axis: cumulative share of population ranked poorest to richest
@@ -222,13 +222,13 @@ Trace the actual U.S. curve. The two specific callouts to land: the bottom 50% e
 
 The Gini coefficient converts the visual bow into one number between 0 and 1. The U.S. Gini is approximately 0.49.
 
-**Slide: International Gini -- 4 minutes**
+**Slide: How the U.S. Compares: International Gini Coefficients -- 4 minutes**
 
 Students are often surprised the U.S. sits much closer to Mexico and Brazil than to Canada or Germany.
 
 Note: Gini is a summary statistic. Two countries with the same Gini can have very different distributions. As with mean vs. median, a single number always loses information about shape.
 
-**Slide: Wealth vs. income -- 4 minutes**
+**Slide: Income vs. Wealth: Two Different Levels of Skew -- 4 minutes**
 
 Give students a moment to take in both charts. The income picture already looks unequal. The wealth picture is on another level.
 
@@ -236,7 +236,7 @@ The bottom 50% of Americans -- roughly 130 million people -- collectively own ab
 
 Clarify the distinction: income is what flows in each year. Wealth is what has accumulated over a lifetime -- savings, home equity, investments, inheritance.
 
-**Slide: Billionaire slider -- 4 minutes**
+**Slide: The Billionaire Slider: How One Outlier Moves the Mean -- 4 minutes**
 
 Let a student volunteer drag the slider if possible.
 
@@ -253,7 +253,7 @@ Ask: "Which of these three numbers best describes what a typical person in this 
 
 ---
 
-### Section 5: Survivorship Bias (12 minutes across 3 slides)
+### Section 5: Survivorship Bias (12 minutes -- 3 slides)
 
 **Slide: Abraham Wald and the WWII Bombers -- 6 minutes**
 
@@ -283,9 +283,9 @@ Graduates who found high-paying jobs are proud to report them. Those who are und
 
 ---
 
-### Section 6: The Birthday Problem (15 minutes across 4 slides)
+### Section 6: The Birthday Problem (10 minutes -- 3 slides)
 
-**Slide: Birthday calculator -- 4 minutes**
+**Slide: What's Your Guess? -- 4 minutes**
 
 Slider now starts at the leftmost position (2 people, 0.3% probability). Before touching it: "In a room of 30 people, what is the probability that at least two share a birthday? Write down your guess."
 
@@ -293,7 +293,7 @@ Take a few answers aloud. Most will be in the 5-20% range. Then drag to 30 and r
 
 Let students interact: "Drag it until it crosses 50%. What number is that?" (23.) "What number hits 99%?" (57.)
 
-**Slide: Birthday curve and table -- 4 minutes**
+**Slide: Why Our Intuition Fails -- 4 minutes**
 
 Walk through the table. The jump from 10 people (12%) to 23 people (50%) is the most surprising.
 
@@ -310,7 +310,7 @@ The person at the party framed the coincidence as a specific prediction. The bir
 
 ### Closing (4 minutes across 2 slides)
 
-**Slide: Six questions**
+**Slide: Six Questions You Now Know to Ask**
 
 Read each question slowly. Pause between them. Suggest students write them down or photograph the slide.
 
@@ -354,5 +354,5 @@ Income inequality measures how unequally annual earnings are distributed. Wealth
 
 *Instructor notes by Pete Halbeisen*
 *Corresponds to index.html -- RevealJS slideshow, ~33 slides*
-*Last updated: Rev 2.1*
+*Last updated: Rev 2.2*
 

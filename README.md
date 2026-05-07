@@ -1,5 +1,5 @@
 # Real-World Applications of Statistics
-### What Numbers Are Telling You -- and What They Aren't
+### What the Numbers Are Telling You -- and What They Aren't
 
 **by Pete Halbeisen**
 
@@ -239,8 +239,32 @@ A right-skewed distribution always follows this order from left to right:
 
 If the mean is higher than the median, the distribution is right-skewed. You now have a diagnostic you can apply every time you see income, wealth, home price, or salary data.
 
-<div style="border: 1px solid #1B2A4A; border-radius: 4px; padding: 12px 16px; margin: 20px 0;">
-</div>
+### Income by the Numbers
+
+The U.S. household income distribution (Census Bureau, 2023) shows that about 65% of households earn under $100,000 per year. The median sits at roughly $83,000 -- but the mean is pulled well above $100,000 by a small number of very high earners.
+
+### 40 Years of Income: The Growing Gap
+
+Adjusted for inflation, median household income has grown modestly since 1980. Mean income has grown much faster -- because the gains have concentrated at the top. The widening gap between mean and median is itself a measure of increasing skew.
+
+### The Lorenz Curve and the Gini Coefficient
+
+The Lorenz curve plots cumulative income share against cumulative population share. Perfect equality would follow the diagonal -- the bottom 50% earning 50%, the bottom 80% earning 80%. The U.S. curve bows well below that line.
+
+Key figures: the bottom 50% of U.S. households earn about 10% of total income. The bottom 80% earn about 33%.
+
+The **Gini coefficient** converts the bow of the Lorenz curve into a single number between 0 (perfect equality) and 1 (one person owns everything). The U.S. Gini is approximately 0.49 -- substantially higher than most other wealthy nations, which cluster between 0.26 and 0.36.
+
+### Wealth vs. Income
+
+Income and wealth are related but very different measures. Income is what flows in each year. Wealth -- savings, home equity, investments -- is what accumulates over a lifetime.
+
+The wealth distribution is dramatically more concentrated than the income distribution. The bottom 50% of Americans own approximately 2.5% of total U.S. wealth. The top 1% own about 33%.
+
+### The Billionaire Effect
+
+Add one billionaire to a room of 30 people all earning $50,000, and the mean income of the group exceeds $33 million -- while the median and mode remain exactly $50,000. The mean describes nobody in the room. This is why the median is the honest measure of typical in any right-skewed distribution.
+
 **Sources:**
 - U.S. Census Bureau. (2025). [Income in the United States: 2024](https://www.census.gov/library/publications/2025/demo/p60-286.html). Report P60-286.
 - Federal Reserve Economic Data (FRED). [fred.stlouisfed.org](https://fred.stlouisfed.org/)
@@ -257,7 +281,7 @@ During World War II, American bombers were being shot down at an unsustainable r
 
 Mathematician Abraham Wald pointed out this was exactly backwards.
 
-![Survivorship bias planes diagram](./images/10_survivorship_planes.png)
+![Survivorship bias diagram](./images/survivorship_bias.png)
 *The planes that returned showed heavy damage to wings and fuselage. But Wald realized the planes that never came back had been hit somewhere else -- in the engines. The absence of engine damage on returned planes was itself the key finding.*
 
 **Wald's insight:** The planes they were studying were the ones that survived. Bullet holes in the wings and fuselage were common on returned planes for exactly one reason -- those hits did not bring the plane down. The planes that took engine hits never made it back. They were not in the dataset at all.
@@ -428,3 +452,4 @@ You do not need a calculator to ask these questions. You need the vocabulary and
 | 2.0 | 4,818 | All 7 generated charts rebuilt: larger text, bolder labels, higher contrast. Fixed overlapping text in confounding diagram and wealth vs. income. Instructor notes restored (sections 5/6/closing were truncated) and updated to Rev 2.0 |
 | 2.1 | 4,857 | Confounding variable diagram rebuilt larger (16x10) with no overlapping text; Clever Hans blinding diagram fixed; agenda slide renamed to "Topics" with larger text; em/en dashes replaced with hyphens throughout |
 | 2.2 | 4,595 | Removed stale height/TI-84 content from README; removed 12 orphaned images from images folder; instructor notes verified clean |
+| 2.3 | 4,926 | README title fixed; broken image ref fixed; Section 4 expanded with Lorenz/Gini/wealth/billionaire content; empty div removed; instructor notes fully realigned to actual slide titles; section slide counts and times corrected; Live Demo and percentile calculator references purged |
